@@ -1,0 +1,26 @@
+.museum-window{width:min(905px,calc(100vw - 24px),calc((100svh - 24px)*181/135));max-width:none;max-height:none;aspect-ratio:181/135;padding:0;border:0;overflow:visible;background:#29274d;box-shadow:0 22px 75px #0009;font:22px/1.2 'VT323',monospace;color:#ffebd0;container-type:inline-size}
+.museum-window::backdrop{background:#01071bd9}
+.museum-window [hidden]{display:none!important}
+.museum-window img{display:block;image-rendering:pixelated;user-select:none}
+.museum-window button{cursor:url('pointers/pointer.png') 12 9, pointer;-webkit-tap-highlight-color:transparent}
+.museum-window :focus-visible{outline:2px solid #ffdf9c;outline-offset:4px}
+.museum-room{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+#museum-gallery{position:absolute;inset:0;transition:filter 240ms ease,opacity 240ms ease}
+.museum-exhibit{position:absolute;padding:0;border:0;background:transparent;pointer-events:none;transition:filter 180ms ease;filter:drop-shadow(0 0 0 transparent)}
+.museum-exhibit img{width:100%;height:100%;pointer-events:auto}
+.museum-exhibit:is(:hover,:focus-visible){filter:drop-shadow(0 0 3px #ffe2a2) drop-shadow(0 0 12px #d69bdd99);z-index:2}
+.museum-exhibit:active{filter:brightness(1.12) drop-shadow(0 0 7px #ffe2a2)}
+#museum-close{position:absolute;right:2%;top:2%;width:4.42%;aspect-ratio:8/9;padding:0;border:0;background:transparent;z-index:5;transition:filter 150ms ease,transform 150ms ease}
+#museum-close::before{content:'';position:absolute;inset:-7px}
+#museum-close img{width:100%;height:100%;pointer-events:none}
+#museum-close:hover{filter:brightness(1.2);transform:translateY(-1px)}
+#museum-close:active{transform:translateY(1px)}
+#museum-hover-label{position:absolute;bottom:7%;left:8%;width:84%;margin:0;padding:1.3cqw 2cqw;text-align:center;font-size:clamp(15px,3cqw,25px);line-height:1.1;color:#fff0d1;background:#15152bd9;border:1px solid #b49a6a88;opacity:0;transition:opacity 180ms ease;pointer-events:none;box-sizing:border-box}
+#museum-hover-label.visible{opacity:1}
+.museum-window.is-viewing #museum-gallery{filter:brightness(.3);opacity:.55}
+#museum-detail{position:absolute;inset:3%;border:2px solid #a78b69;background:radial-gradient(ellipse at 50% 40%,#4a3d5c,#15172ef5 75%);box-shadow:inset 0 0 0 3px #352d49,0 8px 30px #0005;animation:museum-open 220ms ease-out}
+.museum-art-display{position:absolute;left:8%;right:8%;top:8%;bottom:23%;display:flex;align-items:center;justify-content:center}
+#museum-artwork{height:100%;object-fit:contain;filter:drop-shadow(0 10px 14px #0006)}
+#museum-item-title{position:absolute;left:6%;width:88%;bottom:5%;margin:0;text-align:center;font:clamp(16px,4cqw,30px)/1.15 'VT323',monospace;font-weight:400;color:#ffdfb0}
+#museum-item-title:focus-visible{outline:none}
+@keyframes museum-open{from{opacity:0;transform:translateY(8px) scale(.985)}to{opacity:1;transform:translateY(0) scale(1)}}

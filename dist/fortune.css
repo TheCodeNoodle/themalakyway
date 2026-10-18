@@ -1,0 +1,29 @@
+.fortune-window #fortune-title{position:absolute;top:10%;left:12%;width:76%;margin:0;text-align:center;font:6cqw/1 'VT323',monospace;letter-spacing:1cqw;color:#ffe3af;text-shadow:2px 2px #86529e}
+.fortune-invitation,.fortune-touch,.fortune-hint{position:absolute;left:8%;width:84%;margin:0;text-align:center;font:3.6cqw/1.2 'VT323',monospace;color:#b7a3dc}
+.fortune-invitation{top:24%}.fortune-touch{top:81%;color:#e3b8ed}
+.fortune-ball{position:absolute;left:39.22%;top:34%;width:21.56%;aspect-ratio:36/44;padding:0;border:0;background:transparent;isolation:isolate}
+.fortune-ball::before{content:'';position:absolute;inset:-12%;border-radius:50%;background:radial-gradient(ellipse,#b779ff66,transparent 68%);opacity:0;transition:opacity 220ms ease;z-index:-1;pointer-events:none}
+.fortune-window .fortune-ball:is(:hover,:focus-visible){transform:none;filter:drop-shadow(0 0 6px #be7eff) drop-shadow(0 0 18px #9c62db99)}
+.fortune-ball:is(:hover,:focus-visible)::before{opacity:1}
+.fortune-window .fortune-ball:active{transform:scale(.97)}
+.fortune-window .fortune-candle{position:absolute;width:8.982%;height:auto;top:59%}
+.candle-left{left:22%}.candle-right{right:22%}
+.fortune-dialogue{position:absolute;left:5%;top:31%;width:90%;aspect-ratio:186/63;padding:0;background:none;border:0;color:#502b57;text-align:left;container-type:inline-size}
+.fortune-window .fortune-dialogue:is(:hover,:active){transform:none;filter:none}
+.fortune-text{position:absolute;left:8%;top:21%;width:54%;height:59%;display:block;overflow:hidden;font:clamp(15px,4.1cqw,25px)/1.13 'VT323',monospace;text-shadow:none}
+.fortune-hint{top:76%;font-size:3.2cqw;color:#cfb6e7}
+.fortune-again{position:absolute;top:80%;left:31.1377%;width:37.7246%;height:9.375%;border:0;padding:0 0 .5cqw;background:url('disco-art/SubmitButton.svg') center/100% 100% no-repeat;color:#25163b;font:3.2cqw/1 'VT323',monospace!important;letter-spacing:.5px}
+/* Updated table artwork uses the same 167 × 128 coordinate grid. */
+.fortune-window{background-image:url('fortune-art/window-table.svg')}
+.fortune-window #fortune-title{top:7%;font-size:4.8cqw}
+.fortune-invitation{top:17%;font-size:2.9cqw}
+.fortune-ball{left:39.22%;top:28.125%;width:21.56%}
+.fortune-window .fortune-candle{width:14.37%;top:43.75%;height:auto}
+.candle-left{left:13%}.candle-right{right:13%}
+.fortune-window .fortune-crystal{position:absolute;width:10.18%;height:auto;top:53.125%}
+.crystal-left{left:5.4%}.crystal-right{right:5.4%;transform:scaleX(-1)}
+.fortune-touch{top:87%;font-size:3.2cqw}
+.fortune-dialogue{top:30%}
+.fortune-hint{top:78%}
+.fortune-again{top:84%}
+

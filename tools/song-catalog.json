@@ -1,0 +1,4046 @@
+[
+  {
+    "title": "#Beautiful",
+    "artist": "Mariah Carey Featuring Miguel"
+  },
+  {
+    "title": "#thatPOWER",
+    "artist": "will.i.am Featuring Justin Bieber"
+  },
+  {
+    "title": "(Deep Down Inside Ya)",
+    "artist": "Lord Huron",
+    "mbid": "9460078e-b994-4987-8808-a580a6ad326c"
+  },
+  {
+    "title": "(One Helluva Performer)",
+    "artist": "Lord Huron",
+    "mbid": "a345ec1f-56d7-4d0c-9ce1-d6d044991af0"
+  },
+  {
+    "title": "(Sing for Us Tonight)",
+    "artist": "Lord Huron",
+    "mbid": "48beac73-e19a-4ef1-8f1c-80aadfcca1e6"
+  },
+  {
+    "title": "1-800-273-8255",
+    "artist": "Logic Featuring Alessia Cara & Khalid"
+  },
+  {
+    "title": "1949 (acoustic demo)",
+    "artist": "Lana Del Rey",
+    "mbid": "496e0d96-b240-482b-b8bd-f35d2d7e744e"
+  },
+  {
+    "title": "1986 Interview With Fanzine Editor",
+    "artist": "Kate Bush",
+    "mbid": "70a458de-d94f-4472-af2a-acf771f98b1a"
+  },
+  {
+    "title": "2 On",
+    "artist": "Tinashe Featuring ScHoolboy Q"
+  },
+  {
+    "title": "23",
+    "artist": "Mike WiLL Made-It Featuring Miley Cyrus, Wiz Khalifa & Juicy J"
+  },
+  {
+    "title": "5 O'Clock",
+    "artist": "T-Pain Featuring Wiz Khalifa & Lily Allen"
+  },
+  {
+    "title": "50 Words for Snow",
+    "artist": "Kate Bush",
+    "mbid": "a2453c60-c84d-404f-ba54-9908108bddb4"
+  },
+  {
+    "title": "6 Foot 7 Foot",
+    "artist": "Lil Wayne Featuring Cory Gunz"
+  },
+  {
+    "title": "679",
+    "artist": "Fetty Wap Featuring Remy Boyz"
+  },
+  {
+    "title": "A Cautionary Tale",
+    "artist": "Laufey",
+    "mbid": "65382be5-737a-452e-a50d-8eca687c7560"
+  },
+  {
+    "title": "A Drop of Blood",
+    "artist": "Tamino",
+    "mbid": "26c279a9-c108-46aa-af3e-97173a11ce2d"
+  },
+  {
+    "title": "Above the Chinese Restaurant",
+    "artist": "Laufey",
+    "mbid": "fae37118-79b7-457e-91b2-6b02b28a6e75"
+  },
+  {
+    "title": "Above the Chinese Restaurant (instrumental)",
+    "artist": "Laufey",
+    "mbid": "e70f8b9a-ce47-480e-a6e5-e3d94806cb05"
+  },
+  {
+    "title": "Affection",
+    "artist": "Cigarettes After Sex",
+    "mbid": "f80fb635-d184-411f-a19c-87551aab6910"
+  },
+  {
+    "title": "Affection (live)",
+    "artist": "Cigarettes After Sex",
+    "mbid": "22af44e6-c114-4183-89db-ae60eb966892"
+  },
+  {
+    "title": "Afraid (version 2)",
+    "artist": "Lana Del Rey",
+    "mbid": "21a9b981-7723-47b3-9ce9-5169d81bf387"
+  },
+  {
+    "title": "Airplanes",
+    "artist": "B.o.B Featuring Hayley Williams"
+  },
+  {
+    "title": "All About Our Love",
+    "artist": "Sade",
+    "mbid": "faf61091-faf5-4daf-aa65-a9820e554b19"
+  },
+  {
+    "title": "All Eyes on You",
+    "artist": "Meek Mill Featuring Chris Brown & Nicki Minaj"
+  },
+  {
+    "title": "All I Do Is Win",
+    "artist": "DJ Khaled Featuring T-Pain, Ludacris, Snoop Dogg & Rick Ross"
+  },
+  {
+    "title": "All In My Head",
+    "artist": "Fifth Harmony Featuring Fetty Wap"
+  },
+  {
+    "title": "All the Stars",
+    "artist": "Kendrick Lamar & SZA"
+  },
+  {
+    "title": "All Things Pass",
+    "artist": "Lana Del Rey",
+    "mbid": "50330309-64d3-47b7-a523-9d5300b194b5"
+  },
+  {
+    "title": "Ambien Slide",
+    "artist": "Cigarettes After Sex",
+    "mbid": "c7ae0d45-339f-414d-b8f9-ea5c29585394"
+  },
+  {
+    "title": "Amsterdam",
+    "artist": "Tamino",
+    "mbid": "59130ba2-09bb-46a8-be92-af1cfbdc1e2b"
+  },
+  {
+    "title": "Ancient Names (Part I)",
+    "artist": "Lord Huron",
+    "mbid": "5a00ffca-ca75-42ac-8656-858cb9f3225a"
+  },
+  {
+    "title": "Ancient Names, Part I",
+    "artist": "Lord Huron",
+    "mbid": "4eebd499-4872-4fd4-9325-56a63aadd542"
+  },
+  {
+    "title": "Ancient Names, Pt. II",
+    "artist": "Lord Huron",
+    "mbid": "3f30dd95-c8c2-404e-b8d9-17e9e91bcda2"
+  },
+  {
+    "title": "And So Is Love",
+    "artist": "Kate Bush",
+    "mbid": "2a367ec8-4995-488e-ac5c-96e53948f5eb"
+  },
+  {
+    "title": "Anna Karenina",
+    "artist": "Cigarettes After Sex",
+    "mbid": "b1699459-75d0-4029-9210-f09f7e58eb26"
+  },
+  {
+    "title": "Apocalypse",
+    "artist": "Cigarettes After Sex",
+    "mbid": "d617f2d0-87ee-49b9-ac76-c9902dd3a632"
+  },
+  {
+    "title": "Apocalypse (live)",
+    "artist": "Cigarettes After Sex",
+    "mbid": "f27075d3-346c-4255-8f51-64c9b0460258"
+  },
+  {
+    "title": "Army Dreamers",
+    "artist": "Kate Bush"
+  },
+  {
+    "title": "Art Deco",
+    "artist": "Lana Del Rey"
+  },
+  {
+    "title": "As Long As You Love Me",
+    "artist": "Justin Bieber Featuring Big Sean"
+  },
+  {
+    "title": "Ass Back Home",
+    "artist": "Gym Class Heroes Featuring Neon Hitch"
+  },
+  {
+    "title": "At Sea",
+    "artist": "Lord Huron",
+    "mbid": "b4fa4ad8-3502-472a-82a8-f99dda4e0178"
+  },
+  {
+    "title": "Ayo",
+    "artist": "Chris Brown & Tyga"
+  },
+  {
+    "title": "Azafata de Iberia",
+    "artist": "Sade",
+    "mbid": "c73096a5-a857-4800-9eaa-7b48feac72e1"
+  },
+  {
+    "title": "Babooshka",
+    "artist": "Kate Bush",
+    "mbid": "e334544b-40a2-463c-b65b-304621737d5b"
+  },
+  {
+    "title": "Babooshka #1",
+    "artist": "Kate Bush",
+    "mbid": "02488b03-b2ca-4139-8758-b3b9fca1a5c7"
+  },
+  {
+    "title": "Baby",
+    "artist": "Justin Bieber Featuring Ludacris"
+  },
+  {
+    "title": "Baby",
+    "artist": "Lil Baby & DaBaby"
+  },
+  {
+    "title": "Baby Blue Movie",
+    "artist": "Cigarettes After Sex",
+    "mbid": "3a551e13-ca9a-4132-8202-703a78271bf9"
+  },
+  {
+    "title": "Babylon",
+    "artist": "Tamino",
+    "mbid": "7e308613-dfcb-4769-9831-3516ed3e5e76"
+  },
+  {
+    "title": "Babylon (live)",
+    "artist": "Tamino",
+    "mbid": "14758b7d-763d-4912-93a4-74ed58cf2bcf"
+  },
+  {
+    "title": "Back Around",
+    "artist": "Lana Del Rey",
+    "mbid": "acc15d94-a118-4625-9179-0c3d1fbd1e46"
+  },
+  {
+    "title": "Backseat",
+    "artist": "New Boyz Featuring The Cataracs & Dev"
+  },
+  {
+    "title": "Bad",
+    "artist": "Wale Featuring Tiara Thomas Or Rihanna"
+  },
+  {
+    "title": "Bad and Boujee",
+    "artist": "Migos Featuring Lil Uzi Vert"
+  },
+  {
+    "title": "Bad Blood",
+    "artist": "Taylor Swift Featuring Kendrick Lamar"
+  },
+  {
+    "title": "Bad Things",
+    "artist": "Machine Gun Kelly x Camilla Cabello"
+  },
+  {
+    "title": "Bag of Bones",
+    "artist": "Lord Huron",
+    "mbid": "5699075e-9c0f-47c5-a738-769922133c61"
+  },
+  {
+    "title": "Bailando",
+    "artist": "Enrique Iglesias Featuring Descemer Bueno & Gente de Zona"
+  },
+  {
+    "title": "Bang Bang",
+    "artist": "Jessie J, Ariana Grande & Nicki Minaj"
+  },
+  {
+    "title": "Bartier Cardi",
+    "artist": "Cardi B Featuring 21 Savage"
+  },
+  {
+    "title": "Be Kind to My Mistakes",
+    "artist": "Kate Bush",
+    "mbid": "e6adff12-e7e5-47fa-8461-639b1330f5be"
+  },
+  {
+    "title": "Beautiful",
+    "artist": "Bazzi Featuring Camila Cabello"
+  },
+  {
+    "title": "Beautiful People",
+    "artist": "Ed Sheeran Featuring Khalid"
+  },
+  {
+    "title": "Beautiful People (Demo)",
+    "artist": "Lana Del Rey",
+    "mbid": "2c545796-ca31-4382-ade8-c16258639583"
+  },
+  {
+    "title": "Beautiful Stranger (instrumental)",
+    "artist": "Laufey",
+    "mbid": "56ec1818-d86e-4795-8024-4862dc04084f"
+  },
+  {
+    "title": "Beauty And A Beat",
+    "artist": "Justin Bieber Featuring Nicki Minaj"
+  },
+  {
+    "title": "BedRock",
+    "artist": "Young Money Featuring Lloyd"
+  },
+  {
+    "title": "Begotten",
+    "artist": "Sade",
+    "mbid": "374279bd-ea5a-4350-9604-5ac388ede8dc"
+  },
+  {
+    "title": "Believe Me",
+    "artist": "Lil Wayne Featuring Drake"
+  },
+  {
+    "title": "Ben (a capella demo)",
+    "artist": "Lana Del Rey",
+    "mbid": "619ce783-c259-4505-82b6-3d4e18df1f03"
+  },
+  {
+    "title": "Bewitched",
+    "artist": "Laufey",
+    "mbid": "ff0d1890-2a1b-43e1-aa53-443315857552"
+  },
+  {
+    "title": "Big Bank",
+    "artist": "YG Featuring 2 Chainz, Big Sean & Nicki Minaj"
+  },
+  {
+    "title": "Billionaire",
+    "artist": "Travie McCoy Featuring Bruno Mars"
+  },
+  {
+    "title": "Birthday Cake",
+    "artist": "Rihanna Featuring Chris Brown"
+  },
+  {
+    "title": "Black Beatles",
+    "artist": "Rae Stremmurd Featuring Gucci Mane"
+  },
+  {
+    "title": "Black Widow",
+    "artist": "Iggy Azalea Featuring Rita Ora"
+  },
+  {
+    "title": "Blah Blah Blah",
+    "artist": "Ke$ha Featuring 3OH!3"
+  },
+  {
+    "title": "Blessings",
+    "artist": "Big Sean Featuring Drake"
+  },
+  {
+    "title": "Blue Jeans",
+    "artist": "Lana Del Rey",
+    "mbid": "4b3401fd-3ccf-4168-87ab-a5e229850ecb"
+  },
+  {
+    "title": "Blue Jeans (Odd Future’s The Internet mix)",
+    "artist": "Lana Del Rey",
+    "mbid": "c2da8d13-b3cd-4c62-a7ef-a2937b3d0739"
+  },
+  {
+    "title": "Blue Velvet",
+    "artist": "Lana Del Rey",
+    "mbid": "24eeff4a-93f5-4014-84bf-5f7a10e3c752"
+  },
+  {
+    "title": "Blurred Lines",
+    "artist": "Robin Thicke Featuring T.I. + Pharrell"
+  },
+  {
+    "title": "Bored",
+    "artist": "Laufey",
+    "mbid": "aac49be2-85dd-41b7-8af1-987243f1c059"
+  },
+  {
+    "title": "Bored (live from home)",
+    "artist": "Laufey",
+    "mbid": "46aae975-d252-43a3-baf6-96961f5a03e4"
+  },
+  {
+    "title": "Born to Die",
+    "artist": "Lana Del Rey",
+    "mbid": "2cd71916-aac9-4e1c-8135-932e5b0ac1ec"
+  },
+  {
+    "title": "Born to Die (Gemini remix)",
+    "artist": "Lana Del Rey",
+    "mbid": "37f4c44a-7a49-4b8e-ad09-2d9ed4192057"
+  },
+  {
+    "title": "Born to Die (Kygo remix)",
+    "artist": "Lana Del Rey",
+    "mbid": "ff3e3af9-a80d-4701-8615-8fa7e913f176"
+  },
+  {
+    "title": "Borrow mine",
+    "artist": "Liana Flores",
+    "mbid": "fda6fb20-bbb3-434e-b450-b5f8b4987bd3"
+  },
+  {
+    "title": "Both",
+    "artist": "Gucci Mane Featuring Drake"
+  },
+  {
+    "title": "Bottoms Up",
+    "artist": "Trey Songz Featuring Nicki Minaj"
+  },
+  {
+    "title": "Boyfriend",
+    "artist": "Ariana Grande & Social House"
+  },
+  {
+    "title": "Boys 'round Here",
+    "artist": "Blake Shelton Featuring Pistol Annies & Friends"
+  },
+  {
+    "title": "Break Free",
+    "artist": "Ariana Grande Featuring Zedd"
+  },
+  {
+    "title": "Break Your Heart",
+    "artist": "Taio Cruz Featuring Ludacris"
+  },
+  {
+    "title": "Bring Me Home",
+    "artist": "Sade",
+    "mbid": "0e6e6fc1-df5b-4bcc-9e1a-e58d034b54f1"
+  },
+  {
+    "title": "Broccoli",
+    "artist": "D.R.A.M. Featuring Lil Yachty"
+  },
+  {
+    "title": "Brother",
+    "artist": "Lord Huron",
+    "mbid": "d6217c1a-9147-4691-806d-d9f8d1aafb7f"
+  },
+  {
+    "title": "Brother (Last Ride)",
+    "artist": "Lord Huron",
+    "mbid": "1db074fc-c9f4-40d1-9914-bd6209297b8f"
+  },
+  {
+    "title": "Bubblegum",
+    "artist": "Cigarettes After Sex",
+    "mbid": "a2644012-9b39-4e03-add2-28ff89979cf1"
+  },
+  {
+    "title": "Bugatti",
+    "artist": "Ace Hood Featuring Future & Rick Ross"
+  },
+  {
+    "title": "Bullet Proof Soul",
+    "artist": "Sade",
+    "mbid": "83251415-4750-4128-ace2-b74ce0561477"
+  },
+  {
+    "title": "Burning Desire (PHOBI∆ REMIX)",
+    "artist": "Lana Del Rey",
+    "mbid": "0a63f35f-87dd-4f6a-bf9d-db962d69425b"
+  },
+  {
+    "title": "But Beautiful",
+    "artist": "Laufey",
+    "mbid": "bb93a4b1-3074-4165-ae3d-bb376be8886b"
+  },
+  {
+    "title": "Butterflies",
+    "artist": "Liana Flores",
+    "mbid": "2ea0f57c-fab1-4ccf-b26a-b12851fa0fd5"
+  },
+  {
+    "title": "Butterflies",
+    "artist": "Liana Flores feat. Tim Bernardes",
+    "mbid": "f85dabdb-b0b6-4ef6-8598-a57868ae128d"
+  },
+  {
+    "title": "By Your Side",
+    "artist": "Sade",
+    "mbid": "87a3f3a0-a939-4b4c-8ab4-038686b743ed"
+  },
+  {
+    "title": "By Your Side (Ben Watt's Lazy Dog club mix)",
+    "artist": "Sade",
+    "mbid": "942fa853-fa6d-4a4e-ba53-6144d10337ee"
+  },
+  {
+    "title": "By Your Side (Naked Music mix)",
+    "artist": "Sade",
+    "mbid": "37ae0495-a2a4-4e7c-9237-258b709b35db"
+  },
+  {
+    "title": "By Your Side (Unreleased club mix)",
+    "artist": "Sade",
+    "mbid": "cf96ce00-c660-414e-a344-97fba4a5b4e6"
+  },
+  {
+    "title": "California and Me",
+    "artist": "Laufey",
+    "mbid": "903f4fbf-1763-4466-b20d-e4ffb453bd57"
+  },
+  {
+    "title": "California and Me (part. Philharmonia Orchestra)",
+    "artist": "Laufey",
+    "mbid": "d5206409-f389-46d7-bf26-52dc5ba4831b"
+  },
+  {
+    "title": "California Gurls",
+    "artist": "Katy Perry Featuring Snoop Dogg"
+  },
+  {
+    "title": "Can't Hold Us",
+    "artist": "Macklemore & Ryan Lewis Featuring Ray Dalton"
+  },
+  {
+    "title": "Can't Remember To Forget You",
+    "artist": "Shakira Featuring Rihanna"
+  },
+  {
+    "title": "Candle in the Wind (instrumental version)",
+    "artist": "Kate Bush",
+    "mbid": "5a732049-495c-4e98-9c29-6c35a89f183a"
+  },
+  {
+    "title": "Carmen",
+    "artist": "Lana Del Rey",
+    "mbid": "b4a0f730-c353-4a5c-8f29-521d60f733cb"
+  },
+  {
+    "title": "Carmen (instrumental)",
+    "artist": "Lana Del Rey",
+    "mbid": "06475fd1-609e-470b-92b0-a7bf4105bcbf"
+  },
+  {
+    "title": "Carousel",
+    "artist": "Laufey",
+    "mbid": "98cefef0-83fe-4ee3-9161-0e563b4020dc"
+  },
+  {
+    "title": "Carry Out",
+    "artist": "Timbaland Featuring Justin Timberlake"
+  },
+  {
+    "title": "Cash Shit",
+    "artist": "Megan Thee Stallion Featuring DaBaby"
+  },
+  {
+    "title": "Castle in Hollywood",
+    "artist": "Laufey",
+    "mbid": "f19de93d-9ff9-4aee-8e20-39fe33c178ec"
+  },
+  {
+    "title": "Caught You Boy",
+    "artist": "Lana Del Rey",
+    "mbid": "d81eb44a-aaed-43b6-a496-3d723f42462c"
+  },
+  {
+    "title": "Chained to the Rhythm",
+    "artist": "Katy Perry Featuring Skip Marley"
+  },
+  {
+    "title": "Chambers",
+    "artist": "Tamino",
+    "mbid": "6acfa710-8ef7-4308-919c-df72f19e0fcf"
+  },
+  {
+    "title": "Chambers (demo)",
+    "artist": "Tamino",
+    "mbid": "ad15dff9-c96d-4149-b88e-bcdc2c3a58ca"
+  },
+  {
+    "title": "Cheap Thrills",
+    "artist": "Sia Featuring Sean Paul"
+  },
+  {
+    "title": "Chemtrails Over the Country Club",
+    "artist": "Lana Del Rey",
+    "mbid": "7af51d1f-41a3-4a5c-b386-599b92585c1c"
+  },
+  {
+    "title": "Cherish the Day",
+    "artist": "Sade",
+    "mbid": "a5c57dfe-c804-402d-8af3-a95762ca8ffe"
+  },
+  {
+    "title": "Cherish the Day (Pal Joey remix)",
+    "artist": "Sade",
+    "mbid": "eeab4e8a-855a-4519-b8be-954258243a81"
+  },
+  {
+    "title": "Cherry Pie",
+    "artist": "Sade",
+    "mbid": "04bdc924-722f-4677-96b9-2ff3eb46ae69"
+  },
+  {
+    "title": "Christ Masochrist",
+    "artist": "Sade",
+    "mbid": "3ffb54b2-01e1-485e-9c18-5c8586f7d64e"
+  },
+  {
+    "title": "Christmas Magic",
+    "artist": "Laufey",
+    "mbid": "93ef187e-79fc-4054-a22d-70e0955f109c"
+  },
+  {
+    "title": "Cigar",
+    "artist": "Tamino",
+    "mbid": "c138ddbc-0901-4639-9c13-42d5d971b1c8"
+  },
+  {
+    "title": "Cigarettes After Sex - I Can See you",
+    "artist": "Cigarettes After Sex",
+    "mbid": "122d5c4f-694a-41d1-87cc-2c13e815b5bb"
+  },
+  {
+    "title": "Cinnamon",
+    "artist": "Tamino",
+    "mbid": "a520ee6d-6cbb-4005-a43d-bb929d2692f2"
+  },
+  {
+    "title": "Clarity",
+    "artist": "Zedd Featuring Foxes"
+  },
+  {
+    "title": "Classic Man",
+    "artist": "Jidenna Featuring Roman GianArthur"
+  },
+  {
+    "title": "Clockwork",
+    "artist": "Laufey",
+    "mbid": "c095e6be-0885-447a-bb1a-cff04382e7b5"
+  },
+  {
+    "title": "Close",
+    "artist": "Nick Jonas Featuring Tove Lo"
+  },
+  {
+    "title": "Close To Me",
+    "artist": "Ellie Goulding X Diplo Featuring Swae Lee"
+  },
+  {
+    "title": "Closer",
+    "artist": "The Chainsmokers Featuring Halsey"
+  },
+  {
+    "title": "Closing Credits",
+    "artist": "Sade",
+    "mbid": "be900ce6-8797-4f61-bc7f-24479ad6974b"
+  },
+  {
+    "title": "Cloudbusting (video mix)",
+    "artist": "Kate Bush",
+    "mbid": "5ca36405-9195-42fb-911b-081eab8575d2"
+  },
+  {
+    "title": "Clout",
+    "artist": "Offset Featuring Cardi B"
+  },
+  {
+    "title": "Club Can't Handle Me",
+    "artist": "Flo Rida Featuring David Guetta"
+  },
+  {
+    "title": "Cocoa",
+    "artist": "Liana Flores",
+    "mbid": "4b9a5ebc-466e-4e26-97de-907538ea34e8"
+  },
+  {
+    "title": "Cola",
+    "artist": "Lana Del Rey",
+    "mbid": "8e233924-5fd7-40fa-8f37-9623a5e02f3b"
+  },
+  {
+    "title": "Cold",
+    "artist": "Maroon 5 Featuring Future"
+  },
+  {
+    "title": "Cold Water",
+    "artist": "Major Lazer Featuring Justin Bieber & MO"
+  },
+  {
+    "title": "Come When You Call Me America (version 1)",
+    "artist": "Lana Del Rey",
+    "mbid": "9bf57fd0-c12e-489e-a28e-dbc52d8c5ac1"
+  },
+  {
+    "title": "Coming Home",
+    "artist": "Diddy - Dirty Money Featuring Skylar Grey"
+  },
+  {
+    "title": "Con Calma",
+    "artist": "Daddy Yankee & Katy Perry Featuring Snow"
+  },
+  {
+    "title": "Congratulations",
+    "artist": "Post Malone Featuring Quavo"
+  },
+  {
+    "title": "Crocodile",
+    "artist": "Tamino",
+    "mbid": "e623c387-3dcb-478b-a646-7d426fdce34c"
+  },
+  {
+    "title": "Cruise",
+    "artist": "Florida Georgia Line Featuring Nelly"
+  },
+  {
+    "title": "Crush",
+    "artist": "Cigarettes After Sex",
+    "mbid": "b171eb28-57c4-4181-91e1-575aa210384b"
+  },
+  {
+    "title": "Cry",
+    "artist": "Cigarettes After Sex",
+    "mbid": "470c0abc-b276-4a01-95b6-79326e0a4e7f"
+  },
+  {
+    "title": "Crystalline",
+    "artist": "Liana Flores",
+    "mbid": "b82c2638-cfa4-4696-9945-f5fcb38bf9c3"
+  },
+  {
+    "title": "Cuckoo",
+    "artist": "Liana Flores",
+    "mbid": "8368e6b2-e9e6-4fd0-aa87-639f491d3e61"
+  },
+  {
+    "title": "Cuckoo Ballet (interlude)",
+    "artist": "Laufey",
+    "mbid": "25af2f58-0030-4305-9aad-763530f2faf7"
+  },
+  {
+    "title": "Cursed",
+    "artist": "Lord Huron",
+    "mbid": "7bd09af4-dd2c-41ae-a558-3076a0f896e3"
+  },
+  {
+    "title": "Cut It",
+    "artist": "O.T. Genasis Featuring Young Dolph"
+  },
+  {
+    "title": "Dali",
+    "artist": "Kate Bush",
+    "mbid": "c577a0da-4253-4320-a1cf-9e0db90d80c0"
+  },
+  {
+    "title": "Damn You (demo #2)",
+    "artist": "Lana Del Rey",
+    "mbid": "010dd94d-cc10-4f45-92f7-4e73edc9fba0"
+  },
+  {
+    "title": "Dance (A$$)",
+    "artist": "Big Sean Featuring Nicki Minaj"
+  },
+  {
+    "title": "Dance with You Tonight",
+    "artist": "Laufey",
+    "mbid": "8d502bc3-46a1-4915-bc5c-5150461b00dc"
+  },
+  {
+    "title": "Dancing With A Stranger",
+    "artist": "Sam Smith & Normani"
+  },
+  {
+    "title": "Dark Horse",
+    "artist": "Katy Perry Featuring Juicy J"
+  },
+  {
+    "title": "Dark Vacay",
+    "artist": "Cigarettes After Sex",
+    "mbid": "cb72ae3d-29c9-4e7f-bfb8-0ab675b0c6f9"
+  },
+  {
+    "title": "Dead Man's Hand",
+    "artist": "Lord Huron",
+    "mbid": "11bfd1fc-ae31-4ce8-a0be-2e88adf7423f"
+  },
+  {
+    "title": "Dear Soulmate",
+    "artist": "Laufey",
+    "mbid": "609ef6fe-dcb5-40f0-97e7-f8953a5bd78f"
+  },
+  {
+    "title": "Dear Soulmate (instrumental)",
+    "artist": "Laufey",
+    "mbid": "29069fb6-587f-44bb-b885-f507985f9ee1"
+  },
+  {
+    "title": "Death Is the Solution, Cosmic Cataclism: Dedicated There Ítalo César",
+    "artist": "Sade",
+    "mbid": "6873986a-efe7-4c04-a599-0aea393c20dd"
+  },
+  {
+    "title": "Despacito",
+    "artist": "Luis Fonsi & Daddy Yankee Featuring Justin Bieber"
+  },
+  {
+    "title": "Deuces",
+    "artist": "Chris Brown Featuring Tyga & Kevin McCall"
+  },
+  {
+    "title": "Die Zauberflöte, K. 620: Act I, Scene IV. No. 3 Aria \"Dies Bildnis ist bezaubernd schön\" (Tamino)",
+    "artist": "Drottningholm Court Theatre Orchestra, Arnold Östman, Kurt Streit (Tamino)",
+    "mbid": "b11f0374-6312-4132-96d5-77fb9981a236"
+  },
+  {
+    "title": "Die Zauberflöte, K. 620: Act I, Scene XV. Andante \"Wie stark ist nicht dein Zauberton\" (Tamino)",
+    "artist": "Drottningholm Court Theatre Orchestra, Arnold Östman, Kurt Streit (Tamino)",
+    "mbid": "fa3cdf7c-33fd-435c-8556-7207124f040d"
+  },
+  {
+    "title": "Die Zauberflöte, K. 620: Act I, Scene XV. Recitativo \"Die Weisheitslehre dieser Knaben\" (Tamino)",
+    "artist": "Drottningholm Court Theatre Orchestra, Arnold Östman, Kurt Streit (Tamino)",
+    "mbid": "fe15330e-2a23-48d5-a496-8787060fb371"
+  },
+  {
+    "title": "Die Zauberflöte, K. 620: Act II, Scene XXVIII. \"Wir wandelten durch Feuersgluten\" (Pamina, Tamino)",
+    "artist": "Drottningholm Court Theatre Orchestra, Arnold Östman, Barbara Bonney (Pamina), Kurt Streit (Tamino)",
+    "mbid": "f46aaa86-7fe7-4578-84c1-b8d2c40aa854"
+  },
+  {
+    "title": "Die Zauberflöte, K. 620: Act II. \"Was für eine schreckliche Nacht!\"",
+    "artist": "Drottningholm Court Theatre Orchestra, Arnold Östman, Kurt Streit (Tamino)",
+    "mbid": "c6907d33-5400-4c6d-a6ab-6ee6bc443029"
+  },
+  {
+    "title": "Diet Mountain Dew (demo 1)",
+    "artist": "Lana Del Rey",
+    "mbid": "9d357ae3-8049-4714-9837-f657f8303e60"
+  },
+  {
+    "title": "Digging Up the Past",
+    "artist": "Lord Huron",
+    "mbid": "572ad47c-783f-438d-a4fb-3cd1b6630c37"
+  },
+  {
+    "title": "Disbelieving Angel",
+    "artist": "Kate Bush",
+    "mbid": "911a4fa3-d11f-42bd-84df-08fb84abd67e"
+  },
+  {
+    "title": "Dissolve",
+    "artist": "Tamino",
+    "mbid": "5cda4431-03c4-4e83-a956-fdf9c27df5bf"
+  },
+  {
+    "title": "Dissolve (live)",
+    "artist": "Tamino",
+    "mbid": "2d6c8ec4-9622-4754-89f8-4addfb1ce4fc"
+  },
+  {
+    "title": "DJ Got Us Fallin' In Love",
+    "artist": "Usher Featuring Pitbull"
+  },
+  {
+    "title": "Do What U Want",
+    "artist": "Lady Gaga Featuring R. Kelly"
+  },
+  {
+    "title": "Do You Know Where I Should Go?",
+    "artist": "Cigarettes After Sex",
+    "mbid": "ee64edda-2d68-4350-b341-5934e05d3580"
+  },
+  {
+    "title": "Do You Remember",
+    "artist": "Jay Sean Featuring Sean Paul & Lil Jon"
+  },
+  {
+    "title": "Doin' Time (instrumental)",
+    "artist": "Lana Del Rey",
+    "mbid": "f163e2c5-7b2e-4f1a-93e1-7ac3eccdefb4"
+  },
+  {
+    "title": "Don't Let Me Down",
+    "artist": "The Chainsmokers Featuring Daya"
+  },
+  {
+    "title": "Don't Push Your Foot on the Heartbrake",
+    "artist": "Kate Bush",
+    "mbid": "ea65279d-b6b3-42d9-baa0-9342177337db"
+  },
+  {
+    "title": "Don't Push Your Foot on the Heartbreak",
+    "artist": "Kate Bush",
+    "mbid": "b036fcf0-e2a1-44d7-8801-52a4ad54d9e0"
+  },
+  {
+    "title": "Don't Tell 'Em",
+    "artist": "Jeremih Featuring YG"
+  },
+  {
+    "title": "Don't You Wanna Stay",
+    "artist": "Jason Aldean With Kelly Clarkson"
+  },
+  {
+    "title": "Don't You Worry Child",
+    "artist": "Swedish House Mafia Featuring John Martin"
+  },
+  {
+    "title": "Don’t Let Me Go",
+    "artist": "Cigarettes After Sex",
+    "mbid": "90007862-e85c-4b78-aa60-7f8f82a2ca60"
+  },
+  {
+    "title": "Don’t Push Your Foot on the Heartbrake",
+    "artist": "Kate Bush",
+    "mbid": "6b330944-ece4-41aa-8313-b846cf37f93d"
+  },
+  {
+    "title": "Don’t Push Your Foot on the Heartbreak",
+    "artist": "Kate Bush",
+    "mbid": "a552fb89-2a7a-4916-9a08-6d940b2d97d6"
+  },
+  {
+    "title": "Don’t Wanna Know",
+    "artist": "Maroon 5 Featuring Kendrick Lamar"
+  },
+  {
+    "title": "Down",
+    "artist": "Jay Sean Featuring Lil Wayne"
+  },
+  {
+    "title": "Down in the DM",
+    "artist": "Yo Gotti Featuring Nicki Minaj"
+  },
+  {
+    "title": "Down On Me",
+    "artist": "Jeremih Featuring 50 Cent"
+  },
+  {
+    "title": "Downtown",
+    "artist": "Macklemore & Ryan Lewis Featuring Eric Nally, etc."
+  },
+  {
+    "title": "Dreamer",
+    "artist": "Laufey",
+    "mbid": "bd5db251-e339-4843-8620-43401a1819ea"
+  },
+  {
+    "title": "Dreaming of You",
+    "artist": "Cigarettes After Sex",
+    "mbid": "ceb550fc-e222-4e80-8043-5b4cbf092837"
+  },
+  {
+    "title": "Dreaming of You (live)",
+    "artist": "Cigarettes After Sex",
+    "mbid": "590d8213-13b1-4253-a448-b02e89ae1b96"
+  },
+  {
+    "title": "Dreams From Bunker Hill",
+    "artist": "Cigarettes After Sex",
+    "mbid": "e6254dcd-693b-4853-8516-2ed9da63d149"
+  },
+  {
+    "title": "Drip Too Hard",
+    "artist": "Lil Baby & Gunna"
+  },
+  {
+    "title": "Drops in the Lake",
+    "artist": "Lord Huron",
+    "mbid": "6d8d8250-ba49-474a-bc9f-d5c7c7d25ad1"
+  },
+  {
+    "title": "Drowning",
+    "artist": "A Boogie Wit Da Hoodie Featuring Kodak Black"
+  },
+  {
+    "title": "Drunk In Love",
+    "artist": "Beyonce Featuring Jay Z"
+  },
+  {
+    "title": "Dum Dum",
+    "artist": "Lana Del Rey",
+    "mbid": "88f1a650-2739-4b69-a395-d6043fc22164"
+  },
+  {
+    "title": "E.T.",
+    "artist": "Katy Perry Featuring Kanye West"
+  },
+  {
+    "title": "Each Time",
+    "artist": "Tamino",
+    "mbid": "c165e390-9ab1-4c62-8043-6af82f7ce219"
+  },
+  {
+    "title": "Each Time You Fall in Love",
+    "artist": "Cigarettes After Sex",
+    "mbid": "43b8d27c-3d49-49f0-a643-cb046708c575"
+  },
+  {
+    "title": "Each Time You Fall in Love (live)",
+    "artist": "Cigarettes After Sex",
+    "mbid": "35d554c1-848a-4cb3-b58d-ac8ad09934ce"
+  },
+  {
+    "title": "Eastside",
+    "artist": "benny blanco, Halsey & Khalid"
+  },
+  {
+    "title": "Eat the Music",
+    "artist": "Kate Bush",
+    "mbid": "de45ca9c-9480-459c-8775-88c1f5808c5e"
+  },
+  {
+    "title": "Eenie Meenie",
+    "artist": "Sean Kingston & Justin Bieber"
+  },
+  {
+    "title": "El Perdon",
+    "artist": "Nicky Jam & Enrique Iglesias"
+  },
+  {
+    "title": "Elegy",
+    "artist": "Tamino",
+    "mbid": "0817945a-338f-40c0-a517-7bf723bd7f4d"
+  },
+  {
+    "title": "Empire State Of Mind",
+    "artist": "Jay-Z + Alicia Keys"
+  },
+  {
+    "title": "Ends of the Earth",
+    "artist": "Lord Huron",
+    "mbid": "79a6b1ef-f98c-4434-b61a-20f84e980642"
+  },
+  {
+    "title": "Every Dawn's a Mountain (live)",
+    "artist": "Tamino",
+    "mbid": "f624aba4-5cae-436f-b86b-bf880fd85fd1"
+  },
+  {
+    "title": "Every Dawn’s a Mountain",
+    "artist": "Tamino",
+    "mbid": "98538a96-a0d7-411f-b26e-743206e4b474"
+  },
+  {
+    "title": "Every Light Is Out",
+    "artist": "Cigarettes After Sex",
+    "mbid": "efb37474-973a-41ec-b638-1ebb591c0613"
+  },
+  {
+    "title": "Every Pore",
+    "artist": "Tamino",
+    "mbid": "59646685-0e17-46ff-a5b7-20009be04bab"
+  },
+  {
+    "title": "Every Pore (live at Jet Studio, Brussels, 2019)",
+    "artist": "Tamino feat. Nagham Zikrayat Orchestra",
+    "mbid": "ae273e44-6f26-4a80-b1a3-f03a5ac8ee11"
+  },
+  {
+    "title": "Every Word",
+    "artist": "Sade",
+    "mbid": "9fef142d-78ca-4a13-b013-c089915e1e5e"
+  },
+  {
+    "title": "Everyday We Lit",
+    "artist": "YFN Lucci Featuring PnB Rock"
+  },
+  {
+    "title": "Everything Has a Rhythm",
+    "artist": "Lana Del Rey",
+    "mbid": "cc8aeed1-c225-45ad-b90b-7f78b5e32a68"
+  },
+  {
+    "title": "Everything I Know About Love",
+    "artist": "Laufey",
+    "mbid": "b2dec489-7bcd-4c3a-aa3d-3708adf802bb"
+  },
+  {
+    "title": "Everything I Know About Love (instrumental)",
+    "artist": "Laufey",
+    "mbid": "d36832b4-2f8b-400c-b4dc-8d8832616656"
+  },
+  {
+    "title": "F**kin Problems",
+    "artist": "A$AP Rocky Featuring Drake, 2 Chainz & Kendrick Lamar"
+  },
+  {
+    "title": "Falling Behind",
+    "artist": "Laufey",
+    "mbid": "8ad32fc1-63c2-4090-9c4b-536486ed1c83"
+  },
+  {
+    "title": "Falling Behind (instrumental)",
+    "artist": "Laufey",
+    "mbid": "13e6ba32-db73-4ab1-9c7b-a9d9bfbda685"
+  },
+  {
+    "title": "Falling in Love",
+    "artist": "Cigarettes After Sex",
+    "mbid": "9fca824b-9067-49b3-9964-53d4d34f07b1"
+  },
+  {
+    "title": "Fancy",
+    "artist": "Iggy Azalea Featuring Charli XCX"
+  },
+  {
+    "title": "Fascination",
+    "artist": "Tamino",
+    "mbid": "f124ee36-4905-444c-92a7-f9787a1e8261"
+  },
+  {
+    "title": "Fear",
+    "artist": "Sade",
+    "mbid": "a315ff99-9586-44bd-8ffb-9ef547c67a59"
+  },
+  {
+    "title": "Feel It",
+    "artist": "Kate Bush",
+    "mbid": "6e336f90-7e66-47ca-8595-5b92892639ab"
+  },
+  {
+    "title": "Feel No Pain (Nellee Hopper mix)",
+    "artist": "Sade",
+    "mbid": "7a366cd9-e579-43b5-8639-bba2edd70dbd"
+  },
+  {
+    "title": "Feel This MoMent",
+    "artist": "Pitbull Featuring Christina Aguilera"
+  },
+  {
+    "title": "Feels",
+    "artist": "Calvin Harris Featuring Pharrell Williams, Katy Perry, etc."
+  },
+  {
+    "title": "FEFE",
+    "artist": "6ix9ine Featuring Nicki Minaj & Murda Beatz"
+  },
+  {
+    "title": "Ferry Me Over",
+    "artist": "Kate Bush",
+    "mbid": "790f1cce-fbdc-46ad-8596-0f22994264cc"
+  },
+  {
+    "title": "Finesse",
+    "artist": "Bruno Mars Featuring Cardi B"
+  },
+  {
+    "title": "Fish in the Sea",
+    "artist": "Liana Flores",
+    "mbid": "1e5a0fca-7d08-4782-90d6-632da336f1e6"
+  },
+  {
+    "title": "Flash",
+    "artist": "Cigarettes After Sex",
+    "mbid": "1b7fae49-fbdf-4f35-876b-00c3bbad6d30"
+  },
+  {
+    "title": "Flow",
+    "artist": "Sade",
+    "mbid": "ce8995fd-cd67-4fca-8eca-1f54c24fb761"
+  },
+  {
+    "title": "Following Success",
+    "artist": "Kate Bush",
+    "mbid": "b68f0381-4d4d-4277-8f49-948449dc0a9b"
+  },
+  {
+    "title": "Fool for Love",
+    "artist": "Lord Huron",
+    "mbid": "8c74cafe-4efb-430a-9062-fe88ab3cc93c"
+  },
+  {
+    "title": "Fool for Love (radio edit)",
+    "artist": "Lord Huron",
+    "mbid": "fdaf5fb5-a19c-4d9f-8dc1-0fe0f2bf0255"
+  },
+  {
+    "title": "For Free",
+    "artist": "DJ Khaled Featuring Drake"
+  },
+  {
+    "title": "Forever",
+    "artist": "Drake Featuring Kanye West, Lil Wayne & Eminem"
+  },
+  {
+    "title": "FourFiveSeconds",
+    "artist": "Rihanna & Kanye West & Paul McCartney"
+  },
+  {
+    "title": "Fragile",
+    "artist": "Laufey",
+    "mbid": "a9f40727-5357-4cb0-8f98-ffa1a99539fc"
+  },
+  {
+    "title": "Fragile (instrumental)",
+    "artist": "Laufey",
+    "mbid": "e38da63a-26d9-4a96-a9de-bede8935d1d0"
+  },
+  {
+    "title": "Freak (demo) (alternate mix)",
+    "artist": "Lana Del Rey",
+    "mbid": "ec4eae09-4ff9-4495-b405-9039ed783b68"
+  },
+  {
+    "title": "Freaky Friday",
+    "artist": "Lil Dicky Featuring Chris Brown"
+  },
+  {
+    "title": "Friends",
+    "artist": "Marshmello & Anne-Marie"
+  },
+  {
+    "title": "From the Start",
+    "artist": "Laufey",
+    "mbid": "4a15198b-3113-4eb9-935c-353312d5a63a"
+  },
+  {
+    "title": "From the Start (Sped Up)",
+    "artist": "Laufey",
+    "mbid": "91102692-7bfc-46b2-ab99-927fa7d80ea8"
+  },
+  {
+    "title": "Frozen Pines",
+    "artist": "Lord Huron",
+    "mbid": "1c2063ff-489b-431a-aa40-404eee201b91"
+  },
+  {
+    "title": "Fucked My Way Up to the Top (instrumental)",
+    "artist": "Lana Del Rey",
+    "mbid": "d0bfe33e-d14f-4f89-a0c5-0457ec1e57e8"
+  },
+  {
+    "title": "Fullhouse",
+    "artist": "Kate Bush",
+    "mbid": "d8514acc-ba87-43d7-ae69-2bde51e74110"
+  },
+  {
+    "title": "G.D.F.R",
+    "artist": "Flo Rida Featuring Sage The Geminis & Lookas"
+  },
+  {
+    "title": "Gangsta Boy",
+    "artist": "Lana Del Rey",
+    "mbid": "2d24936b-411b-4422-829e-9beb3e4211b3"
+  },
+  {
+    "title": "Gemini",
+    "artist": "Liana Flores",
+    "mbid": "ae788f9d-be51-4fd7-81f2-0927cb80f9bf"
+  },
+  {
+    "title": "Get Lucky",
+    "artist": "Daft Punk Featuring Pharrell Williams"
+  },
+  {
+    "title": "Ghetto Baby",
+    "artist": "Lana Del Rey",
+    "mbid": "24f499e8-6c09-497d-b4e6-3c999002d88c"
+  },
+  {
+    "title": "Girl On Fire",
+    "artist": "Alicia Keys Featuring Nicki Minaj"
+  },
+  {
+    "title": "Girls Like You",
+    "artist": "Maroon 5 Featuring Cardi B"
+  },
+  {
+    "title": "Give It Up",
+    "artist": "Sade",
+    "mbid": "498d0030-2e54-4d6c-8573-6079112ab54d"
+  },
+  {
+    "title": "Give It Up (Matrixxman & Vin Sol Edit)",
+    "artist": "Sade",
+    "mbid": "07ca9e42-fb0c-485f-8309-c2571f7b22b2"
+  },
+  {
+    "title": "Give Me Everything",
+    "artist": "Pitbull Featuring Ne-Yo, Afrojack & Nayer"
+  },
+  {
+    "title": "Go Go Dancer (version 2)",
+    "artist": "Lana Del Rey",
+    "mbid": "f9988b97-f4e8-4892-96c1-fe9031f652b6"
+  },
+  {
+    "title": "God Knows I Tried (instrumental)",
+    "artist": "Lana Del Rey",
+    "mbid": "554040ae-fdbf-4343-b60a-0d7cdb8be97f"
+  },
+  {
+    "title": "Goddess",
+    "artist": "Laufey",
+    "mbid": "dc315b91-112c-4819-b239-139fbdfd9226"
+  },
+  {
+    "title": "Going Bad",
+    "artist": "Meek Mill Featuring Drake"
+  },
+  {
+    "title": "Good For You",
+    "artist": "Selena Gomez Featuring A$AP Rocky"
+  },
+  {
+    "title": "Good Time",
+    "artist": "Owl City & Carly Rae Jepsen"
+  },
+  {
+    "title": "Goodbyes",
+    "artist": "Post Malone Featuring Young Thug"
+  },
+  {
+    "title": "Greenwich",
+    "artist": "Lana Del Rey",
+    "mbid": "7763c062-41fb-4f7d-8bdc-124dad0d1e3a"
+  },
+  {
+    "title": "Guns and Roses",
+    "artist": "Lana Del Rey",
+    "mbid": "0e68c5c7-2e0c-4b84-ad8a-bbf0a5e7545d"
+  },
+  {
+    "title": "Habibi",
+    "artist": "Tamino",
+    "mbid": "d808fd27-4f4b-43db-9d52-597f9a1786a2"
+  },
+  {
+    "title": "Halfway heart",
+    "artist": "Liana Flores",
+    "mbid": "34ba7086-99f8-4c0a-9858-fe7749cc2299"
+  },
+  {
+    "title": "Hall Of Fame",
+    "artist": "The Script Featuring will.i.am"
+  },
+  {
+    "title": "Hammer Horror",
+    "artist": "Kate Bush",
+    "mbid": "c91348ac-c260-4bf6-9288-8e6a283ea64b"
+  },
+  {
+    "title": "Hang on to Your Love",
+    "artist": "Sade",
+    "mbid": "0733fe00-1175-45d6-9766-b0720df3dc5a"
+  },
+  {
+    "title": "Hang On to Your Love (short version)",
+    "artist": "Sade",
+    "mbid": "234d7e06-0523-4388-8e82-66864fcda07b"
+  },
+  {
+    "title": "Happier",
+    "artist": "Marshmello & Bastille"
+  },
+  {
+    "title": "Happiness Starts Within",
+    "artist": "Lana Del Rey",
+    "mbid": "f0d7a066-810c-465b-9804-9b8ecbe6007d"
+  },
+  {
+    "title": "Happy Place",
+    "artist": "Lana Del Rey",
+    "mbid": "2e3abd47-ff5e-4d9f-a0b1-cae91864c59f"
+  },
+  {
+    "title": "Hard",
+    "artist": "Rihanna Featuring Jeezy"
+  },
+  {
+    "title": "Harvest Moon",
+    "artist": "Lord Huron",
+    "mbid": "7fc65177-f708-4e1c-8f3d-177bfe2ecaca"
+  },
+  {
+    "title": "Havana",
+    "artist": "Camila Cabello Featuring Young Thug"
+  },
+  {
+    "title": "Heavenly",
+    "artist": "Cigarettes After Sex",
+    "mbid": "53daeb29-a4e4-4da7-8d9b-3066c67b5a0b"
+  },
+  {
+    "title": "Heavy Hitter (version 1)",
+    "artist": "Lana Del Rey",
+    "mbid": "1159cc8d-74a8-459a-81e2-b2feed947230"
+  },
+  {
+    "title": "Hello again",
+    "artist": "Liana Flores",
+    "mbid": "1f4cf93b-94eb-498d-abc3-d0b35c27f91e"
+  },
+  {
+    "title": "Hentai",
+    "artist": "Cigarettes After Sex",
+    "mbid": "cf649e52-3047-4c5e-ad92-195276aecf3f"
+  },
+  {
+    "title": "Here to stay",
+    "artist": "Liana Flores",
+    "mbid": "4eadfc0c-ebee-400d-8cd2-c86eefeffb2b"
+  },
+  {
+    "title": "Hey",
+    "artist": "Liana Flores",
+    "mbid": "767063df-397b-4659-a1b7-c29412ac82d9"
+  },
+  {
+    "title": "Hey Baby (Drop It To The Floor)",
+    "artist": "Pitbull Featuring T-Pain"
+  },
+  {
+    "title": "Hey Daddy (Daddy's Home)",
+    "artist": "Usher Featuring Plies"
+  },
+  {
+    "title": "Hey Mama",
+    "artist": "David Guetta Featuring Nicki Minaj, Bebe Rexha and Afrojack"
+  },
+  {
+    "title": "Hi",
+    "artist": "Laufey",
+    "mbid": "63351b5d-de0c-4c5f-a83a-b8384f1f0005"
+  },
+  {
+    "title": "Hideaway",
+    "artist": "Cigarettes After Sex",
+    "mbid": "6145fa6f-efd6-4f78-9d74-5385588e9797"
+  },
+  {
+    "title": "Highway Don't Care",
+    "artist": "Tim McGraw With Taylor Swift"
+  },
+  {
+    "title": "Him & I",
+    "artist": "G-Easy and Halsey"
+  },
+  {
+    "title": "Hold On, We're Going Home",
+    "artist": "Drake Featuring Majid Jordan"
+  },
+  {
+    "title": "Holding you, Holding me",
+    "artist": "Cigarettes After Sex",
+    "mbid": "a4408869-a3da-4160-a2c1-b3a616591c90"
+  },
+  {
+    "title": "Holy Grail",
+    "artist": "Jay Z Featuring Justin Timberlake"
+  },
+  {
+    "title": "hope is a dangerous thing for a woman like me to have – but I have it",
+    "artist": "Lana Del Rey",
+    "mbid": "f5a9efc7-d11e-4c9c-8d62-73359deb91e2"
+  },
+  {
+    "title": "Hot",
+    "artist": "Cigarettes After Sex",
+    "mbid": "55effaa3-5a98-4c26-bd1f-7dc6f5c63db5"
+  },
+  {
+    "title": "Hot Girl Summer",
+    "artist": "Megan Thee Stallion, Nicki Minaj & Ty Dolla $ign"
+  },
+  {
+    "title": "How Deep Is Your Love",
+    "artist": "Calvin Harris & Disciples"
+  },
+  {
+    "title": "Hurricane (Johnnie's Theme)",
+    "artist": "Lord Huron",
+    "mbid": "b8aa2466-5c7d-4f0a-a8cd-de3c3619e73d"
+  },
+  {
+    "title": "Hurricane (Johnnie’s Theme) (radio edit)",
+    "artist": "Lord Huron",
+    "mbid": "d0213cb4-05b4-439a-8e58-38e89f56bef0"
+  },
+  {
+    "title": "I Can See You",
+    "artist": "Cigarettes After Sex",
+    "mbid": "24ef01c7-fb35-4001-949c-dda3c0c9b0e4"
+  },
+  {
+    "title": "I Can't Stop These Tears From Falling",
+    "artist": "Cigarettes After Sex",
+    "mbid": "777e98a2-c81d-4353-b813-3793715b8f89"
+  },
+  {
+    "title": "I Couldn't Love You More",
+    "artist": "Sade",
+    "mbid": "0681a97e-23a7-4f7f-918a-26537b05f073"
+  },
+  {
+    "title": "I Don't Care",
+    "artist": "Ed Sheeran & Justin Bieber"
+  },
+  {
+    "title": "I Don’t F**k With you",
+    "artist": "Big Sean Featuring E-40"
+  },
+  {
+    "title": "I Don’t Mind",
+    "artist": "Usher Featuring Juicy J"
+  },
+  {
+    "title": "I Don’t Want to Live Forever",
+    "artist": "Zayn & Taylor Swift"
+  },
+  {
+    "title": "I Feel it Coming",
+    "artist": "The Weeknd Featuring Daft Punk"
+  },
+  {
+    "title": "I Get The Bag",
+    "artist": "Gucci Mane Featuring Migos"
+  },
+  {
+    "title": "I Hate U I Love U",
+    "artist": "gnash Featuring Olivia O’brien"
+  },
+  {
+    "title": "I Know What You Did Last Summer",
+    "artist": "Shawn Mendes & Camila Cabello"
+  },
+  {
+    "title": "I Like it",
+    "artist": "Cardi B, Bad Bunny & J Balvin"
+  },
+  {
+    "title": "I Like It",
+    "artist": "Enrique Iglesias Featuring Pitbull"
+  },
+  {
+    "title": "I Love It",
+    "artist": "Icona Pop Featuring Charli XCX"
+  },
+  {
+    "title": "I Made It (Cash Money Heroes)",
+    "artist": "Kevin Rudolf Featuring Birdman, Jay Sean, & Lil Wayne"
+  },
+  {
+    "title": "I Need A Doctor",
+    "artist": "Dr. Dre Featuring Eminem & Skylar Grey"
+  },
+  {
+    "title": "I Need Your Love",
+    "artist": "Calvin Harris Featuring Ellie Goulding"
+  },
+  {
+    "title": "I Will Be Back One Day",
+    "artist": "Lord Huron",
+    "mbid": "0e0bea07-0f8b-4509-81e2-4815ad8fca95"
+  },
+  {
+    "title": "I Will Be Back One Day (instrumental)",
+    "artist": "Lord Huron",
+    "mbid": "a0ec32fa-1a57-478e-a440-4c9259e63bd8"
+  },
+  {
+    "title": "I Will Be Your Friend",
+    "artist": "Sade",
+    "mbid": "50ebf325-3bb2-4013-86fd-f3281cb315da"
+  },
+  {
+    "title": "I Will Be Your Friend (Lou Rawls House mix)",
+    "artist": "Sade",
+    "mbid": "cd7dd035-48ce-40c7-9dd1-796d6e8eb6f4"
+  },
+  {
+    "title": "I Wish for the Rain",
+    "artist": "Liana Flores",
+    "mbid": "b175e394-a373-4d7e-a3ba-054808df11e6"
+  },
+  {
+    "title": "I'm On One",
+    "artist": "DJ Khaled Featuring Drake, Rick Ross & Lil Wayne"
+  },
+  {
+    "title": "I've Never Been in Love Before",
+    "artist": "Laufey",
+    "mbid": "e9b7db9b-28ae-4d0f-9301-e73d2b73a276"
+  },
+  {
+    "title": "Immigrant (Live)",
+    "artist": "Sade",
+    "mbid": "6911b2e2-62dc-4ce7-98f4-e9bcd85c2846"
+  },
+  {
+    "title": "In The Warm Room",
+    "artist": "Kate Bush",
+    "mbid": "5aee5ebf-98ba-4c24-9a88-d3bf4304c6da"
+  },
+  {
+    "title": "In the Wind",
+    "artist": "Lord Huron",
+    "mbid": "0ef8d520-fce1-4bac-b9b3-f46daed272e5"
+  },
+  {
+    "title": "Indigo Night",
+    "artist": "Tamino",
+    "mbid": "364d5d9d-32cf-4d4c-9d7b-682d4953fb80"
+  },
+  {
+    "title": "Indigo Night (Live at Ancienne Belgique)",
+    "artist": "Tamino",
+    "mbid": "48a9eba9-e2d8-4764-adbd-af3af52622e8"
+  },
+  {
+    "title": "International Love",
+    "artist": "Pitbull Featuring Chris Brown"
+  },
+  {
+    "title": "Intervals",
+    "artist": "Tamino",
+    "mbid": "0fd342ee-0fb3-4453-9ec5-5dfd524a88d3"
+  },
+  {
+    "title": "Intervals (live at Jet Studio, Brussels, 2019)",
+    "artist": "Tamino feat. Nagham Zikrayat Orchestra",
+    "mbid": "2a4ddf53-1b1f-4ba2-8cc4-f92e2157e69f"
+  },
+  {
+    "title": "Interview 2: 1985 - Hounds of Love",
+    "artist": "Kate Bush",
+    "mbid": "961a66ba-3320-4eef-8675-6f60b2dea5fd"
+  },
+  {
+    "title": "Intro (La Javanaise) (live at La Cigale, Paris, 2019)",
+    "artist": "Tamino",
+    "mbid": "594abf78-2411-4c2d-8274-c22c90ca49b2"
+  },
+  {
+    "title": "Is It Wrong? (version 1)",
+    "artist": "Lana Del Rey",
+    "mbid": "a3057fef-4464-433d-80c2-9a0ec1d27361"
+  },
+  {
+    "title": "Is There Anybody Out There",
+    "artist": "Lord Huron",
+    "mbid": "1305ea65-dd64-4adc-a1e9-785245ce759f"
+  },
+  {
+    "title": "iSpy",
+    "artist": "KYLE Featuring Lil Yachty"
+  },
+  {
+    "title": "It Ain't Me",
+    "artist": "Kygo x Selena Gomez"
+  },
+  {
+    "title": "It All Comes Back",
+    "artist": "Lord Huron",
+    "mbid": "cbbae280-3b37-439d-9c1f-8ae90323a6c8"
+  },
+  {
+    "title": "It Could Happen to You",
+    "artist": "Laufey",
+    "mbid": "cd333ab3-dc9c-4a7c-879d-a8f9a8097dd3"
+  },
+  {
+    "title": "It Could Happen to You (live from home)",
+    "artist": "Laufey",
+    "mbid": "1069735e-7a51-420b-a211-c9ebd6feac4b"
+  },
+  {
+    "title": "It Hurts Me",
+    "artist": "Kate Bush",
+    "mbid": "f66da4d6-ed66-4897-a0f0-d45238d91e23"
+  },
+  {
+    "title": "It’s Only Love That Gets You Through",
+    "artist": "Sade",
+    "mbid": "72141080-f965-492e-a8c1-90accd9c7701"
+  },
+  {
+    "title": "İki Gün",
+    "artist": "Sade",
+    "mbid": "21fde2d8-9f01-48b1-a8df-2e1f25094874"
+  },
+  {
+    "title": "I’m a Firefighter",
+    "artist": "Cigarettes After Sex",
+    "mbid": "7cf70f5c-690a-4919-8550-9df642c0cc5f"
+  },
+  {
+    "title": "I’m the one",
+    "artist": "DJ Khaled Featuring Justin Bieber, Quavo, etc."
+  },
+  {
+    "title": "I’ve Never Been in Love Before",
+    "artist": "Laufey",
+    "mbid": "29c21441-b584-4b7a-a8e5-99f7efe851d1"
+  },
+  {
+    "title": "James and the Cold Gun",
+    "artist": "Kate Bush",
+    "mbid": "cb142134-8237-4b2b-8092-ca22c8283b32"
+  },
+  {
+    "title": "Jezebel",
+    "artist": "Sade",
+    "mbid": "7969e0e3-69d3-43c1-ba06-b5fb6c5d8d15"
+  },
+  {
+    "title": "John Wayne",
+    "artist": "Cigarettes After Sex",
+    "mbid": "5fcd9ee6-8fa0-49a5-ba8d-65070de8541b"
+  },
+  {
+    "title": "Jumpman",
+    "artist": "Drake & Future"
+  },
+  {
+    "title": "Jupiter Rainstorm",
+    "artist": "Liana Flores",
+    "mbid": "bdd9eae2-a07e-49ca-bc08-8ffb25ce11f8"
+  },
+  {
+    "title": "Just Another Day",
+    "artist": "Kate Bush",
+    "mbid": "fc94b8df-e3c4-42c2-8c59-be6db97f27a2"
+  },
+  {
+    "title": "Just Give Me A Reason",
+    "artist": "P!nk Featuring Nate Ruess"
+  },
+  {
+    "title": "Just Like Chet",
+    "artist": "Laufey",
+    "mbid": "f6e7a42d-db20-43ff-a448-1a9a493bf114"
+  },
+  {
+    "title": "Just Like Chet (instrumental)",
+    "artist": "Laufey",
+    "mbid": "5e4f1f09-055c-4b53-b7c5-a8820f1f39b6"
+  },
+  {
+    "title": "just my luck",
+    "artist": "Laufey",
+    "mbid": "8841b03e-4999-4435-adb3-8cb3add7d0b0"
+  },
+  {
+    "title": "K.",
+    "artist": "Cigarettes After Sex",
+    "mbid": "b35f707a-f06d-47a1-bf34-51f60cbac473"
+  },
+  {
+    "title": "K. (live)",
+    "artist": "Cigarettes After Sex",
+    "mbid": "e5552bef-a081-488b-86ea-bf0a09dfd9bf"
+  },
+  {
+    "title": "Kapılıp Gidersen",
+    "artist": "Sade",
+    "mbid": "80939be7-077d-4e22-9984-25610ad3573b"
+  },
+  {
+    "title": "Kashka From Baghdad",
+    "artist": "Kate Bush",
+    "mbid": "58e97621-3d56-4df8-b9dd-afa991a055d6"
+  },
+  {
+    "title": "Keep Looking",
+    "artist": "Sade",
+    "mbid": "30c8594f-90c4-4b24-ac05-840f129ff1d9"
+  },
+  {
+    "title": "Keep On Loving You",
+    "artist": "Cigarettes After Sex",
+    "mbid": "8b88cf19-d4b0-431a-ad7c-60c84f338802"
+  },
+  {
+    "title": "Keep on Loving You (live)",
+    "artist": "Cigarettes After Sex",
+    "mbid": "77830979-bddf-4185-821b-6864c7055c7c"
+  },
+  {
+    "title": "Kelepçe",
+    "artist": "Sade",
+    "mbid": "3768f422-0cde-4e42-abe8-95500d32b95c"
+  },
+  {
+    "title": "King of Sorrow",
+    "artist": "Sade",
+    "mbid": "dc1421f6-2e83-46b3-b523-422808238c87"
+  },
+  {
+    "title": "King of the Mountain (Kick Inside remix)",
+    "artist": "Kate Bush",
+    "mbid": "19da36e1-a8ba-45ca-98b4-f19d74d56cd8"
+  },
+  {
+    "title": "King’s Dead",
+    "artist": "Jay Rock, Kendrick Lamar, Future & James Blake"
+  },
+  {
+    "title": "Kiss It Off Me",
+    "artist": "Cigarettes After Sex",
+    "mbid": "e2d15212-0f87-43f6-aee7-81717e634462"
+  },
+  {
+    "title": "Kiss of Life",
+    "artist": "Sade",
+    "mbid": "55992770-d2e8-40f8-8966-551186786add"
+  },
+  {
+    "title": "kiss of life (dazegxd jungle edit)",
+    "artist": "Sade",
+    "mbid": "d7bdcf37-8ed4-43a4-bc29-50bc00cb71d0"
+  },
+  {
+    "title": "Kiss of Life (House mix)",
+    "artist": "Sade",
+    "mbid": "b76d8804-07ed-40c3-8333-9bd3e9d83f0d"
+  },
+  {
+    "title": "Kite",
+    "artist": "Kate Bush",
+    "mbid": "11d2eb14-450b-4f2b-b52b-cb917d273e80"
+  },
+  {
+    "title": "Knee Deep",
+    "artist": "Zac Brown Band Featuring Jimmy Buffett"
+  },
+  {
+    "title": "Koneko",
+    "artist": "Mei Semones feat. Liana Flores",
+    "mbid": "d73b0b92-3ee4-41ca-b9e2-22a212bfd1d3"
+  },
+  {
+    "title": "La Belle Fleur Sauvage",
+    "artist": "Lord Huron",
+    "mbid": "d78e4163-3011-4ae2-b2de-3aeba2d4f5c9"
+  },
+  {
+    "title": "La La La",
+    "artist": "Naughty Boy Featuring Sam Smith"
+  },
+  {
+    "title": "Last Night You Were a Dream",
+    "artist": "Lord Huron",
+    "mbid": "0fe598fb-fd08-4d30-a488-e5d1b1a96624"
+  },
+  {
+    "title": "Latch",
+    "artist": "Disclosure Featuring Sam Smith"
+  },
+  {
+    "title": "Laufey: Tiny Desk Concert",
+    "artist": "Laufey",
+    "mbid": "2bdf5977-e048-4c4d-a342-8b48763fb7be"
+  },
+  {
+    "title": "Lay Here",
+    "artist": "Cigarettes After Sex",
+    "mbid": "6aeec303-5e1c-4397-8db0-5cef6c97a074"
+  },
+  {
+    "title": "Lean On",
+    "artist": "Major Lazer & DJ Snake Featuring MO"
+  },
+  {
+    "title": "Lemon",
+    "artist": "N*E*R*D & Rihanna"
+  },
+  {
+    "title": "Let Me Love You",
+    "artist": "DJ Snake Featuring Justin Bieber"
+  },
+  {
+    "title": "Let You Break My Heart Again",
+    "artist": "Laufey",
+    "mbid": "98ca1991-b0e5-4c77-88d0-b83ee96591be"
+  },
+  {
+    "title": "Let's Go",
+    "artist": "Calvin Harris Featuring Ne-Yo"
+  },
+  {
+    "title": "Life Is Strange",
+    "artist": "Lord Huron",
+    "mbid": "08ad62ea-72cb-40f7-8ea9-58836a7edc3f"
+  },
+  {
+    "title": "Lifestyle",
+    "artist": "Rich Gang Featuring Young Thug & Rich Homie Quan"
+  },
+  {
+    "title": "Lighters",
+    "artist": "Bad Meets Evil Featuring Bruno Mars"
+  },
+  {
+    "title": "Lights Down Low",
+    "artist": "MAX Featuring gnash"
+  },
+  {
+    "title": "Like A G6",
+    "artist": "Far*East MoveMent Featuring Cataracs & Dev"
+  },
+  {
+    "title": "Like a Tatoo",
+    "artist": "Sade",
+    "mbid": "a7bd244d-29a6-4dd2-b33f-63a9077f8fef"
+  },
+  {
+    "title": "Like I’m Gonna Lose You",
+    "artist": "Meghan Trainor Featuring John Legend"
+  },
+  {
+    "title": "Live or Die (final)",
+    "artist": "Lana Del Rey",
+    "mbid": "994744ae-d5f5-4b7b-9bdc-6a9693a4eaa0"
+  },
+  {
+    "title": "Locked Away",
+    "artist": "R. City Featuring Adam Levine"
+  },
+  {
+    "title": "Lolita (demo 2)",
+    "artist": "Lana Del Rey",
+    "mbid": "f7e9cef6-454e-40a4-a59b-f2272151d983"
+  },
+  {
+    "title": "Lolita (demo 3)",
+    "artist": "Lana Del Rey",
+    "mbid": "c88e9888-acaa-4b71-a9ac-988c004c2568"
+  },
+  {
+    "title": "Lonesome Dreams",
+    "artist": "Lord Huron",
+    "mbid": "6d5cb1f1-f107-45c5-92fb-2b973ec9a605"
+  },
+  {
+    "title": "Long Lost",
+    "artist": "Lord Huron",
+    "mbid": "06cc5bc9-b529-4d91-ad7c-06c498814b7a"
+  },
+  {
+    "title": "Look Alive",
+    "artist": "BlocBoy JB Featuring Drake"
+  },
+  {
+    "title": "Look At Me Now",
+    "artist": "Chris Brown Featuring Lil Wayne & Busta Rhymes"
+  },
+  {
+    "title": "Looking Back",
+    "artist": "Lord Huron",
+    "mbid": "787630cf-7bb0-46a8-b526-0385c5db9128"
+  },
+  {
+    "title": "Louisa",
+    "artist": "Lord Huron",
+    "mbid": "a63d7fef-c28a-4fd6-b17f-2d1deb96fa6f"
+  },
+  {
+    "title": "Love Galore",
+    "artist": "SZA Featuring Travis Scott"
+  },
+  {
+    "title": "Love Is Stronger Than Pride",
+    "artist": "Sade",
+    "mbid": "6a39ec6b-5b2b-4e15-9135-22f6a93b5751"
+  },
+  {
+    "title": "Love Lies",
+    "artist": "Khalid & Normani"
+  },
+  {
+    "title": "Love Like Ghosts",
+    "artist": "Lord Huron",
+    "mbid": "c76f53f8-4f1c-4128-836e-04a954883976"
+  },
+  {
+    "title": "Love Me",
+    "artist": "Lil Wayne Featuring Drake & Future"
+  },
+  {
+    "title": "Love Me Harder",
+    "artist": "Ariana Grande & The Weekend"
+  },
+  {
+    "title": "Love Never Felt So Good",
+    "artist": "Michael Jackson & Justin Timberlake"
+  },
+  {
+    "title": "Love The Way You Lie",
+    "artist": "Eminem Featuring Rihanna"
+  },
+  {
+    "title": "Love.",
+    "artist": "Kendrick Lamar Featuring Zacari"
+  },
+  {
+    "title": "Lover Girl",
+    "artist": "Laufey",
+    "mbid": "b3f97c93-de02-4760-b91d-8364d2754248"
+  },
+  {
+    "title": "Lovers Rock",
+    "artist": "Sade",
+    "mbid": "5c9d024c-c417-4729-a8d8-d8e6e058f0b5"
+  },
+  {
+    "title": "Lovesick",
+    "artist": "Laufey",
+    "mbid": "deb79bca-8086-457e-97c2-3bc69b1323c9"
+  },
+  {
+    "title": "Low Life",
+    "artist": "Future Featuring the Weeknd"
+  },
+  {
+    "title": "Loyal",
+    "artist": "Chris Brown Featuring Lil Wayne & French Montana Or Too $hort Or Tyga"
+  },
+  {
+    "title": "Loyalty.",
+    "artist": "Kendrick Lamar Featuring Rihanna"
+  },
+  {
+    "title": "Lucky for Me",
+    "artist": "Laufey",
+    "mbid": "13b92732-d063-44b3-92ed-88ba07c36087"
+  },
+  {
+    "title": "Lucky Ones",
+    "artist": "Lana Del Rey",
+    "mbid": "7a76dc67-1e78-4b81-b555-1fea10066139"
+  },
+  {
+    "title": "Lullaby",
+    "artist": "Lord Huron",
+    "mbid": "086999dd-bd8c-4b4e-998e-e1bf29040dbe"
+  },
+  {
+    "title": "Madwoman",
+    "artist": "Laufey",
+    "mbid": "d557ef1c-a421-4b40-806c-66cbb309704a"
+  },
+  {
+    "title": "Magic",
+    "artist": "B.o.B Featuring Rivers Cuomo"
+  },
+  {
+    "title": "Margaret",
+    "artist": "Lana Del Rey feat. Bleachers"
+  },
+  {
+    "title": "Marilyn Monroe (Puppy Love)",
+    "artist": "Lana Del Rey",
+    "mbid": "733bb344-99c8-4395-8343-b50164460c5e"
+  },
+  {
+    "title": "Marvin Gaye",
+    "artist": "Charlie Puth Featuring Meghan Trainor"
+  },
+  {
+    "title": "Maybe",
+    "artist": "Kate Bush",
+    "mbid": "65d417ad-7360-4d37-8e43-e3ad5a24caaa"
+  },
+  {
+    "title": "ME!",
+    "artist": "Taylor Swift Featuring Brendon Urie"
+  },
+  {
+    "title": "Me, Myself & I",
+    "artist": "G-Eazy x Bebe Rexha"
+  },
+  {
+    "title": "Meant To Be",
+    "artist": "Bebe Rexha & Florida Georgia Line"
+  },
+  {
+    "title": "Meet Me in the City",
+    "artist": "Lord Huron",
+    "mbid": "9a4e3e8a-2e9c-48ab-a054-2b4cff310375"
+  },
+  {
+    "title": "Meet Me In The Woods",
+    "artist": "Lord Huron",
+    "mbid": "464982b8-e6b4-4543-b677-59c3178df7d2"
+  },
+  {
+    "title": "Meet Me in the Woods (radio edit)",
+    "artist": "Lord Huron",
+    "mbid": "d4e2ac6b-421e-4f6a-96dd-58533cc08dd3"
+  },
+  {
+    "title": "Memories to Keep",
+    "artist": "Lana Del Rey",
+    "mbid": "e8577edc-e687-4412-a124-72c93e48c77c"
+  },
+  {
+    "title": "Mercy",
+    "artist": "Kanye West, Big Sean, Pusha T, 2 Chainz"
+  },
+  {
+    "title": "Mermaid",
+    "artist": "Sade",
+    "mbid": "42640092-938d-49b7-a5ff-2a54f3a33175"
+  },
+  {
+    "title": "Mi Gente",
+    "artist": "J Balvin & Willy William Featuring Beyonce"
+  },
+  {
+    "title": "MIA",
+    "artist": "Bad Bunny Featuring Drake"
+  },
+  {
+    "title": "Middle",
+    "artist": "DJ Snake Featuring Bipolar Sunshine"
+  },
+  {
+    "title": "Mighty",
+    "artist": "Lord Huron",
+    "mbid": "b6abbcab-e766-485e-bc15-284098370039"
+  },
+  {
+    "title": "Mighty (Painted Palms remix)",
+    "artist": "Lord Huron",
+    "mbid": "8ac8e720-449e-4ff6-8d97-f42139fa8bf2"
+  },
+  {
+    "title": "Million Dollar Man (demo)",
+    "artist": "Lana Del Rey",
+    "mbid": "6c45d21f-3e30-46b9-910e-8d63278b4c51"
+  },
+  {
+    "title": "Misty",
+    "artist": "Laufey",
+    "mbid": "3f837cde-e2dc-4f93-b41e-3ab896f8b6c2"
+  },
+  {
+    "title": "Mna Na H-Eireann",
+    "artist": "Kate Bush",
+    "mbid": "9844d19b-83d0-4357-b6ce-c04f1282f670"
+  },
+  {
+    "title": "Moije Joue",
+    "artist": "Lana Del Rey",
+    "mbid": "dfd5d1a4-7c08-44ef-b8d1-829966935f92"
+  },
+  {
+    "title": "MoMent 4 Life",
+    "artist": "Nicki Minaj Featuring Drake"
+  },
+  {
+    "title": "Moments of Pleasure",
+    "artist": "Kate Bush",
+    "mbid": "ef84abe3-5046-417a-b797-eac4b2a41311"
+  },
+  {
+    "title": "Money In The Grave",
+    "artist": "Drake Featuring Rick Ross"
+  },
+  {
+    "title": "Moon Song",
+    "artist": "Lord Huron",
+    "mbid": "d368f33e-aea7-408d-99aa-a0e53f7685b0"
+  },
+  {
+    "title": "Moonbeam",
+    "artist": "Lord Huron",
+    "mbid": "38b154ab-e21f-45a2-94db-6deea0c5b7cd"
+  },
+  {
+    "title": "Motel 6 (Slo Gin Slo III)",
+    "artist": "Lana Del Rey",
+    "mbid": "5636c65e-7513-4cfd-8f1b-b2d42f94f7e2"
+  },
+  {
+    "title": "mother tongue",
+    "artist": "Liana Flores",
+    "mbid": "34d7ce2f-b2d8-4682-ab8a-d94eef84b797"
+  },
+  {
+    "title": "Motion Picture Soundtrack",
+    "artist": "Cigarettes After Sex",
+    "mbid": "60234ef6-0021-43b1-a242-ea5fd4d25990"
+  },
+  {
+    "title": "Motivation",
+    "artist": "Kelly Rowland Featuring Lil Wayne"
+  },
+  {
+    "title": "MotorSport",
+    "artist": "Migos, Nicki Minaj & Cardi B"
+  },
+  {
+    "title": "Moves Like Jagger",
+    "artist": "Maroon 5 Featuring Christina Aguilera"
+  },
+  {
+    "title": "Moving",
+    "artist": "Kate Bush",
+    "mbid": "bc10d975-2595-45fb-8e3e-2a65566fadeb"
+  },
+  {
+    "title": "Mr. Eclectic",
+    "artist": "Laufey",
+    "mbid": "5a416322-be40-4163-8799-b67e763ad1af"
+  },
+  {
+    "title": "Mr. Wrong",
+    "artist": "Sade",
+    "mbid": "07f29bb2-aefb-4b17-96b3-86158015b170"
+  },
+  {
+    "title": "Music of Human Destruction",
+    "artist": "Sade",
+    "mbid": "8d623976-ac82-4ab8-89af-0452dcb4411b"
+  },
+  {
+    "title": "My Chick Bad",
+    "artist": "Ludacris Featuring Nicki Minaj"
+  },
+  {
+    "title": "My Dearest Friend and Enemy",
+    "artist": "Tamino",
+    "mbid": "2b2b97a9-b211-48c9-88dd-87b3a5cc12da"
+  },
+  {
+    "title": "My First Kiss",
+    "artist": "3OH!3 Featuring Ke$ha"
+  },
+  {
+    "title": "My Heart’s Not in It",
+    "artist": "Matt Maltese with Liana Flores",
+    "mbid": "5dc143fe-0580-4326-b22b-4102267be4a0"
+  },
+  {
+    "title": "My Heroine",
+    "artist": "Tamino",
+    "mbid": "f39755c0-d9e3-4fbd-91ae-7b937e4f9578"
+  },
+  {
+    "title": "My Hitta",
+    "artist": "YG Featuring Jeezy & Rich Homie Quan"
+  },
+  {
+    "title": "My Last",
+    "artist": "Big Sean Featuring Chris Brown"
+  },
+  {
+    "title": "My Way",
+    "artist": "Fetty Wap Featuring Monty"
+  },
+  {
+    "title": "National Anthem",
+    "artist": "Lana Del Rey",
+    "mbid": "0feac813-1548-425b-b643-00cc52ab31a7"
+  },
+  {
+    "title": "National Anthem (Cashmere remix)",
+    "artist": "Lana Del Rey",
+    "mbid": "c8e4fee9-b11c-417f-bb96-49968a9f048e"
+  },
+  {
+    "title": "National Anthem (monologue)",
+    "artist": "Lana Del Rey",
+    "mbid": "bc8df142-d4d1-403f-907a-9f5377605c5e"
+  },
+  {
+    "title": "National Anthem (Westfunk & Steve Smart remix)",
+    "artist": "Lana Del Rey",
+    "mbid": "6252727d-e1da-4cc7-80be-a981c269ce66"
+  },
+  {
+    "title": "Negative Space",
+    "artist": "Sade Sade",
+    "mbid": "96113d66-616f-491a-8b9e-a02bb3cb7a9f"
+  },
+  {
+    "title": "Neon Moon",
+    "artist": "Cigarettes After Sex",
+    "mbid": "8c6235ee-9fb2-45b8-a0bf-c740a3f66a62"
+  },
+  {
+    "title": "Never Be Like You",
+    "artist": "Flume Featuring Kai"
+  },
+  {
+    "title": "Never Ever",
+    "artist": "Lord Huron",
+    "mbid": "8a444502-005a-4c40-88aa-3682925d756f"
+  },
+  {
+    "title": "Never Forget You",
+    "artist": "Zara Larsson & MNEK"
+  },
+  {
+    "title": "Never Let Me Go",
+    "artist": "Cigarettes After Sex",
+    "mbid": "1f73cd6c-fd45-428a-9d94-f65b14325655"
+  },
+  {
+    "title": "New Flame",
+    "artist": "Chris Brown Featuring Usher & Rick Ross"
+  },
+  {
+    "title": "Ni**as in Paris",
+    "artist": "Jay Z Kanye West"
+  },
+  {
+    "title": "Night Light (instrumental)",
+    "artist": "Laufey",
+    "mbid": "b1350fc4-b67b-4233-8dda-ab4eae369209"
+  },
+  {
+    "title": "night poem",
+    "artist": "Laufey",
+    "mbid": "d91e4918-7f88-4b20-a0b6-d986782c01b5"
+  },
+  {
+    "title": "Nightvisions",
+    "artist": "Liana Flores",
+    "mbid": "137a2123-c6cc-402c-8b6c-1ff3b753e1c9"
+  },
+  {
+    "title": "No Brainer",
+    "artist": "DJ Khaled Featuring Justin Bieber, Chance the Rapper & Quavo"
+  },
+  {
+    "title": "No Guidance",
+    "artist": "Chris Brown Featuring Drake"
+  },
+  {
+    "title": "No Hands",
+    "artist": "Waka Flocka Flame Featuring Roscoe Dash & Wale"
+  },
+  {
+    "title": "No Lie",
+    "artist": "2 Chainz Featuring Drake"
+  },
+  {
+    "title": "No Limit",
+    "artist": "G-Easy Featuring A$AP Rocky & Cardi B"
+  },
+  {
+    "title": "No Limit",
+    "artist": "Usher Featuring Young Thug"
+  },
+  {
+    "title": "No Mediocre",
+    "artist": "T.I. Featuring Iggy Azalea"
+  },
+  {
+    "title": "No Ordinary Love",
+    "artist": "Sade",
+    "mbid": "39f9c1e2-f945-4ce1-b6ef-8fe32d2f0231"
+  },
+  {
+    "title": "No Promises",
+    "artist": "Cheat Code Featuring Demi Lovato"
+  },
+  {
+    "title": "Nocturne (interlude)",
+    "artist": "Laufey",
+    "mbid": "11326380-0525-4572-89ea-d8de8cc1c343"
+  },
+  {
+    "title": "Not Dead Yet",
+    "artist": "Lord Huron",
+    "mbid": "6492cb83-647a-4279-bdd3-b373e0e2730d"
+  },
+  {
+    "title": "Nothin' On You",
+    "artist": "B.o.B Featuring Bruno Mars"
+  },
+  {
+    "title": "Nothing Can Come Between Us",
+    "artist": "Sade",
+    "mbid": "e9e2eb57-3fe5-4df3-9712-c35e63088881"
+  },
+  {
+    "title": "Nothing I Need",
+    "artist": "Lord Huron",
+    "mbid": "f4d9029e-66d8-4781-8159-54d6b8700b7f"
+  },
+  {
+    "title": "Nothing's Gonna Hurt You Baby (live)",
+    "artist": "Cigarettes After Sex",
+    "mbid": "4418d966-260a-4e8d-83d1-fdefa30a0525"
+  },
+  {
+    "title": "Nothing’s Gonna Hurt You Baby",
+    "artist": "Cigarettes After Sex",
+    "mbid": "a91bb323-f019-4897-a2c5-4c64408ddfa6"
+  },
+  {
+    "title": "Now and then",
+    "artist": "Liana Flores",
+    "mbid": "34b782e0-028b-4aaf-82fd-46e6bdddfe75"
+  },
+  {
+    "title": "O Brilho do Mal Ereto sob a Divina Purificação",
+    "artist": "Sade",
+    "mbid": "4837a094-332f-4474-8f26-ce28de334d1a"
+  },
+  {
+    "title": "Oh England My Lionheart",
+    "artist": "Kate Bush",
+    "mbid": "61baa693-5880-4521-9e19-39513da52ba0"
+  },
+  {
+    "title": "Oh England, My Lion Heart",
+    "artist": "Kate Bush",
+    "mbid": "e7b10fb4-5117-4d64-b202-0ec8e4935a19"
+  },
+  {
+    "title": "Old Town Road",
+    "artist": "Lil Nas X Featuring Billy Ray Cyrus"
+  },
+  {
+    "title": "OMG",
+    "artist": "Usher Featuring will.i.am"
+  },
+  {
+    "title": "On Our Way (demo)",
+    "artist": "Lana Del Rey",
+    "mbid": "37b500c4-9ac4-409a-84ab-de9af702889e"
+  },
+  {
+    "title": "On Repeat",
+    "artist": "Goody Grace feat. Cigarettes After Sex & Lexi Jayde",
+    "mbid": "90329b8e-1f7e-4771-8a9d-bf76f1b1f63f"
+  },
+  {
+    "title": "On The Floor",
+    "artist": "Jennifer Lopez Featuring Pitbull"
+  },
+  {
+    "title": "One Dance",
+    "artist": "Drake Featuring WizKid & Kyla"
+  },
+  {
+    "title": "One Kiss",
+    "artist": "Calvin Harris & Dua Lipa"
+  },
+  {
+    "title": "Only",
+    "artist": "Nicki Minaj Featuring Drake, Lil Wayne & Chris Brown"
+  },
+  {
+    "title": "Only Our Love",
+    "artist": "Tamino",
+    "mbid": "6b4e774d-f53f-456c-ae20-b8074fb35170"
+  },
+  {
+    "title": "Only Truth",
+    "artist": "Lana Del Rey",
+    "mbid": "130d8f9a-d84d-49a2-8617-056f35cf8162"
+  },
+  {
+    "title": "Opera House",
+    "artist": "Cigarettes After Sex",
+    "mbid": "8d0d6dd6-c73e-4e52-a894-c7c82c5a2004"
+  },
+  {
+    "title": "Orange-coloured day",
+    "artist": "liana flores"
+  },
+  {
+    "title": "Orange‐coloured day",
+    "artist": "Liana Flores",
+    "mbid": "6e51223b-5483-4aae-b363-2363bb97287e"
+  },
+  {
+    "title": "Organic Acid",
+    "artist": "Kate Bush",
+    "mbid": "047f831f-397c-4069-8c7f-f05e1256e67d"
+  },
+  {
+    "title": "Other (Outro)",
+    "artist": "Sade",
+    "mbid": "1574b9ca-5cfc-4c22-ac94-e8c7b06e55ab"
+  },
+  {
+    "title": "Our Last Day",
+    "artist": "Cigarettes After Sex",
+    "mbid": "ffddac78-b11c-4107-afb1-94fad28c4b63"
+  },
+  {
+    "title": "Overture",
+    "artist": "Laufey",
+    "mbid": "f847e9f7-f9a3-4104-88da-a4be31c4c180"
+  },
+  {
+    "title": "papercut",
+    "artist": "Liana Flores",
+    "mbid": "ca6d70c7-4e37-4166-addc-dfa97c665646"
+  },
+  {
+    "title": "Paradise",
+    "artist": "Sade",
+    "mbid": "b22f9baf-012c-402a-9717-e0242e196604"
+  },
+  {
+    "title": "Party Girl (version 1)",
+    "artist": "Lana Del Rey",
+    "mbid": "81922e09-62b9-45fa-a007-247bf9ef4deb"
+  },
+  {
+    "title": "Party Rock Anthem",
+    "artist": "LMFAO Featuring Lauren Bennett & GoonRock"
+  },
+  {
+    "title": "Payphone",
+    "artist": "Maroon 5 Featuring Wiz Khalifa"
+  },
+  {
+    "title": "Pearls (untitled House mix 3)",
+    "artist": "Sade",
+    "mbid": "c8212c3d-577a-4c34-80ae-203a894131a8"
+  },
+  {
+    "title": "Persephone",
+    "artist": "Tamino",
+    "mbid": "842f3302-2a95-453b-90f5-9cbc1f27a46d"
+  },
+  {
+    "title": "Persephone (Live at Ancienne Belgique)",
+    "artist": "Tamino",
+    "mbid": "e5207bba-1544-49cb-9297-501b11e5b6a4"
+  },
+  {
+    "title": "Pin Up Galore",
+    "artist": "Lana Del Rey",
+    "mbid": "e286356b-ef6f-4f15-bd58-bca2ad698ae6"
+  },
+  {
+    "title": "Pistol",
+    "artist": "Cigarettes After Sex",
+    "mbid": "34f2fea6-7e73-4939-ab96-f45f072a8b54"
+  },
+  {
+    "title": "Plain Jane",
+    "artist": "A$AP Ferg Featuring Nicki Minaj"
+  },
+  {
+    "title": "Playground (Another Lonely Day)",
+    "artist": "Lana Del Rey",
+    "mbid": "0275aa04-ea48-4ca9-9aed-d0266cb8849d"
+  },
+  {
+    "title": "Please Don't Cry",
+    "artist": "Cigarettes After Sex",
+    "mbid": "a311fbb2-0dd4-458e-9224-e7fc8168e4f2"
+  },
+  {
+    "title": "Please Me",
+    "artist": "Cardi B & Bruno Mars"
+  },
+  {
+    "title": "Point of Praxis",
+    "artist": "Sade Sade",
+    "mbid": "42762350-dcf0-405d-b21a-778cd5674ccc"
+  },
+  {
+    "title": "Pop Out",
+    "artist": "Polo G Featuring Lil Tjay"
+  },
+  {
+    "title": "Pop Style",
+    "artist": "Drake Featuring the Throne"
+  },
+  {
+    "title": "Post to Be",
+    "artist": "Omarion Featuring Chris Brown & Jhene Aiko"
+  },
+  {
+    "title": "Power Trip",
+    "artist": "J. Cole Featuring Miguel"
+  },
+  {
+    "title": "Powerglide",
+    "artist": "Rae Stremmurd & Juicy J"
+  },
+  {
+    "title": "Pray for Me",
+    "artist": "The Weeknd & Kendrick Lamar"
+  },
+  {
+    "title": "Price Tag",
+    "artist": "Jessie J Featuring B.o.B"
+  },
+  {
+    "title": "Problem",
+    "artist": "Ariana Grande Featuring Iggy Azalea"
+  },
+  {
+    "title": "Programme Start",
+    "artist": "Sade",
+    "mbid": "7c9a0eef-2b16-4d6e-94c8-0b6ed2349857"
+  },
+  {
+    "title": "Promise",
+    "artist": "Laufey",
+    "mbid": "614668fc-0b28-4e37-a220-535cce6d1da6"
+  },
+  {
+    "title": "Psycho",
+    "artist": "Post Malone Featuring Ty Dolla $ign"
+  },
+  {
+    "title": "Pure",
+    "artist": "Cigarettes After Sex",
+    "mbid": "9202d822-8d7b-46ba-9b91-2bba099af0b7"
+  },
+  {
+    "title": "Queen of the Gas Station (demo 1)",
+    "artist": "Lana Del Rey",
+    "mbid": "0cd353cc-b0c1-4a37-90b6-9d415b31137e"
+  },
+  {
+    "title": "Queen of the Gas Station (demo version 1)",
+    "artist": "Lana Del Rey",
+    "mbid": "c0044a91-f3e1-4d9e-9d07-f3455f57005a"
+  },
+  {
+    "title": "Questions for the Universe",
+    "artist": "Laufey",
+    "mbid": "55d9cb13-729e-456d-bb68-a304d2b78515"
+  },
+  {
+    "title": "Raise Me Up (demo version 2)",
+    "artist": "Lana Del Rey",
+    "mbid": "4e0f3a5c-40d7-4856-a52f-38e6aacf7fea"
+  },
+  {
+    "title": "Rake It Up",
+    "artist": "Yo Gotti Featuring Nicki Minaj"
+  },
+  {
+    "title": "Rather Be",
+    "artist": "Clean Bandit Featuring Jess Glynne"
+  },
+  {
+    "title": "Raven",
+    "artist": "Tamino",
+    "mbid": "1d7503e5-d590-448c-b4cb-43e08f16c7b9"
+  },
+  {
+    "title": "recently,",
+    "artist": "Liana Flores",
+    "mbid": "16fe2077-f5e5-4bf8-984c-4f464d808cb8"
+  },
+  {
+    "title": "Remind Me",
+    "artist": "Brad Paisley Duet With Carrie Underwood"
+  },
+  {
+    "title": "Resistance",
+    "artist": "Lana Del Rey",
+    "mbid": "8f6bbf6f-a560-4f2a-999a-d269b7f62e48"
+  },
+  {
+    "title": "Reverse",
+    "artist": "Tamino",
+    "mbid": "ebc0d897-a773-4433-9312-1efb59c9b75d"
+  },
+  {
+    "title": "Ric Flair Drip",
+    "artist": "Offset & Metro Boomin"
+  },
+  {
+    "title": "Ride",
+    "artist": "Lana Del Rey",
+    "mbid": "34abd43e-e321-425b-86a7-29c9b2e7272b"
+  },
+  {
+    "title": "Right Above It",
+    "artist": "Lil Wayne Featuring Drake"
+  },
+  {
+    "title": "rises the moon",
+    "artist": "Liana Flores",
+    "mbid": "9fb62336-68b7-43fa-a220-e7f3637c7cc5"
+  },
+  {
+    "title": "Rockabye",
+    "artist": "Clean Bandit Featuring Sean Paul & Anne-Marie"
+  },
+  {
+    "title": "Rocketeer",
+    "artist": "Far*East MoveMent Featuring Ryan Tedder"
+  },
+  {
+    "title": "Rockstar",
+    "artist": "Post Malone Featuring 21 Savage"
+  },
+  {
+    "title": "Roses",
+    "artist": "The Chainsmokers featuring Rozes"
+  },
+  {
+    "title": "Rubberband Girl",
+    "artist": "Kate Bush",
+    "mbid": "e0003473-a2d4-4af8-bffa-369760c519b4"
+  },
+  {
+    "title": "Run Towards Your Fears",
+    "artist": "Cigarettes After Sex",
+    "mbid": "f3dec805-f5c8-4977-a4d3-610c3319eca4"
+  },
+  {
+    "title": "Running Up That Hill",
+    "artist": "Kate Bush",
+    "mbid": "d4b29ff9-1870-45fb-8c2f-26fe998c8e0c"
+  },
+  {
+    "title": "Running Up That Hill (Ashley Beedle edit)",
+    "artist": "Kate Bush",
+    "mbid": "250015c5-4f5b-4951-ad64-9cbc0a6e89e2"
+  },
+  {
+    "title": "Running Up That Hill (Infusion remix)",
+    "artist": "Kate Bush",
+    "mbid": "8754da94-5f59-4214-bee8-899f318059a6"
+  },
+  {
+    "title": "Sabotage",
+    "artist": "Laufey",
+    "mbid": "17a112de-3d6d-4d9f-8eb6-0f2dc5b4daf9"
+  },
+  {
+    "title": "Sade Sade - De-Escalation",
+    "artist": "Sade Sade",
+    "mbid": "0bdf2367-0717-48f2-9829-27ca9a91634c"
+  },
+  {
+    "title": "Sade Sade - Reciprocity",
+    "artist": "Sade Sade",
+    "mbid": "adbfbd23-3711-45d5-888f-708da596e0fd"
+  },
+  {
+    "title": "Sally",
+    "artist": "Sade",
+    "mbid": "f437d501-e2b4-4f7c-b158-eb882b925206"
+  },
+  {
+    "title": "Salvatore",
+    "artist": "Lana Del Rey"
+  },
+  {
+    "title": "Same Love",
+    "artist": "Macklemore & Ryan Lewis Featuring Mary Lambert"
+  },
+  {
+    "title": "Sanctuary",
+    "artist": "Tamino feat. Mitski",
+    "mbid": "6639a719-82a3-4351-bf46-624afc99a324"
+  },
+  {
+    "title": "Sanpaku",
+    "artist": "Tamino",
+    "mbid": "35130154-9d82-448b-94b3-a1a315ddbc67"
+  },
+  {
+    "title": "Santa Claus Is Comin’ to Town",
+    "artist": "Laufey",
+    "mbid": "3e171f42-eea2-49f2-abf2-95b75db4a2fa"
+  },
+  {
+    "title": "Sat in Your Lap",
+    "artist": "Kate Bush",
+    "mbid": "47d4447c-dbdd-4608-907d-16106b5313af"
+  },
+  {
+    "title": "Satie's Gymnopedie No. 1: Symphony in Blue",
+    "artist": "Kate Bush",
+    "mbid": "39c060e0-0a43-46a2-a4bf-52b6ab17f213"
+  },
+  {
+    "title": "Savior Complex",
+    "artist": "Laufey",
+    "mbid": "e58d58b1-a152-4ae4-b30b-2b88fb556f7c"
+  },
+  {
+    "title": "Say Aah",
+    "artist": "Trey Songz Featuring Fabolous"
+  },
+  {
+    "title": "Say Something",
+    "artist": "A Great Big World & Christina Aguilera"
+  },
+  {
+    "title": "Say Something",
+    "artist": "Justin Timberlake Featuring Chris Stapleton"
+  },
+  {
+    "title": "Say Something",
+    "artist": "Timbaland Featuring Drake"
+  },
+  {
+    "title": "Say Yes to Heaven (AMANDUS 99 +++ DANZINGER 99 remix)",
+    "artist": "Lana Del Rey",
+    "mbid": "3064e324-de6a-46cb-9d5c-032752911640"
+  },
+  {
+    "title": "Say Yes to Heaven (sped up)",
+    "artist": "Lana Del Rey",
+    "mbid": "11f978ee-3a06-4014-9cfb-88a57f249fb8"
+  },
+  {
+    "title": "Scares Me Silly",
+    "artist": "Kate Bush",
+    "mbid": "2fc55cb6-1229-498f-a762-71a8f09ae03c"
+  },
+  {
+    "title": "Scarface",
+    "artist": "Lana Del Rey",
+    "mbid": "d79094cf-d17c-435f-9a78-cc3761ea572e"
+  },
+  {
+    "title": "Scream & Shout",
+    "artist": "will.i.am & Britney Spears"
+  },
+  {
+    "title": "Season of the Witch",
+    "artist": "Lana Del Rey",
+    "mbid": "bf660da6-6a76-47ab-9fa9-92213667d538"
+  },
+  {
+    "title": "Seasons (Live at Ancienne Belgique)",
+    "artist": "Tamino",
+    "mbid": "eb56198f-f308-434b-8e84-f76e07ed05fd"
+  },
+  {
+    "title": "Second Best",
+    "artist": "Laufey",
+    "mbid": "a423030d-1577-4106-85c4-56a015e783c5"
+  },
+  {
+    "title": "Secret of Life",
+    "artist": "Lord Huron",
+    "mbid": "58e44b93-d09a-4b61-a745-64262c655fb6"
+  },
+  {
+    "title": "See You Again",
+    "artist": "Wiz Khalifa Featuring Charlie Puth"
+  },
+  {
+    "title": "Seems Like Old Times",
+    "artist": "Laufey",
+    "mbid": "b25a313f-b5cf-43f6-a705-8c9ed950d7d9"
+  },
+  {
+    "title": "Senorita",
+    "artist": "Shawn Mendes & Camila Cabello"
+  },
+  {
+    "title": "Serial Killer",
+    "artist": "Lana Del Rey",
+    "mbid": "3959af2f-6b1a-4a80-9fd3-f5c68ef67403"
+  },
+  {
+    "title": "Sesame Syrup",
+    "artist": "Cigarettes After Sex",
+    "mbid": "16d1b707-8b6f-4049-a8e4-85b43ed4533d"
+  },
+  {
+    "title": "Setting Sun",
+    "artist": "Lord Huron",
+    "mbid": "f3f0352e-d588-4e43-9031-931fde5be697"
+  },
+  {
+    "title": "Sexy Chick",
+    "artist": "David Guetta Featuring Akon"
+  },
+  {
+    "title": "Shallow",
+    "artist": "Lady Gaga & Bradley Cooper"
+  },
+  {
+    "title": "She Knows",
+    "artist": "Ne-yo featuring Juicy J"
+  },
+  {
+    "title": "She Lit a Fire",
+    "artist": "Lord Huron",
+    "mbid": "b8fa12f2-3943-454b-8699-2c4200ffabb4"
+  },
+  {
+    "title": "She Lit a Fire (instrumental)",
+    "artist": "Lord Huron",
+    "mbid": "ae000cd1-4961-4db6-9991-3e4ffbe85f41"
+  },
+  {
+    "title": "She Will",
+    "artist": "Lil Wayne Featuring Drake"
+  },
+  {
+    "title": "Show Me",
+    "artist": "Kid Ink Featuring Chris Brown"
+  },
+  {
+    "title": "Side To Side",
+    "artist": "Ariana Grande Featuring Nicki Minaj"
+  },
+  {
+    "title": "Siempre Hay Esperanza",
+    "artist": "Sade",
+    "mbid": "66e15e1a-74f4-4166-84fa-fccc75656b1b"
+  },
+  {
+    "title": "Sign",
+    "artist": "Liana Flores",
+    "mbid": "fa7859e3-7b98-4c14-bbac-b0977495ecf0"
+  },
+  {
+    "title": "Silver Lining",
+    "artist": "Laufey",
+    "mbid": "7264dff4-0b5a-4e5d-8503-cb1b0862de36"
+  },
+  {
+    "title": "Silver Lining (live from Tokyo)",
+    "artist": "Laufey",
+    "mbid": "c819a5c7-392b-4b77-a75a-b6ab3aec9a63"
+  },
+  {
+    "title": "Silver Sable",
+    "artist": "Cigarettes After Sex",
+    "mbid": "bcec4d52-07d9-4e0d-8324-c179eb355534"
+  },
+  {
+    "title": "Silvershoes",
+    "artist": "Liana Flores",
+    "mbid": "bced82e3-cc6b-4ffb-a1bc-13764d3027b0"
+  },
+  {
+    "title": "Sinal",
+    "artist": "Liana Flores",
+    "mbid": "211ccd76-1297-49b4-99c0-c78ba3a4825a"
+  },
+  {
+    "title": "Sing",
+    "artist": "Cigarettes After Sex",
+    "mbid": "d9ad338f-7d05-4f94-b11c-bfc2eaa78950"
+  },
+  {
+    "title": "Skin",
+    "artist": "Sade",
+    "mbid": "a9c9f4ff-7b8b-4786-9cec-5b335bbc0b0a"
+  },
+  {
+    "title": "Sky Walker",
+    "artist": "Miguel Featuring Travis Scott"
+  },
+  {
+    "title": "Slide",
+    "artist": "Calvin Harris Featuring Frank Ocean & Migos"
+  },
+  {
+    "title": "Slippery",
+    "artist": "Migos Featuring Gucci Mane"
+  },
+  {
+    "title": "Slow Down",
+    "artist": "Laufey",
+    "mbid": "67b08de2-3ef4-4204-ae46-0ca817d2e895"
+  },
+  {
+    "title": "Slowly",
+    "artist": "Liana Flores",
+    "mbid": "9a898b44-a29a-4b93-8fea-3ce163d47fa6"
+  },
+  {
+    "title": "Smile",
+    "artist": "Tamino",
+    "mbid": "6dece186-91ee-4790-873e-375214c6435c"
+  },
+  {
+    "title": "Smooth Operator",
+    "artist": "Sade",
+    "mbid": "15a64594-ff66-4ac0-9249-ff447a61cd1e"
+  },
+  {
+    "title": "Snow White",
+    "artist": "Laufey",
+    "mbid": "c54f4e98-5815-450f-8930-732a2166a4f6"
+  },
+  {
+    "title": "So it goes",
+    "artist": "Liana Flores",
+    "mbid": "7e823e61-32c1-40df-a545-2892587951bf"
+  },
+  {
+    "title": "So It Goes",
+    "artist": "Tamino",
+    "mbid": "3a216012-3197-4009-98c4-e4c9543fc737"
+  },
+  {
+    "title": "So It Goes (Live at Ancienne Belgique)",
+    "artist": "Tamino",
+    "mbid": "8081c17e-5cf8-4415-bc0d-6959a0987cae"
+  },
+  {
+    "title": "So mysterious",
+    "artist": "Liana Flores",
+    "mbid": "6e6983aa-1e9e-4e22-990e-cde199c3a27d"
+  },
+  {
+    "title": "Softserve",
+    "artist": "Liana Flores",
+    "mbid": "a0e5b9f4-200f-456d-8b6e-df79789d6109"
+  },
+  {
+    "title": "Soldier of Love",
+    "artist": "Sade",
+    "mbid": "843ca620-8883-4618-92af-6de0773ad4b5"
+  },
+  {
+    "title": "Soldier of Love (main)",
+    "artist": "Sade",
+    "mbid": "3d98f0a9-6ab9-4849-a614-9641f7bffe2c"
+  },
+  {
+    "title": "Somebody",
+    "artist": "Natalie La Rose featuring Jeremih"
+  },
+  {
+    "title": "Somebody Already Broke My Heart",
+    "artist": "Sade",
+    "mbid": "bd566a64-d81b-4a94-9679-0097b6c19d6a"
+  },
+  {
+    "title": "Somebody That I Used To Know",
+    "artist": "Gotye Featuring Kimbra"
+  },
+  {
+    "title": "Somethin' Bad",
+    "artist": "Miranda Lambert Duet With Carrie Underwood"
+  },
+  {
+    "title": "Something Just Like This",
+    "artist": "The Chainsmokers & Coldplay"
+  },
+  {
+    "title": "Something Like a Song",
+    "artist": "Kate Bush",
+    "mbid": "8cb0f3fa-9e74-48a1-9444-8ef7c3daa06c"
+  },
+  {
+    "title": "Son of a Gun",
+    "artist": "Lord Huron",
+    "mbid": "bf3212da-56cd-41fb-9cca-74e9ef675790"
+  },
+  {
+    "title": "Song of a Gun",
+    "artist": "Lord Huron",
+    "mbid": "2e84cbe4-253b-4896-ab20-4a6e19d57014"
+  },
+  {
+    "title": "Spirit (Non album Track)",
+    "artist": "Sade",
+    "mbid": "04de9f0a-e2c1-41c8-872b-707fd99ad3b1"
+  },
+  {
+    "title": "Starboy",
+    "artist": "The Weeknd Featuring Daft Punk"
+  },
+  {
+    "title": "Starry Eyes",
+    "artist": "Cigarettes After Sex",
+    "mbid": "7f9ad89f-c6a5-4757-a9d0-9e8a2b4cb79f"
+  },
+  {
+    "title": "Starry Eyes (live)",
+    "artist": "Cigarettes After Sex",
+    "mbid": "aafa0695-7b33-4323-83c8-ed0fb93f6114"
+  },
+  {
+    "title": "Starving",
+    "artist": "Hailee Steinfeld & Grey Featuring Zedd"
+  },
+  {
+    "title": "Stay",
+    "artist": "Rihanna Featuring Mikky Ekko"
+  },
+  {
+    "title": "Stay",
+    "artist": "Zedd & Alessia Cara"
+  },
+  {
+    "title": "Stay The Night",
+    "artist": "Zedd Featuring Hayley Williams"
+  },
+  {
+    "title": "Stereo Hearts",
+    "artist": "Gym Class Heroes Featuring Adam Levine"
+  },
+  {
+    "title": "Stereo Love",
+    "artist": "Edward Maya & Vika Jigulina"
+  },
+  {
+    "title": "Still Empty",
+    "artist": "Lana Del Rey",
+    "mbid": "30b74929-3e3b-451d-9c23-e0990e417729"
+  },
+  {
+    "title": "Still in Love With You",
+    "artist": "Sade",
+    "mbid": "0f452922-e989-42bd-bf22-e33f4dca9193"
+  },
+  {
+    "title": "Stop Waiting",
+    "artist": "Cigarettes After Sex",
+    "mbid": "ad7425f0-7078-46c7-9e9a-ccc23ad4c76e"
+  },
+  {
+    "title": "Strange Phenomena",
+    "artist": "Kate Bush",
+    "mbid": "36eb9dc0-967a-4571-ac0d-bd0b2c854cf1"
+  },
+  {
+    "title": "Strangest shapes",
+    "artist": "Liana Flores",
+    "mbid": "de88e2b7-85b1-4272-8039-4654e0fbee29"
+  },
+  {
+    "title": "Street by Street",
+    "artist": "Laufey",
+    "mbid": "8af2025b-64de-460b-819f-745d00d4c48f"
+  },
+  {
+    "title": "Strip That Down",
+    "artist": "Liam Payne Featuring Quavo"
+  },
+  {
+    "title": "Studio",
+    "artist": "ScHoolboy Q Featuring BJ The Chicago Kid"
+  },
+  {
+    "title": "Sucker For Pain",
+    "artist": "Wiz Khalifa, Lil Wayne, & Imagine Dragons, etc."
+  },
+  {
+    "title": "Suit & Tie",
+    "artist": "Justin Timberlake Featuring JAY Z"
+  },
+  {
+    "title": "Summertime Sadness",
+    "artist": "Lana Del Rey",
+    "mbid": "440fcca0-8c8b-47f7-9cee-dcea55aca651"
+  },
+  {
+    "title": "Summertime Sadness",
+    "artist": "Lana Del Rey & Cedric Gervais"
+  },
+  {
+    "title": "Summertime Sadness (Cedric Gervais remix)",
+    "artist": "Lana Del Rey",
+    "mbid": "2cc5178b-2696-41c1-9c24-bedc9b9f5a81"
+  },
+  {
+    "title": "Summertime Sadness (Hannes Fischer Nightflight remix)",
+    "artist": "Lana Del Rey",
+    "mbid": "668ba974-3a76-47e6-bad7-385d6cd49112"
+  },
+  {
+    "title": "Summertime Sadness (MK Feel It in the Air remix (I Love House edit))",
+    "artist": "Lana Del Rey",
+    "mbid": "f251e710-1c4d-43a9-a88b-d1c96752633b"
+  },
+  {
+    "title": "Summertime Sadness (MK Feel It in the Air remix)",
+    "artist": "Lana Del Rey",
+    "mbid": "5a3dca1d-41a5-4cb6-8064-fc18bb24ebae"
+  },
+  {
+    "title": "Sun May Shine",
+    "artist": "Tamino",
+    "mbid": "185e736b-6514-458c-8903-fc87676757e0"
+  },
+  {
+    "title": "Sunflower",
+    "artist": "Tamino & Angèle",
+    "mbid": "e52df83e-a301-4b93-8019-4b5fbc8d191e"
+  },
+  {
+    "title": "Sunflower (Spider-Man: Into The Spider-Verse)",
+    "artist": "Post Malone & Swae Lee"
+  },
+  {
+    "title": "Sunsetz",
+    "artist": "Cigarettes After Sex",
+    "mbid": "4961c13b-d3f2-4d2f-a4bd-24ccb42e36f3"
+  },
+  {
+    "title": "Sunsetz (live)",
+    "artist": "Cigarettes After Sex",
+    "mbid": "d84de3cd-beba-4723-a465-a0167e3ced5d"
+  },
+  {
+    "title": "Sunsi",
+    "artist": "Kate Bush",
+    "mbid": "f811b3a1-885f-4929-9fee-f54edaf9d5c4"
+  },
+  {
+    "title": "Swalla",
+    "artist": "Jason Derulo Featuring Nicki Minaj & Ty Dolla $ign"
+  },
+  {
+    "title": "Sweet",
+    "artist": "Cigarettes After Sex",
+    "mbid": "9361a21e-c304-402d-9383-b114a538fc4f"
+  },
+  {
+    "title": "Sweet (single version)",
+    "artist": "Cigarettes After Sex",
+    "mbid": "5f311a92-057c-461f-843a-139860bc7ddf"
+  },
+  {
+    "title": "Sweet Nothing",
+    "artist": "Calvin Harris Featuring Florence Welch"
+  },
+  {
+    "title": "Sweetest Taboo",
+    "artist": "Sade",
+    "mbid": "214e5075-1e2d-4ad7-8cbd-5686201fdd1b"
+  },
+  {
+    "title": "Sweetest Taboo (extended version)",
+    "artist": "Sade",
+    "mbid": "be6b8c9d-a43b-4886-86b3-2ae1828d2b41"
+  },
+  {
+    "title": "Swervin",
+    "artist": "A Boogie Wit da Hoodie Featuring 6ix9ine"
+  },
+  {
+    "title": "Symphony in Blue",
+    "artist": "Kate Bush",
+    "mbid": "3bee65d5-7084-4d37-a66b-ec7db8daac9c"
+  },
+  {
+    "title": "Take Care",
+    "artist": "Drake Featuring Rihanna"
+  },
+  {
+    "title": "Taki Taki",
+    "artist": "DJ Snake Featuring Selena Gomez, Ozuna & Cardi B"
+  },
+  {
+    "title": "Talk Dirty",
+    "artist": "Jason Derulo Featuring 2 Chainz"
+  },
+  {
+    "title": "Taste",
+    "artist": "Tyga Featuring Offset"
+  },
+  {
+    "title": "Te Bote",
+    "artist": "Casper Magico, Nio Garcia, Darell, Nicky Jam, Ozuna & Bad Bunny"
+  },
+  {
+    "title": "Tejano Blue",
+    "artist": "Cigarettes After Sex",
+    "mbid": "7a69da33-dfd8-4ba1-ad66-7799ae0d0a43"
+  },
+  {
+    "title": "Telephone",
+    "artist": "Lady Gaga Featuring Beyonce"
+  },
+  {
+    "title": "Ten Dollar Ring (live)",
+    "artist": "Lana Del Rey",
+    "mbid": "670a6ea0-1f9f-4b02-9284-92626b850c90"
+  },
+  {
+    "title": "Thankful for Today",
+    "artist": "Lana Del Rey",
+    "mbid": "b2249fcc-15d4-434f-875e-4f4f932902a9"
+  },
+  {
+    "title": "The Balancer's Eye",
+    "artist": "Lord Huron",
+    "mbid": "00e80bbb-4d65-4a15-b6a9-4edcd10695bf"
+  },
+  {
+    "title": "The Birds Are Singing at Night",
+    "artist": "Lord Huron",
+    "mbid": "3b919932-8eb5-4497-a60e-4d6447ca8932"
+  },
+  {
+    "title": "The Choice Is Mine",
+    "artist": "Lana Del Rey",
+    "mbid": "8bfe89d6-9a87-4e38-964f-30d064fc6c8f"
+  },
+  {
+    "title": "The Christmas Waltz",
+    "artist": "Laufey",
+    "mbid": "a027ff13-7d7d-435d-b85c-567da732e5a3"
+  },
+  {
+    "title": "The Comedian",
+    "artist": "Lord Huron",
+    "mbid": "72897509-7383-413e-9f5a-53059acc6f3c"
+  },
+  {
+    "title": "The Confrontation",
+    "artist": "Kate Bush",
+    "mbid": "ff60d6b6-4bb5-48f5-8a9b-c75714a27b00"
+  },
+  {
+    "title": "The Crystal Ship",
+    "artist": "Cigarettes After Sex",
+    "mbid": "fac03259-0ce0-4bf5-a247-dc032075b3ba"
+  },
+  {
+    "title": "The Disbelieving Angel",
+    "artist": "Kate Bush",
+    "mbid": "6698316a-bd34-4c5f-90c5-3d1903cfbdc1"
+  },
+  {
+    "title": "The Fighter",
+    "artist": "Keith Urban Featuring Carrie Underwood"
+  },
+  {
+    "title": "The First Disciple",
+    "artist": "Tamino",
+    "mbid": "afdf8380-cc7f-48e6-98aa-fb1de8c943eb"
+  },
+  {
+    "title": "The Flame",
+    "artist": "Tamino",
+    "mbid": "c10c76bf-c274-4514-9a3f-c5a9414f832d"
+  },
+  {
+    "title": "The Hanging Tree",
+    "artist": "James Newton Howard Featuring Jennifer Lawrence"
+  },
+  {
+    "title": "The Infant Kiss / Night Scented Stock",
+    "artist": "Kate Bush",
+    "mbid": "93a7e667-3518-4640-b1d8-eb56dd952a1b"
+  },
+  {
+    "title": "The London",
+    "artist": "Young Thug, J. Cole & Travis Scott"
+  },
+  {
+    "title": "The Longing",
+    "artist": "Tamino",
+    "mbid": "c3fd4ecb-1698-4e0a-bae6-0f70a7f3dea9"
+  },
+  {
+    "title": "The Man Who Lives Forever",
+    "artist": "Lord Huron",
+    "mbid": "81048db7-03f7-46c7-a9c1-efc2b20cbfd3"
+  },
+  {
+    "title": "The Man With the Child in His Eyes",
+    "artist": "Kate Bush",
+    "mbid": "7cc17286-6b42-42d1-b395-0f4a1edfd356"
+  },
+  {
+    "title": "The Middle",
+    "artist": "Zedd, Maren Morris & Grey"
+  },
+  {
+    "title": "The Monster",
+    "artist": "Eminem Featuring Rihanna"
+  },
+  {
+    "title": "The Moon and the Sky",
+    "artist": "Sade",
+    "mbid": "8f7ce49e-9575-4e0b-9ac5-d6e1355f927c"
+  },
+  {
+    "title": "The Moon Doesn’t Mind",
+    "artist": "Lord Huron",
+    "mbid": "e037588d-8cb8-450d-8eb3-4518ab1e302a"
+  },
+  {
+    "title": "The Motto",
+    "artist": "Drake Featuring Lil Wayne"
+  },
+  {
+    "title": "The Nearness of You",
+    "artist": "Laufey",
+    "mbid": "78d047ef-55fe-4511-b564-b3976a4d9e9d"
+  },
+  {
+    "title": "The Next Best American Record (instrumental)",
+    "artist": "Lana Del Rey",
+    "mbid": "fb147e5b-5881-4c55-815f-bb770e9aad2a"
+  },
+  {
+    "title": "The Night Train",
+    "artist": "Cigarettes After Sex",
+    "mbid": "08b4aec4-1deb-4d68-8f04-589e07537181"
+  },
+  {
+    "title": "The Night We Met",
+    "artist": "Lord Huron",
+    "mbid": "88b337c9-0e69-415e-8146-25f6d1ee12c5"
+  },
+  {
+    "title": "The Rare Flower",
+    "artist": "Kate Bush",
+    "mbid": "f9fd48eb-4ab2-42a5-be24-c6f45c49c4ca"
+  },
+  {
+    "title": "The Red Shoes",
+    "artist": "Kate Bush",
+    "mbid": "56c38dc6-b35e-41d8-8b62-c7c118ff7457"
+  },
+  {
+    "title": "The Risk",
+    "artist": "Laufey",
+    "mbid": "510249ae-53d1-4d77-ab02-b23cc4690180"
+  },
+  {
+    "title": "The Risk (instrumental)",
+    "artist": "Laufey",
+    "mbid": "de8213b0-4c4b-4d8b-88b1-6e4208136be8"
+  },
+  {
+    "title": "The Song of Solomon",
+    "artist": "Kate Bush",
+    "mbid": "9ebe687f-b803-494c-b6ab-a07eb2caa4bf"
+  },
+  {
+    "title": "The Stranger",
+    "artist": "Lord Huron",
+    "mbid": "12745dbf-c7db-44c3-8a19-90b3da0c33f3"
+  },
+  {
+    "title": "The Sweetest Taboo",
+    "artist": "Sade",
+    "mbid": "6aa7cda1-d547-40c3-8ef3-18751069fecb"
+  },
+  {
+    "title": "The Water's Fine!",
+    "artist": "Liana Flores",
+    "mbid": "c88c9b31-4d03-406c-b2f7-de427cb53134"
+  },
+  {
+    "title": "The Way",
+    "artist": "Ariana Grande Featuring Mac Miller"
+  },
+  {
+    "title": "The way I say goodbye",
+    "artist": "Liana Flores",
+    "mbid": "15f46d33-a2bf-4805-932e-38939418077a"
+  },
+  {
+    "title": "The Wedding List",
+    "artist": "Kate Bush",
+    "mbid": "220221aa-c6f9-40d5-9ec6-af0b7e20f286"
+  },
+  {
+    "title": "The World Ender",
+    "artist": "Lord Huron",
+    "mbid": "ae87f6d9-a707-4fd0-9ae9-881315b03d2a"
+  },
+  {
+    "title": "The Yawning Grave",
+    "artist": "Lord Huron",
+    "mbid": "0de912c6-2fe0-4a0f-b77c-e338e1b70c70"
+  },
+  {
+    "title": "Them Heavy People",
+    "artist": "Kate Bush",
+    "mbid": "9bcf42df-cd4b-47d2-8082-bb9b682f2e66"
+  },
+  {
+    "title": "This Is How We Roll",
+    "artist": "Florida Georgia Line Featuring Luke Bryan"
+  },
+  {
+    "title": "This Is What You Came For",
+    "artist": "Calvin Harris Featuring Rihanna"
+  },
+  {
+    "title": "This Woman's Work (single mix)",
+    "artist": "Kate Bush",
+    "mbid": "05d452b5-649c-4ed0-b113-5d7b553865c7"
+  },
+  {
+    "title": "This Woman’s Work",
+    "artist": "Kate Bush",
+    "mbid": "5a053ed8-ccb7-44b7-b187-241284c2c094"
+  },
+  {
+    "title": "Thrift Shop",
+    "artist": "Macklemore & Ryan Lewis Featuring Wanz"
+  },
+  {
+    "title": "Tie Me Down",
+    "artist": "New Boyz Featuring Ray J"
+  },
+  {
+    "title": "Timber",
+    "artist": "Pitbull Featuring Ke$ha"
+  },
+  {
+    "title": "Time of Our Lives",
+    "artist": "Pitbull & Ne-Yo"
+  },
+  {
+    "title": "Time to Run",
+    "artist": "Lord Huron",
+    "mbid": "149c8a5d-878a-4f0a-9bf0-883511e02b0c"
+  },
+  {
+    "title": "Time’s Blur",
+    "artist": "Lord Huron",
+    "mbid": "f8bcef32-52d5-4397-bd85-6070c73bab18"
+  },
+  {
+    "title": "Titanium",
+    "artist": "David Guetta Featuring Sia"
+  },
+  {
+    "title": "to binge",
+    "artist": "Liana Flores",
+    "mbid": "8ceb3eac-1a20-417c-b057-95b8478eb04b"
+  },
+  {
+    "title": "Tonight (I'm Lovin' You)",
+    "artist": "Enrique Iglesias Featuring Ludacris & DJ Frank E"
+  },
+  {
+    "title": "Too Good",
+    "artist": "Drake Featuring Rihanna"
+  },
+  {
+    "title": "Too Little, Too Late",
+    "artist": "Laufey",
+    "mbid": "d6e2ea14-6202-4819-bee9-84d664b15de1"
+  },
+  {
+    "title": "Top of the City",
+    "artist": "Kate Bush",
+    "mbid": "c2b7fbad-f18d-4211-a572-0884f89fd006"
+  },
+  {
+    "title": "Touch",
+    "artist": "Cigarettes After Sex",
+    "mbid": "7d511839-beaf-42b4-8b36-e674ddc90cc3"
+  },
+  {
+    "title": "Tough Luck",
+    "artist": "Laufey",
+    "mbid": "31c1e416-09c5-4175-a007-d602a8b94d28"
+  },
+  {
+    "title": "Trouble (live from home)",
+    "artist": "Laufey",
+    "mbid": "e7ea36f9-95cf-4a86-8e1c-a201bc2450e0"
+  },
+  {
+    "title": "Troublemaker",
+    "artist": "Olly Murs Featuring Flo Rida"
+  },
+  {
+    "title": "Truffle Butter",
+    "artist": "Nicki Minaj Featuring Drake & Little Wayne"
+  },
+  {
+    "title": "Truly",
+    "artist": "Cigarettes After Sex",
+    "mbid": "083e1bcb-cfe6-4c8b-8ee3-414c188e9a47"
+  },
+  {
+    "title": "try again tomorrow",
+    "artist": "Liana Flores",
+    "mbid": "a31f121c-00b1-4d66-ac3f-581a7aa41a93"
+  },
+  {
+    "title": "Tuesday",
+    "artist": "I LOVE MAKONNEN Featuring Drake"
+  },
+  {
+    "title": "Tummy",
+    "artist": "Tamino",
+    "mbid": "ba337cc4-995d-4b0e-b6cb-962df4223886"
+  },
+  {
+    "title": "Tummy (demo)",
+    "artist": "Tamino",
+    "mbid": "e36751f6-0070-48bb-b26a-42c1dfb5d67e"
+  },
+  {
+    "title": "Turn Down For What",
+    "artist": "DJ Snake & Lil Jon"
+  },
+  {
+    "title": "Turn Me On",
+    "artist": "David Guetta Featuring Nicki Minaj"
+  },
+  {
+    "title": "Twenty Long Years",
+    "artist": "Lord Huron",
+    "mbid": "50a8c0b4-e50e-4fd1-ba79-ff3aaa035c0b"
+  },
+  {
+    "title": "Twizzler",
+    "artist": "Cigarettes After Sex",
+    "mbid": "215c4e50-019a-4e0a-b2c9-2430fe22a756"
+  },
+  {
+    "title": "Two Is Better Than One",
+    "artist": "Boys Like Girls Featuring Taylor Swift"
+  },
+  {
+    "title": "U.O.E.N.O.",
+    "artist": "Rocko Featuring Future & Rick Ross"
+  },
+  {
+    "title": "Ultraviolence (Prins Thomas Diskomiks)",
+    "artist": "Lana Del Rey",
+    "mbid": "790d301e-750c-478e-acd6-13b8505b0b97"
+  },
+  {
+    "title": "Unforgettable",
+    "artist": "French Montana Featuring Swae Lee"
+  },
+  {
+    "title": "Until the Night Turns",
+    "artist": "Lord Huron",
+    "mbid": "762307d9-4979-4353-8c0b-5cd6c102d47a"
+  },
+  {
+    "title": "Uptown Funk!",
+    "artist": "Mark Ronson Featuring Bruno Mars"
+  },
+  {
+    "title": "Valentine",
+    "artist": "Laufey",
+    "mbid": "b75f4a36-0237-4b63-8b80-45918a64ff77"
+  },
+  {
+    "title": "Velvet Crowbar",
+    "artist": "Lana Del Rey",
+    "mbid": "88c315e5-7481-4f10-bb0c-2b7cc33f0e5c"
+  },
+  {
+    "title": "Verses",
+    "artist": "Tamino",
+    "mbid": "db087daf-62b8-45a9-b242-a5f6e40f51b7"
+  },
+  {
+    "title": "Verses (live at La Cigale, Paris, 2019)",
+    "artist": "Tamino",
+    "mbid": "9d2f8b83-9f7b-4740-ba25-f78fd14f5077"
+  },
+  {
+    "title": "Vide Noir",
+    "artist": "Lord Huron",
+    "mbid": "ac25152f-c90c-4dac-a56e-31794f50fbf3"
+  },
+  {
+    "title": "Video Games",
+    "artist": "Lana Del Rey",
+    "mbid": "6d10289e-21a7-4f3f-8e2c-5f8ed8e94d0a"
+  },
+  {
+    "title": "Video Games (acoustic)",
+    "artist": "Lana Del Rey",
+    "mbid": "9836b050-5551-4791-a702-fe1ca9392f41"
+  },
+  {
+    "title": "Video Games (Ali Wilson Tekelec Remix)",
+    "artist": "Lana Del Rey",
+    "mbid": "b401b109-006a-41f9-bc4b-d9a5b13b43c5"
+  },
+  {
+    "title": "Video Games (performance edit)",
+    "artist": "Lana Del Rey",
+    "mbid": "4146ceee-0c2a-4ab6-931f-fa3163f4a3b8"
+  },
+  {
+    "title": "Video Games (Re.You edit)",
+    "artist": "Lana Del Rey",
+    "mbid": "9594ca0a-2b3c-4ca4-bcd3-9911fee72422"
+  },
+  {
+    "title": "Violin",
+    "artist": "Kate Bush",
+    "mbid": "bfd45c8a-5bca-419c-8fdb-66c4aa37f976"
+  },
+  {
+    "title": "w.o.t.h.",
+    "artist": "Tamino",
+    "mbid": "f411fda0-a725-4e87-8eaf-3baa21026351"
+  },
+  {
+    "title": "w.o.t.h. (live at La Cigale, Paris, 2019)",
+    "artist": "Tamino",
+    "mbid": "49fc4826-e248-4fd5-b2e3-2ce8d8d3d6f8"
+  },
+  {
+    "title": "Wait by the River",
+    "artist": "Lord Huron",
+    "mbid": "7e8b1d54-0d19-467c-8800-366f1dfd76dc"
+  },
+  {
+    "title": "Wake Up In The Sky",
+    "artist": "Gucci Mane X Bruno Mars X Kodak Black"
+  },
+  {
+    "title": "Walk It Talk It",
+    "artist": "Migos Featuring Drake"
+  },
+  {
+    "title": "War of the Hearts",
+    "artist": "Sade",
+    "mbid": "cd9c9dc7-e586-4d2d-992a-ba516442af96"
+  },
+  {
+    "title": "War of the Hearts (DJ Spinna Refreak)",
+    "artist": "Sade",
+    "mbid": "da26f032-58ff-4283-a164-fb0e330111cb"
+  },
+  {
+    "title": "Watch Me Go",
+    "artist": "Lord Huron",
+    "mbid": "877a98ff-58a0-4e17-a0b5-69c27cf90ac0"
+  },
+  {
+    "title": "Way Out There",
+    "artist": "Lord Huron",
+    "mbid": "4f3e0b4c-ba0e-400e-9078-ce321e810435"
+  },
+  {
+    "title": "We Are Young",
+    "artist": "fun. Featuring Janelle Monae"
+  },
+  {
+    "title": "We Don’t Talk Anymore",
+    "artist": "Charlie Puth Featuring Selena Gomez"
+  },
+  {
+    "title": "We Found Love",
+    "artist": "Rihanna Featuring Calvin Harris"
+  },
+  {
+    "title": "We Run The Night",
+    "artist": "Havana Brown Featuring Pitbull"
+  },
+  {
+    "title": "West Coast",
+    "artist": "Lana Del Rey",
+    "mbid": "159ab71b-d039-4704-9f37-7a4baea5366a"
+  },
+  {
+    "title": "West Coast (acoustic version)",
+    "artist": "Lana Del Rey",
+    "mbid": "a73c90d5-410d-4d02-bca4-75bc7f2ee9fd"
+  },
+  {
+    "title": "West Coast (Alle Farben remix)",
+    "artist": "Lana Del Rey",
+    "mbid": "f5c63d78-3e3a-4ef4-8232-4f7b1782f062"
+  },
+  {
+    "title": "West Coast (alternative version)",
+    "artist": "Lana Del Rey",
+    "mbid": "4def0abd-4927-4a79-9008-052859b6f5cc"
+  },
+  {
+    "title": "What Do It Mean",
+    "artist": "Lord Huron",
+    "mbid": "c9df2a1e-38c8-4a77-b0d9-95d28c0fbdc2"
+  },
+  {
+    "title": "What Ifs",
+    "artist": "Kane Brown Featuring Lauren Alaina"
+  },
+  {
+    "title": "What Love Will Do to You",
+    "artist": "Laufey",
+    "mbid": "8e1f4ad9-f0cb-4a75-8669-007bb4607202"
+  },
+  {
+    "title": "What Lovers Do",
+    "artist": "Maroon 5 Featuring SZA"
+  },
+  {
+    "title": "What's My Name?",
+    "artist": "Rihanna Featuring Drake"
+  },
+  {
+    "title": "When the Night Is Over",
+    "artist": "Lord Huron",
+    "mbid": "251d82ef-7d64-42c9-8185-8323239797c4"
+  },
+  {
+    "title": "When Will I See You Again",
+    "artist": "Lord Huron",
+    "mbid": "24c35897-ad7c-4505-931b-cda1136e7942"
+  },
+  {
+    "title": "When Will I See You Again (Markaholic remix)",
+    "artist": "Lord Huron",
+    "mbid": "82c1d9d7-4235-4b99-9302-0a0326f58b47"
+  },
+  {
+    "title": "Where Are U Now",
+    "artist": "Skrillex & Diplo with Justin Bieber"
+  },
+  {
+    "title": "Where Did the Time Go",
+    "artist": "Lord Huron",
+    "mbid": "fba1188c-954e-4668-9cb9-61f8d9614a81"
+  },
+  {
+    "title": "Where or When",
+    "artist": "Laufey",
+    "mbid": "232290fa-6414-4b2a-95e4-177dda6aff3a"
+  },
+  {
+    "title": "Where Them Girls At",
+    "artist": "David Guetta Featuring Flo Rida & Nicki Minaj"
+  },
+  {
+    "title": "Where's My Heart",
+    "artist": "Cigarettes After Sex",
+    "mbid": "7455ad6c-092a-41fd-87e8-dd1ae2be5760"
+  },
+  {
+    "title": "While You Were Sleeping",
+    "artist": "Laufey",
+    "mbid": "ea0ee8ab-89dc-46e2-8abe-5cf0622b4c7b"
+  },
+  {
+    "title": "White Walls",
+    "artist": "Macklemore & Ryan Lewis Featuring ScHoolboy Q & Hollis"
+  },
+  {
+    "title": "Why Can’t We Live Together",
+    "artist": "Sade",
+    "mbid": "660d94ab-a9d7-452b-b1a7-408d8ea04920"
+  },
+  {
+    "title": "Wiggle",
+    "artist": "Jason Derulo Featuring Snoop Dogg"
+  },
+  {
+    "title": "Wild Man (Remastered Shimmer)",
+    "artist": "Kate Bush",
+    "mbid": "74ce8c8f-9fd8-47b0-be34-e94f68fffc29"
+  },
+  {
+    "title": "Wild Ones",
+    "artist": "Flo Rida Featuring Sia"
+  },
+  {
+    "title": "Wild Thoughts",
+    "artist": "DJ Khaled Featuring Rihanna & Bryson Tiller"
+  },
+  {
+    "title": "Willow",
+    "artist": "Tamino",
+    "mbid": "ba7ee330-783c-4a05-bb57-a1b77d1c6669"
+  },
+  {
+    "title": "Willow (live)",
+    "artist": "Tamino",
+    "mbid": "686af3ca-674d-4a9c-a7ab-1e87f939af63"
+  },
+  {
+    "title": "Wired",
+    "artist": "Sade",
+    "mbid": "bb859d8a-b7cd-4f7c-b8c8-1e527901d4ae"
+  },
+  {
+    "title": "Without You",
+    "artist": "David Guetta Featuring Usher"
+  },
+  {
+    "title": "Wolves",
+    "artist": "Selena Gomez X Marshmello"
+  },
+  {
+    "title": "Woman With a Crow (The Last Train)",
+    "artist": "Cigarettes After Sex",
+    "mbid": "2d24d586-e05d-40d4-bb68-bd1add4f596a"
+  },
+  {
+    "title": "Work",
+    "artist": "Rihanna Featuring Drake"
+  },
+  {
+    "title": "Work From Home",
+    "artist": "Fifth Harmony Featuring Ty Dolla $ign"
+  },
+  {
+    "title": "World Ender",
+    "artist": "Lord Huron",
+    "mbid": "6f3ed3e0-5d31-4056-a6bc-ae963a39624e"
+  },
+  {
+    "title": "Worth It",
+    "artist": "Fifth Harmony Featuring Kid Ink"
+  },
+  {
+    "title": "Wow",
+    "artist": "Kate Bush",
+    "mbid": "e9c99b89-7d7d-45b8-a51d-0b54035d94e9"
+  },
+  {
+    "title": "Written In The Stars",
+    "artist": "Tinie Tempah Featuring Eric Turner"
+  },
+  {
+    "title": "Wuthering Heights",
+    "artist": "Kate Bush",
+    "mbid": "84819891-435f-4522-8309-21eec4dfb450"
+  },
+  {
+    "title": "X",
+    "artist": "Nicky Jam x J Balvin"
+  },
+  {
+    "title": "X’s",
+    "artist": "Cigarettes After Sex",
+    "mbid": "c14c1d03-d6ad-4a7f-9a7b-b7d1c7baf898"
+  },
+  {
+    "title": "Yes Indeed",
+    "artist": "Lil Baby & Drake"
+  },
+  {
+    "title": "You",
+    "artist": "Cigarettes After Sex",
+    "mbid": "4a2ca8f9-5a90-4f6b-b443-5189ee986a52"
+  },
+  {
+    "title": "You And Tequila",
+    "artist": "Kenny Chesney Featuring Grace Potter"
+  },
+  {
+    "title": "You Don’t Own Me",
+    "artist": "Tamino",
+    "mbid": "48748bad-bcbd-4dc0-8e42-57767832fa49"
+  },
+  {
+    "title": "You Know you like it",
+    "artist": "DJ Snake & AlunaGeorge"
+  },
+  {
+    "title": "You Make Me Feel...",
+    "artist": "Cobra Starship Featuring Sabi"
+  },
+  {
+    "title": "You Were the Stars",
+    "artist": "Kate Bush",
+    "mbid": "319ec723-71cd-4ccd-8263-c676b25eee4a"
+  },
+  {
+    "title": "You're All I Want",
+    "artist": "Cigarettes After Sex",
+    "mbid": "950dce65-0860-48fc-a00f-8cc9521fff72"
+  },
+  {
+    "title": "Young & Dumb",
+    "artist": "Cigarettes After Sex",
+    "mbid": "138649dc-2914-45b2-9427-1a4b5c29ccd8"
+  },
+  {
+    "title": "Young and Beautiful",
+    "artist": "Lana Del Rey",
+    "mbid": "aa9cdaf8-b8f4-42ad-92a3-d0c3d66bfcb1"
+  },
+  {
+    "title": "Young and Beautiful (Dan Heath's Orchestral version)",
+    "artist": "Lana Del Rey",
+    "mbid": "0afbf021-f74a-4841-b00a-99b682c4d7f0"
+  },
+  {
+    "title": "Young and Beautiful (DH orchestral version)",
+    "artist": "Lana Del Rey",
+    "mbid": "603f0c19-cf20-4243-8d2d-cbddd5b0082e"
+  },
+  {
+    "title": "Young and Beautiful (Jazz version at Gatsby's Mansion)",
+    "artist": "Lana Del Rey",
+    "mbid": "3b05f556-f1f7-4aa1-8a2d-53107ad95965"
+  },
+  {
+    "title": "Young and Beautiful (Paradise version)",
+    "artist": "Lana Del Rey",
+    "mbid": "232cc640-fafe-4dc2-8363-0d8c8bd6c989"
+  },
+  {
+    "title": "Young Forever",
+    "artist": "Jay-Z + Mr. Hudson"
+  },
+  {
+    "title": "Young, Wild & Free",
+    "artist": "Snoop Dogg & Wiz Khalifa Featuring Bruno Mars"
+  },
+  {
+    "title": "Your Hair Should Be Black and Long",
+    "artist": "Cigarettes After Sex",
+    "mbid": "a2791fab-f558-4b9d-a080-dcc7152e1b7b"
+  },
+  {
+    "title": "Your Hair Should Be Blonde + Long",
+    "artist": "Cigarettes After Sex",
+    "mbid": "21c252c7-a43a-482f-8cd9-318972c545b1"
+  },
+  {
+    "title": "Your Love Is King",
+    "artist": "Sade",
+    "mbid": "023947aa-6a87-47de-a690-b4d61dbabe5a"
+  },
+  {
+    "title": "Your Love Is King (album version)",
+    "artist": "Sade",
+    "mbid": "ea812124-b28b-4483-84b6-a6e310813fae"
+  },
+  {
+    "title": "Your Other Life",
+    "artist": "Lord Huron",
+    "mbid": "102b52db-4b76-429e-a924-6ddaece71792"
+  },
+  {
+    "title": "You’re Not the Man",
+    "artist": "Sade",
+    "mbid": "7fc20bc2-4da3-4159-8328-c433e6e9b8d4"
+  },
+  {
+    "title": "You’re the Only Good Thing in My Life",
+    "artist": "Cigarettes After Sex",
+    "mbid": "92b4de7a-aa8b-4cf8-b61b-b95b5520c6a0"
+  },
+  {
+    "title": "ZEZE",
+    "artist": "Kodak Black Featuring Travis Scott & Offset"
+  },
+  {
+    "title": "“When the sun…”",
+    "artist": "Liana Flores",
+    "mbid": "d24beadf-abeb-4ec4-b2cd-8c63fa760d04"
+  }
+]

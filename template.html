@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en" class="intro-active">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#020e32"><meta name="description" content="Seven little surprises, tucked into a sky made just for you."><title>The Malaky Way</title><link rel="icon" type="image/svg+xml" href="favicon.svg"><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="disco.css"><link rel="stylesheet" href="fortune.css"><link rel="stylesheet" href="museum.css"><script src="surprises.js" defer></script><script src="app.js" defer></script></head>
+<body>
+<main inert aria-hidden="true">
+<section class="universe" aria-label="Explore seven birthday stars">
+<div class="sky">
+<img class="layer base" src="sky-render.svg" alt="" draggable="false">
+<div class="layer twinkles" aria-hidden="true"><!-- TWINKLES --></div>
+<svg class="layer interactions" viewBox="0 0 167 94" aria-label="Seven surprise stars"><!-- STARS --></svg>
+<div class="layer moving-clouds" aria-hidden="true"><img class="cloud-drift" src="moving-clouds-render.svg" alt="" draggable="false"></div>
+<img class="layer bottom-cloud" src="bottom-cloud-render.svg" alt="" draggable="false">
+</div>
+</section>
+<div class="shooting-star-stage" aria-label="Occasional shooting star"><button class="shooting-star" aria-label="Catch the shooting star" hidden><img src="shooting-star/frame-1.png" width="90" height="60" alt="" draggable="false"></button></div>
+<div class="companion-float">
+<div class="thought-cloud" id="character-message" role="status" hidden>I think the stars are looking at you.</div>
+<button class="companion-button" aria-label="Talk to the floating character" aria-expanded="false" aria-controls="character-message"><img class="companion" src="cursor/frame-large-0.png" width="128" height="128" alt="" draggable="false"></button>
+</div>
+<div class="explore"><p class="hint">Hover to find a little light. Tap a star to open it.</p><div class="progress"><span id="dots" aria-hidden="true"></span><p id="progress" role="status" aria-live="polite">0 of 7 little discoveries</p></div><button class="final-button" id="final" disabled>A last little wish <span aria-hidden="true">↗</span></button><p class="unlock" id="unlock">Find all seven stars to open your last wish.</p></div>
+</main>
+<section class="intro-scene" id="intro-scene" aria-label="Birthday space transmission">
+<button class="intro-advance" id="intro-advance" type="button" aria-label="Continue transmission" disabled>
+<span class="transmission-card" id="transmission-card" hidden>
+<svg class="transmission-art" viewBox="0 20 167 50" aria-hidden="true"><image href="intro-dialogue.svg" width="167" height="94"/></svg>
+<span class="transmission-text" id="transmission-text" aria-live="polite"></span>
+</span>
+<span class="license-reveal" id="license-reveal" hidden><img src="rocketship-license.svg" alt="Your official Rocketship License" width="102" height="73" draggable="false"></span>
+<span class="transmission-hint" id="transmission-hint" hidden>Click to continue <span aria-hidden="true">▸</span></span>
+</button>
+<div class="camera-flash" id="camera-flash" aria-hidden="true"></div>
+</section>
+<footer><span>A sky full of small things. A whole lot of love.</span><span>MADE JUST FOR YOU</span></footer>
+<dialog id="surprise" aria-labelledby="dialog-title"><button class="close" aria-label="Close surprise">×</button><p class="eyebrow" id="dialog-kind"></p><h2 id="dialog-title"></h2><p id="dialog-body"></p><a id="song-link" target="_blank" rel="noopener noreferrer" hidden>Listen to our song ↗</a><p class="dialog-note" id="dialog-note"></p></dialog>
+<noscript><p>Please enable JavaScript to open the birthday surprises.</p></noscript>
+<dialog id="disco" class="disco-window" aria-labelledby="disco-title">
+<button id="disco-close" class="disco-close" type="button" aria-label="Close Disco"><img src="disco-art/closeButton.svg" alt="" draggable="false"></button>
+<header class="disco-header"><h2 id="disco-title"><img src="disco-art/title.svg" alt="Music guessing" draggable="false"></h2></header>
+<div id="disco-game">
+<p class="disco-subtitle">Listen to the song and guess the name!</p>
+<p id="disco-round" class="disco-round">TRACK 01 / 10</p>
+<div class="disco-player">
+<div class="disco-player-top"><button id="disco-play" class="disco-play" type="button" aria-label="Play snippet" aria-pressed="false"><img src="disco-art/playButton.svg" alt="" draggable="false"></button><div class="disco-equalizer" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><span class="disco-spark" aria-hidden="true">✦</span></div>
+<div class="disco-timeline"><input id="disco-seek" type="range" min="0" max="15" step="0.05" value="0" aria-label="Snippet playback position"><output id="disco-time">0:00 / 0:15</output></div>
+<audio preload="none"></audio>
+</div>
+<form id="disco-form" autocomplete="off">
+<div class="disco-answer-wrap"><label class="disco-sr-only" for="disco-answer">Song name</label><input id="disco-answer" type="text" placeholder="Type your answer..." maxlength="180" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="disco-suggestions" spellcheck="false" enterkeyhint="done"><ul id="disco-suggestions" role="listbox" aria-label="Matching songs" hidden></ul></div>
+<button id="disco-submit" class="disco-action" type="submit"><img src="disco-art/SubmitButton.svg" alt="" draggable="false"><span>SUBMIT</span></button>
+</form>
+<div id="disco-hearts" class="disco-hearts" role="img" aria-label="3 of 3 chances left"><span aria-hidden="true"><img src="disco-art/heart-frame-0.png" alt="" draggable="false"></span><span aria-hidden="true"><img src="disco-art/heart-frame-0.png" alt="" draggable="false"></span><span aria-hidden="true"><img src="disco-art/heart-frame-0.png" alt="" draggable="false"></span></div>
+<p id="disco-feedback" class="disco-feedback" role="status" aria-live="polite"></p>
+<button id="disco-next" class="disco-next" type="button" hidden>Next song ▸</button>
+<p class="disco-footnote">15 seconds · 3 chances · replay as often as you like</p>
+</div>
+<section id="disco-finale" hidden><p class="disco-subtitle">Every song was a little clue.</p><h3 tabindex="-1">Your playlist, written in the stars</h3><p id="disco-score"></p><ol id="disco-playlist"></ol><button id="disco-replay" class="disco-action" type="button">PLAY AGAIN</button></section>
+</dialog>
+<script src="song-catalog.js" defer></script>
+<dialog id="fortune" class="disco-window fortune-window" aria-labelledby="fortune-title">
+<button id="fortune-close" class="disco-close" type="button" aria-label="Close Fortune"><img src="disco-art/closeButton.svg" alt="" draggable="false"></button>
+<h2 id="fortune-title">FORTUNE</h2>
+<div id="fortune-idle">
+<p class="fortune-invitation">The crystal ball is waiting for you.</p>
+<img class="fortune-candle candle-left" src="fortune-art/candle-new.gif" alt="" draggable="false">
+<button id="fortune-ball" class="fortune-ball" type="button" aria-label="Touch the crystal ball to hear your fortune"><img src="fortune-art/crystal-ball.svg" alt="" draggable="false"></button>
+<img class="fortune-candle candle-right" src="fortune-art/candle-new.gif" alt="" draggable="false">
+<img class="fortune-crystal crystal-left" src="fortune-art/side-crystal.svg" alt="" draggable="false">
+<img class="fortune-crystal crystal-right" src="fortune-art/side-crystal.svg" alt="" draggable="false">
+<p class="fortune-touch">Touch the crystal ball ▸</p>
+</div>
+<button id="fortune-dialogue" class="fortune-dialogue" type="button" aria-label="Continue fortune" hidden>
+<img src="fortune-art/dialogueFrame.svg" alt="" draggable="false">
+<span id="fortune-text" class="fortune-text" aria-live="polite"></span>
+</button>
+<p id="fortune-hint" class="fortune-hint" hidden>Click to continue ▸</p>
+<button id="fortune-again" class="fortune-again" type="button" hidden>HEAR IT AGAIN</button>
+<audio id="fortune-music" src="audio/wizards-theme.mp3" loop preload="none"></audio>
+</dialog>
+<dialog id="museum" class="museum-window" aria-labelledby="museum-title">
+<h2 id="museum-title" class="disco-sr-only">Museum</h2>
+<div id="museum-gallery">
+<img class="museum-room" src="museum-art/background.svg" alt="" draggable="false">
+<button class="museum-exhibit" type="button" data-exhibit="blanket" style="left:13.812155%;top:23.703704%;width:15.469613%;height:27.407407%"><img src="museum-art/blanket-painting.svg" alt="" draggable="false" style="clip-path:polygon(46.428571% 0.000000%,46.428571% 2.702703%,42.857143% 2.702703%,42.857143% 5.405405%,3.571429% 5.405405%,3.571429% 8.108108%,0.000000% 8.108108%,0.000000% 10.810811%,0.000000% 10.810811%,0.000000% 13.513514%,0.000000% 13.513514%,0.000000% 16.216216%,3.571429% 16.216216%,3.571429% 18.918919%,3.571429% 18.918919%,3.571429% 21.621622%,3.571429% 21.621622%,3.571429% 24.324324%,3.571429% 24.324324%,3.571429% 27.027027%,3.571429% 27.027027%,3.571429% 29.729730%,3.571429% 29.729730%,3.571429% 32.432432%,3.571429% 32.432432%,3.571429% 35.135135%,3.571429% 35.135135%,3.571429% 37.837838%,3.571429% 37.837838%,3.571429% 40.540541%,3.571429% 40.540541%,3.571429% 43.243243%,3.571429% 43.243243%,3.571429% 45.945946%,3.571429% 45.945946%,3.571429% 48.648649%,3.571429% 48.648649%,3.571429% 51.351351%,3.571429% 51.351351%,3.571429% 54.054054%,3.571429% 54.054054%,3.571429% 56.756757%,3.571429% 56.756757%,3.571429% 59.459459%,3.571429% 59.459459%,3.571429% 62.162162%,3.571429% 62.162162%,3.571429% 64.864865%,3.571429% 64.864865%,3.571429% 67.567568%,3.571429% 67.567568%,3.571429% 70.270270%,3.571429% 70.270270%,3.571429% 72.972973%,3.571429% 72.972973%,3.571429% 75.675676%,3.571429% 75.675676%,3.571429% 78.378378%,3.571429% 78.378378%,3.571429% 81.081081%,3.571429% 81.081081%,3.571429% 83.783784%,3.571429% 83.783784%,3.571429% 86.486486%,3.571429% 86.486486%,3.571429% 89.189189%,0.000000% 89.189189%,0.000000% 91.891892%,0.000000% 91.891892%,0.000000% 94.594595%,0.000000% 94.594595%,0.000000% 97.297297%,3.571429% 97.297297%,3.571429% 100.000000%,96.428571% 100.000000%,96.428571% 97.297297%,100.000000% 97.297297%,100.000000% 94.594595%,100.000000% 94.594595%,100.000000% 91.891892%,100.000000% 91.891892%,100.000000% 89.189189%,96.428571% 89.189189%,96.428571% 86.486486%,96.428571% 86.486486%,96.428571% 83.783784%,96.428571% 83.783784%,96.428571% 81.081081%,96.428571% 81.081081%,96.428571% 78.378378%,96.428571% 78.378378%,96.428571% 75.675676%,96.428571% 75.675676%,96.428571% 72.972973%,96.428571% 72.972973%,96.428571% 70.270270%,96.428571% 70.270270%,96.428571% 67.567568%,96.428571% 67.567568%,96.428571% 64.864865%,96.428571% 64.864865%,96.428571% 62.162162%,96.428571% 62.162162%,96.428571% 59.459459%,96.428571% 59.459459%,96.428571% 56.756757%,96.428571% 56.756757%,96.428571% 54.054054%,96.428571% 54.054054%,96.428571% 51.351351%,96.428571% 51.351351%,96.428571% 48.648649%,96.428571% 48.648649%,96.428571% 45.945946%,96.428571% 45.945946%,96.428571% 43.243243%,96.428571% 43.243243%,96.428571% 40.540541%,96.428571% 40.540541%,96.428571% 37.837838%,96.428571% 37.837838%,96.428571% 35.135135%,96.428571% 35.135135%,96.428571% 32.432432%,96.428571% 32.432432%,96.428571% 29.729730%,96.428571% 29.729730%,96.428571% 27.027027%,96.428571% 27.027027%,96.428571% 24.324324%,96.428571% 24.324324%,96.428571% 21.621622%,96.428571% 21.621622%,96.428571% 18.918919%,100.000000% 18.918919%,100.000000% 16.216216%,100.000000% 16.216216%,100.000000% 13.513514%,100.000000% 13.513514%,100.000000% 10.810811%,96.428571% 10.810811%,96.428571% 8.108108%,64.285714% 8.108108%,64.285714% 5.405405%,57.142857% 5.405405%,57.142857% 2.702703%,53.571429% 2.702703%,53.571429% 0.000000%)"></button>
+<button class="museum-exhibit" type="button" data-exhibit="demnate" style="left:71.270718%;top:22.962963%;width:15.469613%;height:27.407407%"><img src="museum-art/painting-demnate.svg" alt="" draggable="false" style="clip-path:polygon(46.428571% 0.000000%,46.428571% 2.702703%,42.857143% 2.702703%,42.857143% 5.405405%,35.714286% 5.405405%,35.714286% 8.108108%,3.571429% 8.108108%,3.571429% 10.810811%,0.000000% 10.810811%,0.000000% 13.513514%,0.000000% 13.513514%,0.000000% 16.216216%,0.000000% 16.216216%,0.000000% 18.918919%,3.571429% 18.918919%,3.571429% 21.621622%,3.571429% 21.621622%,3.571429% 24.324324%,3.571429% 24.324324%,3.571429% 27.027027%,3.571429% 27.027027%,3.571429% 29.729730%,3.571429% 29.729730%,3.571429% 32.432432%,3.571429% 32.432432%,3.571429% 35.135135%,3.571429% 35.135135%,3.571429% 37.837838%,3.571429% 37.837838%,3.571429% 40.540541%,3.571429% 40.540541%,3.571429% 43.243243%,3.571429% 43.243243%,3.571429% 45.945946%,3.571429% 45.945946%,3.571429% 48.648649%,3.571429% 48.648649%,3.571429% 51.351351%,3.571429% 51.351351%,3.571429% 54.054054%,3.571429% 54.054054%,3.571429% 56.756757%,3.571429% 56.756757%,3.571429% 59.459459%,3.571429% 59.459459%,3.571429% 62.162162%,3.571429% 62.162162%,3.571429% 64.864865%,3.571429% 64.864865%,3.571429% 67.567568%,3.571429% 67.567568%,3.571429% 70.270270%,3.571429% 70.270270%,3.571429% 72.972973%,3.571429% 72.972973%,3.571429% 75.675676%,3.571429% 75.675676%,3.571429% 78.378378%,3.571429% 78.378378%,3.571429% 81.081081%,3.571429% 81.081081%,3.571429% 83.783784%,3.571429% 83.783784%,3.571429% 86.486486%,3.571429% 86.486486%,3.571429% 89.189189%,0.000000% 89.189189%,0.000000% 91.891892%,0.000000% 91.891892%,0.000000% 94.594595%,0.000000% 94.594595%,0.000000% 97.297297%,3.571429% 97.297297%,3.571429% 100.000000%,96.428571% 100.000000%,96.428571% 97.297297%,100.000000% 97.297297%,100.000000% 94.594595%,100.000000% 94.594595%,100.000000% 91.891892%,100.000000% 91.891892%,100.000000% 89.189189%,96.428571% 89.189189%,96.428571% 86.486486%,96.428571% 86.486486%,96.428571% 83.783784%,96.428571% 83.783784%,96.428571% 81.081081%,96.428571% 81.081081%,96.428571% 78.378378%,96.428571% 78.378378%,96.428571% 75.675676%,96.428571% 75.675676%,96.428571% 72.972973%,96.428571% 72.972973%,96.428571% 70.270270%,96.428571% 70.270270%,96.428571% 67.567568%,96.428571% 67.567568%,96.428571% 64.864865%,96.428571% 64.864865%,96.428571% 62.162162%,96.428571% 62.162162%,96.428571% 59.459459%,96.428571% 59.459459%,96.428571% 56.756757%,96.428571% 56.756757%,96.428571% 54.054054%,96.428571% 54.054054%,96.428571% 51.351351%,96.428571% 51.351351%,96.428571% 48.648649%,96.428571% 48.648649%,96.428571% 45.945946%,96.428571% 45.945946%,96.428571% 43.243243%,96.428571% 43.243243%,96.428571% 40.540541%,96.428571% 40.540541%,96.428571% 37.837838%,96.428571% 37.837838%,96.428571% 35.135135%,96.428571% 35.135135%,96.428571% 32.432432%,96.428571% 32.432432%,96.428571% 29.729730%,96.428571% 29.729730%,96.428571% 27.027027%,96.428571% 27.027027%,96.428571% 24.324324%,96.428571% 24.324324%,96.428571% 21.621622%,96.428571% 21.621622%,96.428571% 18.918919%,96.428571% 18.918919%,96.428571% 16.216216%,100.000000% 16.216216%,100.000000% 13.513514%,100.000000% 13.513514%,100.000000% 10.810811%,100.000000% 10.810811%,100.000000% 8.108108%,96.428571% 8.108108%,96.428571% 5.405405%,57.142857% 5.405405%,57.142857% 2.702703%,53.571429% 2.702703%,53.571429% 0.000000%)"></button>
+<button class="museum-exhibit" type="button" data-exhibit="statue" style="left:6.077348%;top:37.777778%;width:14.364641%;height:36.296296%"><img src="museum-art/status-stand.svg" alt="" draggable="false" style="clip-path:polygon(38.461538% 0.000000%,38.461538% 2.040816%,34.615385% 2.040816%,34.615385% 4.081633%,30.769231% 4.081633%,30.769231% 6.122449%,26.923077% 6.122449%,26.923077% 8.163265%,26.923077% 8.163265%,26.923077% 10.204082%,23.076923% 10.204082%,23.076923% 12.244898%,23.076923% 12.244898%,23.076923% 14.285714%,19.230769% 14.285714%,19.230769% 16.326531%,19.230769% 16.326531%,19.230769% 18.367347%,23.076923% 18.367347%,23.076923% 20.408163%,19.230769% 20.408163%,19.230769% 22.448980%,19.230769% 22.448980%,19.230769% 24.489796%,23.076923% 24.489796%,23.076923% 26.530612%,19.230769% 26.530612%,19.230769% 28.571429%,26.923077% 28.571429%,26.923077% 30.612245%,26.923077% 30.612245%,26.923077% 32.653061%,26.923077% 32.653061%,26.923077% 34.693878%,30.769231% 34.693878%,30.769231% 36.734694%,34.615385% 36.734694%,34.615385% 38.775510%,38.461538% 38.775510%,38.461538% 40.816327%,38.461538% 40.816327%,38.461538% 42.857143%,23.076923% 42.857143%,23.076923% 44.897959%,3.846154% 44.897959%,3.846154% 46.938776%,0.000000% 46.938776%,0.000000% 48.979592%,0.000000% 48.979592%,0.000000% 51.020408%,3.846154% 51.020408%,3.846154% 53.061224%,7.692308% 53.061224%,7.692308% 55.102041%,7.692308% 55.102041%,7.692308% 57.142857%,11.538462% 57.142857%,11.538462% 59.183673%,11.538462% 59.183673%,11.538462% 61.224490%,11.538462% 61.224490%,11.538462% 63.265306%,11.538462% 63.265306%,11.538462% 65.306122%,11.538462% 65.306122%,11.538462% 67.346939%,11.538462% 67.346939%,11.538462% 69.387755%,11.538462% 69.387755%,11.538462% 71.428571%,11.538462% 71.428571%,11.538462% 73.469388%,11.538462% 73.469388%,11.538462% 75.510204%,11.538462% 75.510204%,11.538462% 77.551020%,11.538462% 77.551020%,11.538462% 79.591837%,11.538462% 79.591837%,11.538462% 81.632653%,11.538462% 81.632653%,11.538462% 83.673469%,7.692308% 83.673469%,7.692308% 85.714286%,3.846154% 85.714286%,3.846154% 87.755102%,3.846154% 87.755102%,3.846154% 89.795918%,3.846154% 89.795918%,3.846154% 91.836735%,3.846154% 91.836735%,3.846154% 93.877551%,15.384615% 93.877551%,15.384615% 95.918367%,23.076923% 95.918367%,23.076923% 97.959184%,30.769231% 97.959184%,30.769231% 100.000000%,38.461538% 100.000000%,38.461538% 97.959184%,61.538462% 97.959184%,61.538462% 95.918367%,92.307692% 95.918367%,92.307692% 93.877551%,96.153846% 93.877551%,96.153846% 91.836735%,96.153846% 91.836735%,96.153846% 89.795918%,96.153846% 89.795918%,96.153846% 87.755102%,96.153846% 87.755102%,96.153846% 85.714286%,92.307692% 85.714286%,92.307692% 83.673469%,88.461538% 83.673469%,88.461538% 81.632653%,88.461538% 81.632653%,88.461538% 79.591837%,88.461538% 79.591837%,88.461538% 77.551020%,88.461538% 77.551020%,88.461538% 75.510204%,88.461538% 75.510204%,88.461538% 73.469388%,88.461538% 73.469388%,88.461538% 71.428571%,88.461538% 71.428571%,88.461538% 69.387755%,88.461538% 69.387755%,88.461538% 67.346939%,88.461538% 67.346939%,88.461538% 65.306122%,88.461538% 65.306122%,88.461538% 63.265306%,88.461538% 63.265306%,88.461538% 61.224490%,88.461538% 61.224490%,88.461538% 59.183673%,88.461538% 59.183673%,88.461538% 57.142857%,92.307692% 57.142857%,92.307692% 55.102041%,96.153846% 55.102041%,96.153846% 53.061224%,100.000000% 53.061224%,100.000000% 51.020408%,100.000000% 51.020408%,100.000000% 48.979592%,96.153846% 48.979592%,96.153846% 46.938776%,92.307692% 46.938776%,92.307692% 44.897959%,80.769231% 44.897959%,80.769231% 42.857143%,65.384615% 42.857143%,65.384615% 40.816327%,73.076923% 40.816327%,73.076923% 38.775510%,76.923077% 38.775510%,76.923077% 36.734694%,73.076923% 36.734694%,73.076923% 34.693878%,73.076923% 34.693878%,73.076923% 32.653061%,69.230769% 32.653061%,69.230769% 30.612245%,80.769231% 30.612245%,80.769231% 28.571429%,84.615385% 28.571429%,84.615385% 26.530612%,80.769231% 26.530612%,80.769231% 24.489796%,80.769231% 24.489796%,80.769231% 22.448980%,84.615385% 22.448980%,84.615385% 20.408163%,80.769231% 20.408163%,80.769231% 18.367347%,84.615385% 18.367347%,84.615385% 16.326531%,84.615385% 16.326531%,84.615385% 14.285714%,80.769231% 14.285714%,80.769231% 12.244898%,80.769231% 12.244898%,80.769231% 10.204082%,76.923077% 10.204082%,76.923077% 8.163265%,73.076923% 8.163265%,73.076923% 6.122449%,73.076923% 6.122449%,73.076923% 4.081633%,69.230769% 4.081633%,69.230769% 2.040816%,61.538462% 2.040816%,61.538462% 0.000000%)"></button>
+<button class="museum-exhibit" type="button" data-exhibit="earring" style="left:79.558011%;top:48.148148%;width:14.364641%;height:25.925926%"><img src="museum-art/earring-stand.svg" alt="" draggable="false" style="clip-path:polygon(26.923077% 0.000000%,26.923077% 2.857143%,23.076923% 2.857143%,23.076923% 5.714286%,26.923077% 5.714286%,26.923077% 8.571429%,38.461538% 8.571429%,38.461538% 11.428571%,30.769231% 11.428571%,30.769231% 14.285714%,26.923077% 14.285714%,26.923077% 17.142857%,26.923077% 17.142857%,26.923077% 20.000000%,19.230769% 20.000000%,19.230769% 22.857143%,7.692308% 22.857143%,7.692308% 25.714286%,3.846154% 25.714286%,3.846154% 28.571429%,0.000000% 28.571429%,0.000000% 31.428571%,0.000000% 31.428571%,0.000000% 34.285714%,3.846154% 34.285714%,3.846154% 37.142857%,7.692308% 37.142857%,7.692308% 40.000000%,11.538462% 40.000000%,11.538462% 42.857143%,11.538462% 42.857143%,11.538462% 45.714286%,11.538462% 45.714286%,11.538462% 48.571429%,11.538462% 48.571429%,11.538462% 51.428571%,11.538462% 51.428571%,11.538462% 54.285714%,11.538462% 54.285714%,11.538462% 57.142857%,11.538462% 57.142857%,11.538462% 60.000000%,11.538462% 60.000000%,11.538462% 62.857143%,11.538462% 62.857143%,11.538462% 65.714286%,11.538462% 65.714286%,11.538462% 68.571429%,11.538462% 68.571429%,11.538462% 71.428571%,11.538462% 71.428571%,11.538462% 74.285714%,11.538462% 74.285714%,11.538462% 77.142857%,7.692308% 77.142857%,7.692308% 80.000000%,3.846154% 80.000000%,3.846154% 82.857143%,3.846154% 82.857143%,3.846154% 85.714286%,3.846154% 85.714286%,3.846154% 88.571429%,3.846154% 88.571429%,3.846154% 91.428571%,7.692308% 91.428571%,7.692308% 94.285714%,38.461538% 94.285714%,38.461538% 97.142857%,61.538462% 97.142857%,61.538462% 100.000000%,69.230769% 100.000000%,69.230769% 97.142857%,76.923077% 97.142857%,76.923077% 94.285714%,84.615385% 94.285714%,84.615385% 91.428571%,96.153846% 91.428571%,96.153846% 88.571429%,96.153846% 88.571429%,96.153846% 85.714286%,96.153846% 85.714286%,96.153846% 82.857143%,96.153846% 82.857143%,96.153846% 80.000000%,92.307692% 80.000000%,92.307692% 77.142857%,88.461538% 77.142857%,88.461538% 74.285714%,88.461538% 74.285714%,88.461538% 71.428571%,88.461538% 71.428571%,88.461538% 68.571429%,88.461538% 68.571429%,88.461538% 65.714286%,88.461538% 65.714286%,88.461538% 62.857143%,88.461538% 62.857143%,88.461538% 60.000000%,88.461538% 60.000000%,88.461538% 57.142857%,88.461538% 57.142857%,88.461538% 54.285714%,88.461538% 54.285714%,88.461538% 51.428571%,88.461538% 51.428571%,88.461538% 48.571429%,88.461538% 48.571429%,88.461538% 45.714286%,88.461538% 45.714286%,88.461538% 42.857143%,88.461538% 42.857143%,88.461538% 40.000000%,92.307692% 40.000000%,92.307692% 37.142857%,92.307692% 37.142857%,92.307692% 34.285714%,96.153846% 34.285714%,96.153846% 31.428571%,100.000000% 31.428571%,100.000000% 28.571429%,100.000000% 28.571429%,100.000000% 25.714286%,96.153846% 25.714286%,96.153846% 22.857143%,76.923077% 22.857143%,76.923077% 20.000000%,69.230769% 20.000000%,69.230769% 17.142857%,69.230769% 17.142857%,69.230769% 14.285714%,65.384615% 14.285714%,65.384615% 11.428571%,57.692308% 11.428571%,57.692308% 8.571429%,30.769231% 8.571429%,30.769231% 5.714286%,34.615385% 5.714286%,34.615385% 2.857143%,30.769231% 2.857143%,30.769231% 0.000000%)"></button>
+<p id="museum-hover-label" aria-hidden="true"></p>
+</div>
+<section id="museum-detail" aria-labelledby="museum-item-title" hidden>
+<div class="museum-art-display"><img id="museum-artwork" alt="" draggable="false"></div>
+<h3 id="museum-item-title" tabindex="-1"></h3>
+</section>
+<button id="museum-close" type="button" aria-label="Close Museum"><img src="disco-art/closeButton.svg" alt="" draggable="false"></button>
+<audio id="museum-music" src="audio/golden-star.mp3" loop preload="none"></audio>
+</dialog>
+<link rel="stylesheet" href="on-this-day.css">
+<dialog id="on-this-day" class="day-window" aria-labelledby="day-title">
+ <div class="day-topbar"><h2 id="day-title">On This Day...</h2><button id="day-close" type="button" aria-label="Close On This Day"><img src="disco-art/closeButton.svg" alt=""></button></div>
+ <div class="day-binding"><div class="day-paper">
+  <nav class="day-tabs" aria-label="Scrapbook pages"><button class="day-tab" type="button" aria-label="Page 1" aria-pressed="true">01</button><button class="day-tab" type="button" aria-label="Page 2" aria-pressed="false">02</button><button class="day-tab" type="button" aria-label="Page 3" aria-pressed="false">03</button></nav>
+  <div class="day-scroll">
+   <div class="day-masthead"><span class="day-date">NOVEMBER 26</span><span>A DAY TO REMEMBER</span></div>
+   <article class="day-page" data-chapter="1">
+    <p class="day-intro">Today is a special day. And not just because it's your birthday. Turns out, quite a few interesting things happened on this very specific date.</p>
+    <h3 tabindex="-1">First things first,<br>let's travel back in time.</h3>
+    <div class="day-columns"><div>
+     <p>On November 26, 1922, a British archaeologist named Howard Carter peered through a small opening into the tomb of an ancient Egyptian pharaoh named Tutankhamun.</p>
+     <p>Imagine discovering a sealed tomb that had been hidden for more than 3,000 years. Inside were golden objects, statues, chariots, and countless treasures from ancient Egypt.</p>
+     <p>When his companion, Lord Carnarvon, asked him if he could see anything, Carter famously replied,</p>
+     <blockquote>“Yes, wonderful things!”</blockquote>
+     <p>And just like that, one of the most famous archaeological discoveries in history became part of the story of November 26.</p>
+    </div><aside><figure class="day-photo"><img src="on-this-day-art/tutankhamun.png" alt="Tutankhamun's golden coffin" width="453" height="679"><figcaption>Tutankhamun</figcaption></figure><p class="day-note">26 November, 1922</p></aside></div>
+   </article>
+   <article class="day-page" data-chapter="2" hidden>
+    <h3 tabindex="-1">But wait, there's more.</h3>
+    <div class="day-columns"><div>
+     <p>Do you know Snoopy? Yup, the Snoopy from <em>Peanuts</em>. One of mi madre's favorite characters.</p>
+     <p>Now, you might be wondering, how on Earth am I related to that little beagle?</p>
+     <p>Well, do you know this guy? Probably not.</p>
+     <p>Meet Charles M. Schulz, an American cartoonist who created <em>Peanuts</em>, the comic strip featuring Snoopy, Charlie Brown, and the gang.</p>
+     <p>Now, guess when he was born...</p>
+     <blockquote>Exactly. November 26, 1922.</blockquote>
+     <p>Which means you share your birthday with Snoopy's dad. Happy birthday to both of you, I guess.</p>
+    </div><aside><figure class="day-photo"><img src="on-this-day-art/schulz.png" alt="Charles M. Schulz smiling" width="480" height="640"><figcaption>Charles M. Schulz</figcaption></figure><p class="day-note">Snoopy's dad.<br>Your birthday twin.</p></aside></div>
+   </article>
+   <article class="day-page" data-chapter="3" hidden>
+    <h3 tabindex="-1">And finally, the chef's kiss.<br>The cherry on top of the “cake”.</h3>
+    <div class="day-columns"><div>
+     <p>Today is National Cake Day in the United States.</p>
+     <p>Which means that, technically, an entire country has an excuse to eat cake on your birthday.</p>
+     <blockquote>Coincidence? I think not.</blockquote>
+     <p>Anyway, happy birthday.</p>
+     <p class="day-last-line">The universe has clearly been preparing this day for you.</p>
+    </div><aside>
+     <svg class="day-cake" viewBox="0 0 48 55" role="img" aria-label="Pixel birthday cake with a cherry" shape-rendering="crispEdges">
+      <path fill="#94718d" d="M4 47h40v4H4zM8 51h32v2H8z"/>
+      <path fill="#b47d65" d="M9 27h30v20H9z"/><path fill="#e4b383" d="M11 30h26v15H11z"/><path fill="#f9dbac" d="M11 36h26v4H11z"/>
+      <path fill="#c78ca5" d="M8 25h32v7H8zM10 32h5v4h-5zM20 32h5v6h-5zM32 32h6v4h-6z"/>
+      <path fill="#f2c1c3" d="M10 23h28v5H10zM13 21h22v3H13z"/>
+      <path fill="#84647f" d="M15 12h4v10h-4zM30 12h4v10h-4z"/><path fill="#f3d198" d="M15 15h2v3h-2zM30 15h2v3h-2z"/>
+      <path fill="#d69d4d" d="M15 7h4v4h-4zM16 4h2v3h-2zM30 7h4v4h-4zM31 4h2v3h-2z"/>
+      <path fill="#a7526b" d="M21 17h7v6h-7zM23 15h3v2h-3z"/><path fill="#f1a5ab" d="M22 18h2v2h-2z"/><path fill="#68795a" d="M25 12h2v5h-2zM27 10h3v2h-3z"/>
+     </svg><p class="day-note">26 November<br>National Cake Day</p>
+    </aside></div>
+   </article>
+  </div>
+  <footer class="day-footer"><button id="day-previous" type="button" disabled>← Previous</button><span id="day-counter" aria-live="polite">01 / 03</span><button id="day-next" type="button">Turn the page →</button></footer>
+ </div></div>
+</dialog>
+<audio id="day-music" src="audio/pleasant-memory.mp3" loop preload="none"></audio>
+<script src="on-this-day.js" defer></script>
+<script src="museum.js" defer></script>
+<script src="disco.js" defer></script>
+<script src="fortune.js" defer></script>
+<script src="shooting-stars.js" defer></script>
+<audio id="background-music" src="audio/moonlight-jellies.mp3" loop preload="none"></audio>
+<button id="music-toggle" type="button" aria-label="Background music" aria-pressed="true">♫ Music on</button>
+<script src="dialogue-audio-data.js" defer></script>
+<script src="scene-audio.js" defer></script>
+<script src="intro.js" defer></script>
+<link rel="stylesheet" href="gift.css">
+<script src="gift.js" defer></script>
+</body></html>
