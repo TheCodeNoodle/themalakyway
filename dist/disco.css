@@ -1,4 +1,13 @@
 /* Position the supplied artwork on its original 167 × 128 canvas. */
+#disco-levels{position:absolute;left:10%;right:10%;top:23%;bottom:5%;text-align:center;overflow:auto;scrollbar-width:thin}
+#disco-levels h3{font:4.5cqw/1 'VT323',monospace;color:#f2c9ff;margin:1cqw 0 1.5cqw}
+#disco-levels p{font-size:3cqw;line-height:1.2;color:#b6b3eb;margin:1cqw 0 2cqw}
+.disco-level-list{display:grid;gap:1.8cqw;margin:2.5cqw 0}
+.disco-level-list button{display:flex;justify-content:space-between;align-items:center;gap:1cqw;width:100%;padding:2.4cqw 3cqw;border:2px solid #8274d8;border-radius:0;background:#20204c;color:#f5ddff;box-shadow:3px 3px #090e2b}
+.disco-level-list button span{font-size:4.2cqw}
+.disco-level-list button small{font-size:2.7cqw;color:#b8b3e8}
+.disco-level-list button:disabled{opacity:.55}
+#disco-levels .disco-level-rule{font-size:2.8cqw;line-height:1.35;color:#d5b7eb;margin-top:2.5cqw}
 .star-name{font:3px 'VT323',monospace;fill:#f6d6fc;opacity:0;pointer-events:none;transition:opacity .2s}
 .star.is-hovered .star-name,.star:focus-visible .star-name{opacity:1}
 .disco-window{width:min(668px,calc(100vw - 24px),calc((100svh - 24px)*167/128));max-width:none;max-height:none;aspect-ratio:167/128;padding:0;border:0;outline:none;overflow:visible;background:transparent url('disco-art/windowBackground.svg') center/100% 100% no-repeat;box-shadow:none;color:#eee2fb;font:20px/1.15 'VT323',monospace;container-type:inline-size;image-rendering:pixelated;isolation:isolate}

@@ -1,14 +1,27 @@
 (() => {
- const tracks=[
+ const easyTracks=[
   ['Margaret','Lana Del Rey feat. Bleachers'],['All the Stars','Kendrick Lamar & SZA'],
   ['Lover Girl','Laufey'],['Army Dreamers','Kate Bush'],['K.','Cigarettes After Sex'],
   ['Indigo Night','Tamino'],['Smooth Operator','Sade'],['The Night We Met','Lord Huron'],
-  ['Orange-coloured day','liana flores'],['Salvatore','Lana Del Rey']
+  ['Orange-coloured day','liana flores'],['Shape of My Heart','Sting']
  ].map(([title,artist],i)=>({title,artist,src:`music/track-${String(i+1).padStart(2,'0')}.mp3`}));
+ const intermediateTracks=[
+  ['Umbrella','Rihanna feat. JAY-Z'],['Red Right Hand','Nick Cave & The Bad Seeds'],
+  ['Englishman in New York','Sting'],['Glamorous','Fergie feat. Ludacris'],
+  ['Against All Odds','Phil Collins'],['You Are My Destiny','Paul Anka']
+ ].map(([title,artist],i)=>({title,artist,src:`music/intermediate-${String(i+1).padStart(2,'0')}.mp3`}));
+ const playlists={easy:easyTracks,intermediate:intermediateTracks};
+ let tracks=easyTracks,levelName='Easy';
  const modal=document.querySelector('#disco');
  const $=s=>modal.querySelector(s);
  const audio=$('audio'),input=$('#disco-answer'),suggestions=$('#disco-suggestions');
  const play=$('#disco-play'),seek=$('#disco-seek'),feedback=$('#disco-feedback');
+ const levels=document.createElement('section');levels.id='disco-levels';levels.setAttribute('aria-labelledby','disco-level-title');
+ levels.innerHTML=`<h3 id="disco-level-title">Choose your level</h3><p>Listen. Guess. Unlock a little more.</p><div class="disco-level-list"><button type="button" data-level="easy"><span>Easy</span><small>10 songs · Ready to play ▸</small></button><button type="button" data-level="intermediate"><span>Intermediate</span><small>6 songs · Ready to play ▸</small></button><button type="button" disabled><span>Hard</span><small>Coming soon</small></button></div><p class="disco-level-rule">5 seconds → 10 seconds → 15 seconds<br>Each wrong guess reveals more of the song.</p>`;
+ modal.append(levels);$('#disco-game').hidden=true;
+ let levelStarted=false,snippetLoading=false;
+ const clipSeconds=()=>Math.min(15,5*(mistakes+1));
+ const clipSource=()=>tracks[round].src.replace('.mp3',clipSeconds()===15?'.mp3':`-${clipSeconds()}s.mp3`);
  const bars=[...modal.querySelectorAll('.disco-equalizer i')];
  let analyser,frequencyData,visualFrame=0,lastVisualTime=0,roundRequest=0;
  function stopVisualizer(){
@@ -43,7 +56,7 @@
   for(let i=1;i<=a.length;i++){let next=[i];for(let j=1;j<=b.length;j++)next[j]=Math.min(next[j-1]+1,row[j]+1,row[j-1]+(a[i-1]!==b[j-1]));row=next;}
   return row[b.length];
  }
- const catalog=[...(window.discoSongCatalog||[]),...tracks].filter((song,i,all)=>all.findIndex(s=>normalize(s.title)===normalize(song.title)&&normalize(s.artist)===normalize(song.artist))===i).map(s=>({...s,key:normalize(s.title),artistKey:normalize(s.artist)}));
+ const catalog=[...(window.discoSongCatalog||[]),...easyTracks,...intermediateTracks].filter((song,i,all)=>all.findIndex(s=>normalize(s.title)===normalize(song.title)&&normalize(s.artist)===normalize(song.artist))===i).map(s=>({...s,key:normalize(s.title),artistKey:normalize(s.artist)}));
  function hideSuggestions(){suggestions.hidden=true;input.setAttribute('aria-expanded','false');input.removeAttribute('aria-activedescendant');selected=-1;}
  function choose(i){if(!matches[i])return;input.value=matches[i].title;hideSuggestions();input.focus();}
  function filter(){
@@ -74,9 +87,9 @@
   }else if(e.key==='Enter'&&selected>=0){e.preventDefault();choose(selected);}
  });
  function updatePlayback(){
-  const time=Math.min(15,audio.currentTime||0);seek.value=time;
-  seek.style.setProperty('--played',`${time/15*100}%`);
-  $('#disco-time').textContent=`0:${String(Math.floor(time)).padStart(2,'0')} / 0:15`;
+  const limit=clipSeconds(),time=Math.min(limit,audio.currentTime||0);seek.max=limit;seek.value=time;
+  seek.style.setProperty('--played',`${time/limit*100}%`);
+  $('#disco-time').textContent=`0:${String(Math.floor(time)).padStart(2,'0')} / 0:${String(limit).padStart(2,'0')}`;
   const playing=!audio.paused&&!audio.ended;
   modal.classList.toggle('is-playing',playing);play.setAttribute('aria-label',playing?'Pause snippet':'Play snippet');play.setAttribute('aria-pressed',String(playing));
   play.querySelector('img').src=playing?'disco-art/pauseButton.svg':'disco-art/playButton.svg';
@@ -85,7 +98,7 @@
  audio.addEventListener('error',()=>{feedback.textContent='The clip could not load. Close and reopen Disco to retry.';});
  play.addEventListener('click',async()=>{
   if(!audio.paused){window.sceneAudio.fadeOut(audio);return;}
-  if(audio.ended||audio.currentTime>=14.99)audio.currentTime=0;
+  if(audio.ended||audio.currentTime>=clipSeconds()-.05)audio.currentTime=0;
   try{
    analyser=await window.sceneAudio.analyserFor(audio).catch(()=>null);
    if(analyser&&!frequencyData)frequencyData=new Uint8Array(analyser.frequencyBinCount);
@@ -93,7 +106,7 @@
    if(!await window.sceneAudio.playMedia(audio))feedback.textContent='Press play again to start the snippet.';
   }catch{feedback.textContent='Press play again to start the snippet.';}
  });
- seek.addEventListener('input',()=>{if(Number.isFinite(audio.duration))audio.currentTime=Math.min(+seek.value,Math.max(0,audio.duration-.02));updatePlayback();});
+ seek.addEventListener('input',()=>{if(Number.isFinite(audio.duration))audio.currentTime=Math.max(0,Math.min(+seek.value,clipSeconds(),audio.duration-.02));updatePlayback();});
  const heartTimers=new Map();
  const heartFrames=[0,1,2].map(i=>`disco-art/heart-frame-${i}.png`);
  heartFrames.forEach(src=>{const image=new Image();image.src=src;});
@@ -113,13 +126,14 @@
  async function loadRound(){
   const request=++roundRequest;
   clearTimeout(transitionTimer);resolved=false;mistakes=0;guesses.clear();modal.classList.remove('is-resolved');
-  play.disabled=true;
-  input.disabled=false;input.value='';$('#disco-submit').disabled=false;$('#disco-next').hidden=true;
+  snippetLoading=true;play.disabled=true;
+  input.disabled=true;input.value='';$('#disco-submit').disabled=true;$('#disco-next').hidden=true;
   feedback.textContent='';feedback.className='disco-feedback';hideSuggestions();hearts();
-  $('#disco-round').textContent=`TRACK ${String(round+1).padStart(2,'0')} / 10`;
+  $('#disco-round').textContent=`TRACK ${String(round+1).padStart(2,'0')} / ${tracks.length}`;
+  $('#disco-game .disco-subtitle').textContent=`${levelName.toUpperCase()} · Listen to 5 seconds and guess the song`;
   await window.sceneAudio.fadeOut(audio);
   if(request!==roundRequest)return;
-  audio.src=tracks[round].src;audio.load();updatePlayback();play.disabled=false;
+  audio.src=clipSource();audio.load();updatePlayback();snippetLoading=false;play.disabled=false;input.disabled=false;$('#disco-submit').disabled=false;
   if(modal.open)input.focus({preventScroll:true});
  }
  function next(){
@@ -132,13 +146,13 @@
   resolved=true;modal.classList.add('is-resolved');window.sceneAudio.fadeOut(audio);hideSuggestions();input.disabled=true;$('#disco-submit').disabled=true;
   results[round]=correct;feedback.classList.add(correct?'correct':'revealed');
   feedback.textContent=`${correct?'You got it!':'This one was'} ${tracks[round].title} — ${tracks[round].artist}`;
-  $('#disco-next').textContent=round===9?'See your playlist ▸':'Next song ▸';$('#disco-next').hidden=false;
+  $('#disco-next').textContent=round===tracks.length-1?'See your playlist ▸':'Next song ▸';$('#disco-next').hidden=false;
   $('#disco-next').focus({preventScroll:true});
   // Leave enough time to read the revealed title before automatically moving on.
   if(!correct)transitionTimer=setTimeout(()=>{if(modal.open)next();},4500);
  }
- $('#disco-form').addEventListener('submit',e=>{
-  e.preventDefault();if(resolved)return;
+ $('#disco-form').addEventListener('submit',async e=>{
+  e.preventDefault();if(resolved||snippetLoading||!levelStarted)return;
   const guess=normalize(input.value),answer=normalize(tracks[round].title);
   if(!guess){feedback.textContent='Type a song name first.';input.focus();return;}
   if(guesses.has(guess)){feedback.textContent='You already tried that one. Try another name.';return;}
@@ -146,28 +160,35 @@
   if(guess===answer||(answer.length>=5&&distance(guess,answer)<= (answer.length>=10?2:1))){resolve(true);return;}
   mistakes++;hearts();hideSuggestions();
   if(mistakes===3){resolve(false);return;}
-  feedback.textContent=`Not quite. ${3-mistakes} ${3-mistakes===1?'chance':'chances'} left — listen again.`;
-  input.select();
+  const request=++roundRequest;snippetLoading=true;play.disabled=true;input.disabled=true;$('#disco-submit').disabled=true;
+  feedback.textContent=`Not quite. ${clipSeconds()} seconds unlocked — listen again.`;
+  $('#disco-game .disco-subtitle').textContent=`${levelName.toUpperCase()} · Listen to ${clipSeconds()} seconds and guess the song`;
+  await window.sceneAudio.fadeOut(audio);
+  if(request!==roundRequest)return;
+  audio.src=clipSource();audio.load();updatePlayback();snippetLoading=false;play.disabled=false;input.disabled=false;$('#disco-submit').disabled=false;
+  if(modal.open){input.focus({preventScroll:true});input.select();}
  });
  $('#disco-next').addEventListener('click',next);
  function showPlaylist(){
   finished=true;modal.classList.add('is-finale');window.sceneAudio.fadeOut(audio);hideSuggestions();$('#disco-game').hidden=true;$('#disco-finale').hidden=false;
-  $('#disco-score').textContent=`${results.filter(Boolean).length} / 10 songs found. A whole playlist for you.`;
+  $('#disco-score').textContent=`${results.filter(Boolean).length} / ${tracks.length} songs found · ${levelName}. A whole playlist for you.`;
   const list=$('#disco-playlist');list.replaceChildren();
   tracks.forEach((track,i)=>{
    const row=document.createElement('li'),initial=document.createElement('b'),details=document.createElement('span'),title=document.createElement('span'),artist=document.createElement('small');
    initial.textContent=track.title[0];initial.className='disco-initial';initial.setAttribute('aria-hidden','true');
    title.textContent=track.title;artist.textContent=track.artist;details.append(title,artist);row.append(initial,details);list.append(row);
   });
-  $('#disco-finale h3').focus({preventScroll:true});
+  $('#disco-score').tabIndex=-1;$('#disco-score').focus({preventScroll:true});
  }
- $('#disco-replay').addEventListener('click',()=>{round=0;results=[];finished=false;modal.classList.remove('is-finale');$('#disco-game').hidden=false;$('#disco-finale').hidden=true;loadRound();});
+ levels.querySelectorAll('[data-level]').forEach(button=>button.addEventListener('click',()=>{tracks=playlists[button.dataset.level];levelName=button.dataset.level==='easy'?'Easy':'Intermediate';levelStarted=true;levels.hidden=true;round=0;results=[];finished=false;modal.classList.remove('is-finale');$('#disco-game').hidden=false;$('#disco-finale').hidden=true;loadRound();}));
+ $('#disco-replay').addEventListener('click',()=>{levelStarted=false;finished=false;modal.classList.remove('is-finale');$('#disco-game').hidden=true;$('#disco-finale').hidden=true;levels.hidden=false;levels.querySelector('button').focus({preventScroll:true});});
  $('#disco-close').addEventListener('click',()=>modal.close());
  modal.addEventListener('close',()=>{window.sceneAudio.fadeOut(audio);stopVisualizer();clearTimeout(transitionTimer);hideSuggestions();opener?.focus({preventScroll:true});});
  document.addEventListener('visibilitychange',()=>{if(document.hidden){window.sceneAudio.stopMedia(audio);stopVisualizer();clearTimeout(transitionTimer);}});
  window.disco={open(source){
   if(document.querySelector('dialog[open]')||document.documentElement.classList.contains('intro-active'))return;
   opener=source;modal.showModal();
+  if(!levelStarted){levels.querySelector('button').focus({preventScroll:true});return;}
   if(!audio.getAttribute('src')&&!finished)loadRound();
   else if(!finished&&!resolved)input.focus({preventScroll:true});
   else if(!finished)$('#disco-next').focus({preventScroll:true});
