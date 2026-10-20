@@ -78,3 +78,5 @@ html.intro-active{overflow:hidden}
 html,body,dialog::backdrop{cursor:url('pointers/cursor.png') 15 12,default}
 a[href],[role=button]{cursor:url('pointers/pointer.png') 12 9,pointer}
 .universe.is-dragging,.universe.is-dragging *{cursor:url('pointers/drag.png') 24 24,grabbing}
+
+html.window-loading,html.window-loading *{cursor:progress!important}

@@ -6,8 +6,8 @@ const discovered=new Set();
 let opener;
 const dots=document.querySelector('#dots');
 stars.forEach(()=>dots.append(document.createElement('i')));
-function show(content,source){
- if(document.querySelector('dialog[open]')||document.documentElement.classList.contains('intro-active'))return;
+async function show(content,source){
+ if(window.windowAssets.pending||document.querySelector('dialog[open]')||document.documentElement.classList.contains('intro-active'))return;
  opener=source;
  document.querySelector('#dialog-kind').textContent=content.kind;
  document.querySelector('#dialog-title').textContent=content.title;
@@ -17,10 +17,10 @@ function show(content,source){
  const safeUrl=/^https?:\/\//i.test(content.songUrl||'');
  link.hidden=!safeUrl;
  if(safeUrl)link.href=content.songUrl;else link.removeAttribute('href');
- dialog.showModal();
+ await window.windowAssets.show(dialog);
 }
 function openStar(index){
- if(document.querySelector('dialog[open]')||document.documentElement.classList.contains('intro-active'))return;
+ if(window.windowAssets.pending||document.querySelector('dialog[open]')||document.documentElement.classList.contains('intro-active'))return;
  discovered.add(index);
  stars[index].classList.add('discovered');
  stars[index].setAttribute('aria-label',`Reopen ${surprises[index].title}, discovered`);

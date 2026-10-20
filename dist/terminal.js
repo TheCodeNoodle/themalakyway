@@ -106,8 +106,8 @@
  $('#terminal-form').addEventListener('submit',event=>{event.preventDefault();command(input.value);});
  $('#terminal-close').addEventListener('click',()=>modal.close());
  modal.addEventListener('close',()=>{finishTyping();window.sceneAudio?.stopLetters();opener?.focus({preventScroll:true});});
- window.cosmicTerminal={open(source){
-  if(document.querySelector('dialog[open]')||document.documentElement.classList.contains('intro-active'))return;
-  opener=source;modal.showModal();if(!begun){standby();begun=true;}input.focus({preventScroll:true});
+ window.cosmicTerminal={async open(source){
+  if(window.windowAssets.pending||document.querySelector('dialog[open]')||document.documentElement.classList.contains('intro-active'))return;
+  opener=source;if(!await window.windowAssets.show(modal))return;if(!begun){standby();begun=true;}input.focus({preventScroll:true});
  }};
 })();

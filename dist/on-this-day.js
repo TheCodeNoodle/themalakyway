@@ -20,8 +20,8 @@
  next.addEventListener('click',()=>page===pages.length-1?modal.close():showPage(page+1,true));
  modal.querySelector('#day-close').addEventListener('click',()=>modal.close());
  modal.addEventListener('close',()=>opener?.focus({preventScroll:true}));
- window.onThisDay={open(source){
-  if(document.querySelector('dialog[open]')||document.documentElement.classList.contains('intro-active'))return;
-  opener=source;showPage(page);modal.showModal();modal.querySelector('#day-close').focus({preventScroll:true});
+ window.onThisDay={async open(source){
+  if(window.windowAssets.pending||document.querySelector('dialog[open]')||document.documentElement.classList.contains('intro-active'))return;
+  opener=source;showPage(page);if(!await window.windowAssets.show(modal))return;modal.querySelector('#day-close').focus({preventScroll:true});
  }};
 })();

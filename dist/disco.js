@@ -190,9 +190,9 @@
  $('#disco-close').addEventListener('click',()=>modal.close());
  modal.addEventListener('close',()=>{window.sceneAudio.fadeOut(audio);stopVisualizer();clearTimeout(transitionTimer);hideSuggestions();opener?.focus({preventScroll:true});});
  document.addEventListener('visibilitychange',()=>{if(document.hidden){window.sceneAudio.stopMedia(audio);stopVisualizer();clearTimeout(transitionTimer);}});
- window.disco={open(source){
-  if(document.querySelector('dialog[open]')||document.documentElement.classList.contains('intro-active'))return;
-  opener=source;modal.showModal();
+ window.disco={async open(source){
+  if(window.windowAssets.pending||document.querySelector('dialog[open]')||document.documentElement.classList.contains('intro-active'))return;
+  opener=source;if(!await window.windowAssets.show(modal))return;
   if(!levelStarted){levels.querySelector('button').focus({preventScroll:true});return;}
   if(!audio.getAttribute('src')&&!finished)loadRound();
   else if(!finished&&!resolved)input.focus({preventScroll:true});

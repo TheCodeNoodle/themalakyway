@@ -82,9 +82,9 @@
  $('.gift-return').addEventListener('click',()=>modal.close());
  modal.addEventListener('cancel',e=>{if(state!=='collected')e.preventDefault();});
  modal.addEventListener('close',()=>{stop();trigger?.focus({preventScroll:true});});
- function maybeStart(){
-  if(!pending||started||document.hidden||document.querySelector('dialog[open]'))return;
-  started=true;pending=false;state='dialogue';preload();modal.showModal();render();advance.focus({preventScroll:true});
+ async function maybeStart(){
+  if(!pending||started||document.hidden||window.windowAssets.pending||document.querySelector('dialog[open]'))return;
+  started=true;pending=false;state='dialogue';preload();if(!await window.windowAssets.show(modal)){started=false;pending=true;return;}render();advance.focus({preventScroll:true});
  }
  document.addEventListener('stardiscovered',event=>{
   if(event.detail.count<4||started)return;pending=true;trigger=event.detail.star;preload();requestAnimationFrame(maybeStart);

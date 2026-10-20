@@ -60,9 +60,9 @@
  modal.addEventListener('close',()=>{stop();opener?.focus({preventScroll:true});});
  let resizeFrame;
  window.addEventListener('resize',()=>{cancelAnimationFrame(resizeFrame);resizeFrame=requestAnimationFrame(()=>{if(modal.open&&started)render();});});
- window.fortune={open(source){
-  if(document.querySelector('dialog[open]')||document.documentElement.classList.contains('intro-active'))return;
+ window.fortune={async open(source){
+  if(window.windowAssets.pending||document.querySelector('dialog[open]')||document.documentElement.classList.contains('intro-active'))return;
   opener=source;started=false;done=false;typing=false;idle.hidden=false;dialogue.hidden=true;hint.hidden=true;again.hidden=true;
-  modal.showModal();ball.focus({preventScroll:true});
+  if(!await window.windowAssets.show(modal))return;ball.focus({preventScroll:true});
  }};
 })();

@@ -41,10 +41,10 @@
  close.addEventListener('click',()=>{if(detail.hidden)modal.close();else returnToGallery();});
  modal.addEventListener('cancel',e=>{if(!detail.hidden){e.preventDefault();returnToGallery();}});
  modal.addEventListener('close',()=>{viewRequest++;detail.hidden=true;gallery.inert=false;gallery.removeAttribute('aria-hidden');opener?.focus({preventScroll:true});});
- window.museum={open(source){
-  if(document.querySelector('dialog[open]')||document.documentElement.classList.contains('intro-active'))return;
+ window.museum={async open(source){
+  if(window.windowAssets.pending||document.querySelector('dialog[open]')||document.documentElement.classList.contains('intro-active'))return;
   opener=source;selected=null;detail.hidden=true;label.classList.remove('visible');modal.classList.remove('is-viewing');
   gallery.inert=false;gallery.removeAttribute('aria-hidden');modal.setAttribute('aria-labelledby','museum-title');close.setAttribute('aria-label','Close Museum');
-  modal.showModal();close.focus({preventScroll:true});
+  if(!await window.windowAssets.show(modal))return;close.focus({preventScroll:true});
  }};
 })();
