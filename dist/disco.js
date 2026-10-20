@@ -22,7 +22,7 @@
  const audio=$('audio'),input=$('#disco-answer'),suggestions=$('#disco-suggestions');
  const play=$('#disco-play'),seek=$('#disco-seek'),feedback=$('#disco-feedback');
  const levels=document.createElement('section');levels.id='disco-levels';levels.setAttribute('aria-labelledby','disco-level-title');
- levels.innerHTML=`<h3 id="disco-level-title">Choose your level</h3><p>Listen. Guess. Unlock a little more.</p><div class="disco-level-list"><button type="button" data-level="easy"><span>Easy</span><small>10 songs ▸</small></button><button type="button" data-level="intermediate"><span>Intermediate</span><small>6 songs ▸</small></button><button type="button" data-level="hard"><span>Hard</span><small>5 songs ▸</small></button></div><p class="disco-level-rule">5 seconds → 10 seconds → 15 seconds<br>Each wrong guess reveals more of the song.</p>`;
+ levels.innerHTML=`<h3 id="disco-level-title">Choose your level</h3><p>Listen. Guess. Unlock a little more.</p><div class="disco-level-list"><button type="button" data-level="easy"><span>Easy</span><small>10 songs ▸</small></button><button type="button" data-level="intermediate"><span>Intermediate</span><small>6 songs ▸</small></button><button type="button" data-level="hard"><span>Hard</span><small>5 songs ▸</small></button></div>`;
  modal.append(levels);$('#disco-game').hidden=true;
  let levelStarted=false,snippetLoading=false;
  const clipSeconds=()=>Math.min(15,5*(mistakes+1));
