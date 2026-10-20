@@ -10,14 +10,19 @@
   ['Englishman in New York','Sting'],['Glamorous','Fergie feat. Ludacris'],
   ['Against All Odds','Phil Collins'],['You Are My Destiny','Paul Anka']
  ].map(([title,artist],i)=>({title,artist,src:`music/intermediate-${String(i+1).padStart(2,'0')}.mp3`}));
- const playlists={easy:easyTracks,intermediate:intermediateTracks};
+ const hardTracks=[
+  ['Speedy Gonzales','Pat Boone'],['Pepper-Tree','Cocteau Twins'],
+  ['Always Somewhere','Scorpions'],['Cars and Girls','Prefab Sprout'],
+  ['Every Girl Gets Her Wish','Saint Avangeline']
+ ].map(([title,artist],i)=>({title,artist,src:`music/hard-${String(i+1).padStart(2,'0')}.mp3`}));
+ const playlists={easy:easyTracks,intermediate:intermediateTracks,hard:hardTracks};
  let tracks=easyTracks,levelName='Easy';
  const modal=document.querySelector('#disco');
  const $=s=>modal.querySelector(s);
  const audio=$('audio'),input=$('#disco-answer'),suggestions=$('#disco-suggestions');
  const play=$('#disco-play'),seek=$('#disco-seek'),feedback=$('#disco-feedback');
  const levels=document.createElement('section');levels.id='disco-levels';levels.setAttribute('aria-labelledby','disco-level-title');
- levels.innerHTML=`<h3 id="disco-level-title">Choose your level</h3><p>Listen. Guess. Unlock a little more.</p><div class="disco-level-list"><button type="button" data-level="easy"><span>Easy</span><small>10 songs · Ready to play ▸</small></button><button type="button" data-level="intermediate"><span>Intermediate</span><small>6 songs · Ready to play ▸</small></button><button type="button" disabled><span>Hard</span><small>Coming soon</small></button></div><p class="disco-level-rule">5 seconds → 10 seconds → 15 seconds<br>Each wrong guess reveals more of the song.</p>`;
+ levels.innerHTML=`<h3 id="disco-level-title">Choose your level</h3><p>Listen. Guess. Unlock a little more.</p><div class="disco-level-list"><button type="button" data-level="easy"><span>Easy</span><small>10 songs ▸</small></button><button type="button" data-level="intermediate"><span>Intermediate</span><small>6 songs ▸</small></button><button type="button" data-level="hard"><span>Hard</span><small>5 songs ▸</small></button></div><p class="disco-level-rule">5 seconds → 10 seconds → 15 seconds<br>Each wrong guess reveals more of the song.</p>`;
  modal.append(levels);$('#disco-game').hidden=true;
  let levelStarted=false,snippetLoading=false;
  const clipSeconds=()=>Math.min(15,5*(mistakes+1));
@@ -56,7 +61,7 @@
   for(let i=1;i<=a.length;i++){let next=[i];for(let j=1;j<=b.length;j++)next[j]=Math.min(next[j-1]+1,row[j]+1,row[j-1]+(a[i-1]!==b[j-1]));row=next;}
   return row[b.length];
  }
- const catalog=[...(window.discoSongCatalog||[]),...easyTracks,...intermediateTracks].filter((song,i,all)=>all.findIndex(s=>normalize(s.title)===normalize(song.title)&&normalize(s.artist)===normalize(song.artist))===i).map(s=>({...s,key:normalize(s.title),artistKey:normalize(s.artist)}));
+ const catalog=[...(window.discoSongCatalog||[]),...easyTracks,...intermediateTracks,...hardTracks].filter((song,i,all)=>all.findIndex(s=>normalize(s.title)===normalize(song.title)&&normalize(s.artist)===normalize(song.artist))===i).map(s=>({...s,key:normalize(s.title),artistKey:normalize(s.artist)}));
  function hideSuggestions(){suggestions.hidden=true;input.setAttribute('aria-expanded','false');input.removeAttribute('aria-activedescendant');selected=-1;}
  function choose(i){if(!matches[i])return;input.value=matches[i].title;hideSuggestions();input.focus();}
  function filter(){
@@ -180,7 +185,7 @@
   });
   $('#disco-score').tabIndex=-1;$('#disco-score').focus({preventScroll:true});
  }
- levels.querySelectorAll('[data-level]').forEach(button=>button.addEventListener('click',()=>{tracks=playlists[button.dataset.level];levelName=button.dataset.level==='easy'?'Easy':'Intermediate';levelStarted=true;levels.hidden=true;round=0;results=[];finished=false;modal.classList.remove('is-finale');$('#disco-game').hidden=false;$('#disco-finale').hidden=true;loadRound();}));
+ levels.querySelectorAll('[data-level]').forEach(button=>button.addEventListener('click',()=>{tracks=playlists[button.dataset.level];levelName={easy:'Easy',intermediate:'Intermediate',hard:'Hard'}[button.dataset.level];levelStarted=true;levels.hidden=true;round=0;results=[];finished=false;modal.classList.remove('is-finale');$('#disco-game').hidden=false;$('#disco-finale').hidden=true;loadRound();}));
  $('#disco-replay').addEventListener('click',()=>{levelStarted=false;finished=false;modal.classList.remove('is-finale');$('#disco-game').hidden=true;$('#disco-finale').hidden=true;levels.hidden=false;levels.querySelector('button').focus({preventScroll:true});});
  $('#disco-close').addEventListener('click',()=>modal.close());
  modal.addEventListener('close',()=>{window.sceneAudio.fadeOut(audio);stopVisualizer();clearTimeout(transitionTimer);hideSuggestions();opener?.focus({preventScroll:true});});
