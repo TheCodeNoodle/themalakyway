@@ -2,7 +2,7 @@
  const passages=[
   'Citizen! Agent 01 reporting in. Four stars discovered! Congratulations on reaching your first cosmic milestone.',
   'Such impressive exploration deserves a reward. Mission Control has approved a special delivery, just for you.',
-  'One gift, sealed and ready. Go on, Citizen. Open your mail!'
+  'One gift, sealed and ready. Go on Citizen, I mean Astronaut sorry. Open your mail!'
  ];
  const description='Malakistos the Great is the legendary warrior who conquered the Seven Realms. Known for her strength, courage, and unmatched fighting skills, she defeated countless enemies and built an empire that would never be forgotten.';
  const cardFace=`<div class="gift-card-face"><img src="gift-art/card.svg" alt="Malakistos the Great"><p class="gift-card-description">${description}</p><span class="gift-strength" aria-label="Strength: 90">90</span><span class="gift-defense" aria-label="Defense: 75">75</span></div>`;
