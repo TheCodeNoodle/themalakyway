@@ -72,6 +72,7 @@
   text.replaceChildren(fragment);
  }
  function render(){
+  if(state!=='dialogue')return;
   clearTimeout(typingTimer);
   window.sceneAudio.stopLetters();
   const tokens=words();
@@ -83,8 +84,8 @@
    if(text.scrollHeight<=text.clientHeight+1){best=mid;low=mid+1;}else high=mid-1;
   }
   nextOffset=best;write(tokens,offset,best);text.removeAttribute('aria-busy');
-  continueHint=nextOffset<tokens.length?'Click to continue ▸':passage===10?'Click to enter your universe ▸':'Click to continue ▸';
-  advance.setAttribute('aria-label',passage===10?'Enter your birthday universe':'Continue transmission');
+  continueHint=nextOffset<tokens.length?'Click to continue ▸':passage===passages.length-1?'Click to enter your universe ▸':'Click to continue ▸';
+  advance.setAttribute('aria-label',passage===passages.length-1?'Enter your birthday universe':'Continue transmission');
   scene.dataset.passage=String(passage+1);scene.dataset.state='dialogue';
   typePage();
  }
@@ -107,20 +108,29 @@
   advance.focus({preventScroll:true});
  }
  async function finish(){
+  if(state==='transition'||state==='complete')return;
   state='transition';scene.dataset.state=state;advance.disabled=true;
+  clearTimeout(typingTimer);cancelAnimationFrame(resizeFrame);
   window.sceneAudio.stopLetters();
   const curtain=document.createElement('div');
   curtain.setAttribute('aria-hidden','true');curtain.id='intro-transition';
   Object.assign(curtain.style,{position:'fixed',inset:'0',background:'#000',opacity:'0',zIndex:'10000',pointerEvents:'all'});
   document.body.append(curtain);
-  const fade=async(from,to,duration,delay=0)=>{
-   const animation=curtain.animate([{opacity:from},{opacity:to}],{duration,delay,easing:'ease-in-out',fill:'forwards'});
-   await animation.finished;curtain.style.opacity=String(to);animation.cancel();
-  };
-  await fade(0,1,reduced.matches?250:550);
-  scene.hidden=true;document.documentElement.classList.remove('intro-active');
+  // Keep the opaque animation in place until the next scene has been painted.
+  const cover=curtain.animate([{opacity:0},{opacity:1}],{
+   duration:reduced.matches?250:550,easing:'ease-in-out',fill:'both'
+  });
+  await cover.finished;
+  scene.hidden=true;scene.style.visibility='hidden';card.hidden=true;hint.hidden=true;
+  document.documentElement.classList.remove('intro-active');
   document.dispatchEvent(new CustomEvent('introcomplete'));
-  await fade(1,0,reduced.matches?300:750,150);
+  await new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve)));
+  const uncover=curtain.animate([{opacity:1},{opacity:0}],{
+   duration:reduced.matches?300:750,delay:150,easing:'ease-in-out',fill:'both'
+  });
+  // The new animation already covers its delay before the old one is removed.
+  cover.cancel();
+  await uncover.finished;
   curtain.remove();main.inert=false;main.removeAttribute('aria-hidden');
   state='complete';scene.dataset.state=state;
   // Leave the character unfocused on arrival; Tab still reveals its keyboard focus ring.
@@ -140,7 +150,7 @@
   if(scene.dataset.typing==='true'){completeTyping();return;}
   if(nextOffset<words().length){offset=nextOffset;render();return;}
   if(passage===8){photograph();return;}
-  if(passage===10){finish();return;}
+  if(passage===passages.length-1){finish();return;}
   passage++;offset=0;render();
  });
  let resizeFrame;
