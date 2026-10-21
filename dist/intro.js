@@ -140,7 +140,7 @@
   if(scene.dataset.typing==='true'){completeTyping();return;}
   if(nextOffset<words().length){offset=nextOffset;render();return;}
   if(passage===8){photograph();return;}
-  if(passage===11){finish();return;}
+  if(passage===10){finish();return;}
   passage++;offset=0;render();
  });
  let resizeFrame;
