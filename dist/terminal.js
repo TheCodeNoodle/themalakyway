@@ -39,9 +39,11 @@
   if(!queue.length){const callback=afterSequence;afterSequence=null;callback?.();return;}
   const item=queue.shift(),alien=!!item.alien;
   const alphabet={a:'ᔑ',e:'ᒷ',f:'⎓',h:'⍑',i:'╎',l:'ꖎ',m:'ᒲ',n:'リ',o:'𝙹',r:'∷',s:'ᓭ',t:'ℸ̣',u:'⚍',w:'∴',y:'||'};
-  const text=alien?Array.from(item.text,c=>alphabet[c]||c).join(''):item;
+  const martian=caller==='Krobus'&&planet==='Mars';
+  const text=alien&&!martian?Array.from(item.text,c=>alphabet[c]||c).join(''):(alien?item.text:item);
   const body=line('',alien?'alien':'speech',caller);
-  if(alien){body.classList.add('terminal-galactic');body.setAttribute('aria-label','Unknown alien transmission');}
+  if(martian)body.classList.add('terminal-martian');
+  if(alien&&!martian){body.classList.add('terminal-galactic');body.setAttribute('aria-label','Unknown alien transmission');}
   choices([['Show message','next']],'Press Enter to reveal','Receiving transmission...');
   typing={body,text,alien};let index=0;const characters=Array.from(text);
   const tick=()=>{if(!typing||!modal.open)return;body.textContent=characters.slice(0,++index).join('');if(/\S/.test(characters[index-1]))window.sceneAudio?.letter();scroll();if(index>=characters.length)finishTyping();else timer=setTimeout(tick,26);};
@@ -64,6 +66,7 @@
   say(['Hilo?','dis bawkday heuman?'],()=>{state='chicken-answer';choices([['Yes','yes'],['No','no']],'yes / no','Type YES or NO.');});
  }
  function krobus(){
+  planet='Earth';
   contact('Krobus','krobus','Origin unknown · translator offline','CH 02 / CONNECTED');
   say([{text:'hello... are you there?',alien:true},{text:'are you from this!',alien:true}],()=>{
    state='planet';line('What planet are you from?','system','SYSTEM');line('[SELECT YOUR PLANET]');

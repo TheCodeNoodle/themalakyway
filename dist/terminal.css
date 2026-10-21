@@ -69,3 +69,8 @@
 .terminal-screen{position:absolute;left:3.125%;right:3.125%;top:9.41%;bottom:9.41%;border:0;border-radius:0;box-shadow:inset 0 0 36px #000;padding:18px 24px 12px}
 .terminal-screen::after{border-radius:0}
 @media(max-width:650px){.terminal-window{width:calc(100vw - 18px);height:calc(100svh - 22px);aspect-ratio:auto}.terminal-screen{padding:14px 14px 12px}.terminal-top{font-size:12px}.terminal-bottom{font-size:11px}#terminal-close{width:27px;height:27px;font-size:25px}}
+
+@font-face{font-family:Eyeclipse;src:url('fonts/eyeclipse.ttf') format('truetype');font-style:normal;font-weight:400;font-display:swap}
+.terminal-line .terminal-martian{font-family:Eyeclipse,monospace;font-size:14px;letter-spacing:0;color:#ed815e;text-shadow:0 0 7px #dc593c55;font-weight:400;line-height:1.5}
+
+@media(max-width:650px){.terminal-line .terminal-martian{font-size:12px}}

@@ -22,7 +22,7 @@
   const urls=[...common,...(extra[modal.id]||[])];
   modal.querySelectorAll('img[src],image[href]').forEach(img=>urls.push(img.currentSrc||img.getAttribute('src')||img.getAttribute('href')));
   const fonts=['24px VT323'];
-  if(modal.id==='cosmic-terminal')fonts.push('24px MalakyGalactic','24px GalacticSyllabics');
+  if(modal.id==='cosmic-terminal')fonts.push('24px MalakyGalactic','24px GalacticSyllabics','24px Eyeclipse');
   return Promise.all([...urls.map(image),...fonts.map(font=>document.fonts.load(font).catch(()=>{}))]);
  }
  window.windowAssets={
