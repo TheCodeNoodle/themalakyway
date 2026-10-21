@@ -83,8 +83,8 @@
    if(text.scrollHeight<=text.clientHeight+1){best=mid;low=mid+1;}else high=mid-1;
   }
   nextOffset=best;write(tokens,offset,best);text.removeAttribute('aria-busy');
-  continueHint=nextOffset<tokens.length?'Click to continue ▸':passage===11?'Click to enter your universe ▸':'Click to continue ▸';
-  advance.setAttribute('aria-label',passage===11?'Enter your birthday universe':'Continue transmission');
+  continueHint=nextOffset<tokens.length?'Click to continue ▸':passage===10?'Click to enter your universe ▸':'Click to continue ▸';
+  advance.setAttribute('aria-label',passage===10?'Enter your birthday universe':'Continue transmission');
   scene.dataset.passage=String(passage+1);scene.dataset.state='dialogue';
   typePage();
  }
