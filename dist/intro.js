@@ -9,8 +9,8 @@
   'But before we can issue your official Rocketship License, we need one last thing from you.',
   'Please look directly at the nearest camera, put on your best astronaut smile, and hold still.',
   'Three... two... one... CHEESE!',
-  "Your Rocketship License has been issued. You're cleared to explore the galaxy, chase shooting stars, and find your own way out there.",
-  "Now go on. There's a whole universe out there waiting for you.",
+  "Your Rocketship License has been issued.",
+  "Alriight, you're cleared for takeoff. Grab your helmet and go ride the Saturn V Rocketship. There's a whole universe out there waiting for you.",
   'Transmission terminated. Happy 18th Birthday!'
  ];
  const scene=document.querySelector('#intro-scene');
