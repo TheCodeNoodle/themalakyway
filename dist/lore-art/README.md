@@ -9,6 +9,6 @@ art: [
 ]
 ```
 
-Place new image files in this folder. The book automatically offers numbered picture selectors when a chapter has multiple pictures. An empty art array uses the decorative mountain drawing. Images retain their proportions. The original supplied Paarthurnax PNG is preserved unchanged.
+Place new image files in this folder. Multiple chapter illustrations appear together, stacked in their listed order. The current two-image page places Alduin beneath Paarthurnax. An empty art array uses the decorative mountain drawing. Images retain their proportions. All supplied PNG files are preserved unchanged. Whiterun belongs to chapter 1, the dragons to chapter 2, Blackreach to chapter 3, and Skuldafn to chapter 4.
 
 No build step is needed. Do not run the old build script over manually edited page files.

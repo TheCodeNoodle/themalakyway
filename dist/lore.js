@@ -10,9 +10,11 @@
   <div class="lore-cover"><div class="lore-cover-border"><span class="lore-cover-kicker">A TALE FROM SKYRIM</span><div class="lore-seal" aria-hidden="true">✧</div><h2>Malakistos<br><em>the Great</em></h2><div class="lore-cover-rule" aria-hidden="true"></div><p>The Dragonborn’s story</p><button id="lore-read">Open the book <span aria-hidden="true">→</span></button><span class="lore-cover-foot">FOUR CHAPTERS · ONE LEGEND</span></div></div>
  </div><div class="lore-bottom"><button id="lore-cover-button" hidden>↖ Back to cover</button><span id="lore-help">An illustrated chronicle</span></div>`;
  document.body.append(modal);
+ const soundtrack=new Audio('music/lore-solitude.mp3');soundtrack.id='lore-music';soundtrack.loop=true;soundtrack.preload='metadata';document.body.append(soundtrack);
+ window.sceneAudio.registerMusic(modal,soundtrack);
  const $=s=>modal.querySelector(s),cover=$('.lore-cover'),spread=$('.lore-spread');
  const reduced=matchMedia('(prefers-reduced-motion: reduce)');
- let page=0,opener,opened=false,busy=false,version=0,artIndex=0;
+ let page=0,opener,opened=false,busy=false,version=0;
  const images=new Map();
  function preload(){return Promise.all(chapters.flatMap(c=>c.art).map(a=>{
   if(!images.has(a.src)){const img=new Image();img.src=a.src;images.set(a.src,img.decode().catch(()=>{}));}return images.get(a.src);
@@ -22,14 +24,17 @@
  function renderArt(){
   const root=$('#lore-art'),items=chapters[page].art;root.replaceChildren();
   if(!items.length){root.innerHTML=ornament;const n=document.createElement('span');n.className='lore-plate-number';n.textContent=roman[page];root.append(n);return;}
-  const a=items[artIndex],figure=document.createElement('figure'),img=document.createElement('img'),caption=document.createElement('figcaption');
-  img.src=a.src;img.alt=a.alt;img.className='lore-illustration';caption.textContent=a.caption||'';figure.append(img,caption);root.append(figure);
-  if(items.length>1){const controls=document.createElement('div');controls.className='lore-art-controls';items.forEach((item,i)=>{const btn=document.createElement('button');btn.textContent=String(i+1);btn.setAttribute('aria-label',`View ${item.caption||'illustration '+(i+1)}`);btn.setAttribute('aria-pressed',String(i===artIndex));btn.onclick=()=>{artIndex=i;renderArt();};controls.append(btn);});root.append(controls);}
+  root.classList.toggle('lore-art-stack',items.length>1);
+  for(const a of items){
+   const figure=document.createElement('figure'),img=document.createElement('img'),caption=document.createElement('figcaption');
+   img.src=a.src;img.alt=a.alt;img.className='lore-illustration';caption.textContent=a.caption||'';
+   figure.append(img,caption);root.append(figure);
+  }
  }
  function render(){
   const chapter=chapters[page];$('#lore-title').textContent=chapter.title;$('#lore-chapter-number').textContent=`CHAPTER ${roman[page]}`;$('.lore-place').textContent=chapter.place;
   const story=$('#lore-story');story.replaceChildren();chapter.paragraphs.forEach(text=>{const p=document.createElement('p');p.textContent=text.replaceAll('—',',');story.append(p);});
-  $('#lore-page-number').textContent=`${page+1} / ${chapters.length}`;$('#lore-prev').disabled=page===0;$('#lore-next').disabled=page===chapters.length-1;artIndex=0;renderArt();$('.lore-reading').scrollTop=0;
+  $('#lore-page-number').textContent=`${page+1} / ${chapters.length}`;$('#lore-prev').disabled=page===0;$('#lore-next').disabled=page===chapters.length-1;renderArt();$('.lore-reading').scrollTop=0;
  }
  const motion=new Set();
  function animateBook(element,frames,duration=650){
@@ -40,23 +45,20 @@
  async function turn(direction){
   if(busy||!opened||page+direction<0||page+direction>=chapters.length)return;
   busy=true;const request=version;
-  const source=$('.lore-story-page'),leaf=source.cloneNode(true);
-  leaf.querySelectorAll('[id]').forEach(el=>{el.classList.add(el.id+'-copy');el.removeAttribute('id');});
-  leaf.setAttribute('aria-hidden','true');leaf.inert=true;leaf.classList.add('lore-turning-leaf');
-  leaf.querySelector('.lore-reading').scrollTop=$('.lore-reading').scrollTop;
-  $('.lore-binding').append(leaf);
-  const oldArt=$('#lore-art').cloneNode(true);oldArt.removeAttribute('id');oldArt.className='lore-art-ghost';oldArt.inert=true;oldArt.setAttribute('aria-hidden','true');
-  const art=$('#lore-art'),rect=art.getBoundingClientRect(),parent=art.parentElement.getBoundingClientRect();
-  Object.assign(oldArt.style,{left:rect.left-parent.left+'px',top:rect.top-parent.top+'px',width:rect.width+'px',height:rect.height+'px'});art.parentElement.append(oldArt);
-  await animateBook(leaf,[{transform:'rotateY(0deg)',opacity:1},{transform:`rotateY(${direction>0?-88:88}deg)`,opacity:.9}],380);
-  if(version!==request){leaf.remove();oldArt.remove();return;}
-  leaf.style.visibility='hidden';page+=direction;render();
-  await Promise.all([
-   animateBook(source,[{transform:`rotateY(${direction>0?75:-75}deg)`,opacity:.45},{transform:'rotateY(0deg)',opacity:1}],520),
-   animateBook(oldArt,[{opacity:1},{opacity:0}],420),
-   animateBook(art,[{opacity:0,transform:'translateY(12px)'},{opacity:1,transform:'translateY(0)'}],600)
-  ]);
-  leaf.remove();oldArt.remove();if(version!==request)return;busy=false;$('.lore-reading').focus({preventScroll:true});
+  const artPage=$('.lore-art-page'),storyPage=$('.lore-story-page');
+  modal.classList.add('is-turning');
+  // Move the entire paper, including its illustration. Swap both pages only at the fold.
+  await Promise.all([artPage,storyPage].map((sheet,i)=>animateBook(sheet,[
+   {transform:'rotateY(0deg)',opacity:1},
+   {transform:`rotateY(${(i? -1:1)*direction*88}deg)`,opacity:0}
+  ],360)));
+  if(version!==request)return;
+  page+=direction;render();
+  await Promise.all([artPage,storyPage].map((sheet,i)=>animateBook(sheet,[
+   {transform:`rotateY(${(i?1:-1)*direction*80}deg)`,opacity:0},
+   {transform:'rotateY(0deg)',opacity:1}
+  ],500)));
+  if(version!==request)return;modal.classList.remove('is-turning');busy=false;$('.lore-reading').focus({preventScroll:true});
  }
  async function openBook(){
   if(busy||opened)return;busy=true;const request=version;await preload();if(version!==request||!modal.open){busy=false;return;}
@@ -77,7 +79,7 @@
   if(request===version)showCover();
  };
  modal.addEventListener('keydown',event=>{if(opened&&['ArrowLeft','ArrowRight'].includes(event.key)){event.preventDefault();turn(event.key==='ArrowRight'?1:-1);}});
- modal.addEventListener('close',()=>{version++;busy=false;motion.forEach(a=>a.cancel());modal.querySelectorAll('.lore-art-ghost').forEach(el=>el.remove());modal.querySelectorAll('.lore-turning-leaf').forEach(el=>{el.getAnimations().forEach(a=>a.cancel());el.remove();});opener?.focus({preventScroll:true});});
+ modal.addEventListener('close',()=>{version++;busy=false;motion.forEach(a=>a.cancel());modal.classList.remove('is-turning');modal.querySelectorAll('.lore-turning-leaf').forEach(el=>{el.getAnimations().forEach(a=>a.cancel());el.remove();});opener?.focus({preventScroll:true});});
  render();
  window.lore={async open(source){
   if(window.windowAssets.pending||document.querySelector('dialog[open]')||document.documentElement.classList.contains('intro-active'))return;

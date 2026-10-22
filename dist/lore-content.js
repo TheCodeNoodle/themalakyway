@@ -1,7 +1,7 @@
 // Four story pages. Add illustrations to each art array in reading order.
 // {src:'lore-art/filename.png', alt:'Description of the picture', caption:'Name'}
 window.loreChapters = [
- {title:'The Beginning',place:'Helgen · Whiterun',art:[],paragraphs:[
+ {title:'The Beginning',place:'Helgen · Whiterun',art:[{src:'lore-art/Whiterun.png',alt:'An illustration of Whiterun.',caption:'Whiterun'}],paragraphs:[
  'One day, Malakistos woke up in a cart with her hands tied. She had been captured by Imperial soldiers and was being taken to a town called Helgen.',
  'They were about to execute her, even though her name wasn’t on their list.',
  'But before they could do it, a huge black dragon landed on a tower and attacked the town. Everyone started running as the buildings caught fire.',
@@ -11,7 +11,7 @@ window.loreChapters = [
  'The guards realised what she was.',
  'She was the Dragonborn, someone with the power to use the voice of dragons.'
  ]},
- {title:'The Dragonborn',place:'The Throat of the World',art:[{src:'lore-art/paarthurnax.png',alt:'An illustrated portrait of Paarthurnax, the ancient dragon with pale scales and long horns.',caption:'Paarthurnax'}],paragraphs:[
+ {title:'The Dragonborn',place:'The Throat of the World',art:[{src:'lore-art/paarthurnax.png',alt:'An illustrated portrait of Paarthurnax, the ancient dragon with pale scales and long horns.',caption:'Paarthurnax'},{src:'lore-art/dragon2.png',alt:'Alduin, the black dragon known as the World-Eater.',caption:'Alduin'}],paragraphs:[
  'After the battle, Malakistos heard a voice calling her from the mountains.',
  'It was the Greybeards, a group of old men who knew how to use powerful dragon Shouts. She climbed the mountain to meet them, and they helped her understand her powers.',
  'But the dragons were still attacking Skyrim.',
@@ -21,7 +21,7 @@ window.loreChapters = [
  'He told her about Dragonrend, a special Shout that could force Alduin to land so she could fight him.',
  'The problem was that the people who knew it had died a long time ago.'
  ]},
- {title:'The First Battle',place:'Blackreach · The Time-Wound',art:[],paragraphs:[
+ {title:'The First Battle',place:'Blackreach · The Time-Wound',art:[{src:'lore-art/Blackreach.png',alt:'An illustration of Blackreach.',caption:'Blackreach'}],paragraphs:[
  'To learn Dragonrend, Malakistos had to find an Elder Scroll.',
  'She searched through old underground ruins and reached Blackreach, a huge cave with glowing mushrooms and abandoned buildings.',
  'After finding the Scroll, she returned to Paarthurnax.',
@@ -33,7 +33,7 @@ window.loreChapters = [
  'But before she could finish him, Alduin escaped.',
  'She wasn’t going to let him get away that easily.'
  ]},
- {title:'Malakistos the Great',place:'Skuldafn · Sovngarde',art:[],paragraphs:[
+ {title:'Malakistos the Great',place:'Skuldafn · Sovngarde',art:[{src:'lore-art/Skuldafn.png',alt:'An illustration of Skuldafn.',caption:'Skuldafn'}],paragraphs:[
  'Malakistos trapped a dragon called Odahviing in Whiterun and asked him where Alduin had gone.',
  'He told her that Alduin was hiding in Sovngarde, the place where the souls of Nord heroes went after death.',
  'She released Odahviing, and he flew her to an ancient temple with a portal to Sovngarde.',

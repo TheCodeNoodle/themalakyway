@@ -59,10 +59,31 @@
 /* Paper and cover motion, with flat artwork on the page. */
 .lore-story-page{transform-origin:left center;backface-visibility:hidden}
 .lore-spread{perspective:1800px}
-.lore-art-ghost{position:absolute;z-index:2;pointer-events:none;display:flex;align-items:center;justify-content:center;background:var(--paper)}
-.lore-art-ghost figure{margin:0;width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;overflow:hidden}
-.lore-art-ghost figcaption{font:italic 23px/1.2 Georgia,serif;color:#523e29;text-align:center}
-.lore-title-copy{font:normal clamp(26px,2.8vw,37px)/1.12 Georgia,serif;color:#543821;letter-spacing:-.9px;margin:0 0 24px}
-.lore-story-copy p{font-size:16px;line-height:1.65;margin:0 0 13px;color:#493826}
-.lore-story-copy p:first-child::first-letter{float:left;font:52px/.85 Georgia,serif;color:#884731;padding:7px 7px 0 0}
-@media(max-width:700px){.lore-art-ghost figure{flex-direction:row;gap:12px}.lore-art-ghost figcaption{font-size:17px;width:32%}.lore-title-copy{font-size:27px;margin-bottom:18px}.lore-story-copy p{font-size:15px;line-height:1.6}}
+
+.lore-art-page{transform-origin:right center;backface-visibility:hidden}
+#lore-art .lore-illustration{width:100%;max-width:100%}
+#lore-art.lore-art-stack{display:grid;grid-template-rows:1fr 1fr;gap:16px;padding:14px 0}
+#lore-art.lore-art-stack figure{height:100%;min-height:0;gap:8px}
+#lore-art.lore-art-stack .lore-illustration{flex:1;min-height:0;max-height:calc(100% - 30px)}
+#lore-art.lore-art-stack figcaption{font-size:19px;flex:none}
+.is-turning .lore-spread{pointer-events:none}
+@media(max-width:700px){
+ .lore-spread:has(.lore-art-stack){grid-template-rows:40% 60%}
+ #lore-art .lore-illustration{width:68%;max-width:68%}
+ #lore-art.lore-art-stack{gap:6px;padding:0}
+ #lore-art.lore-art-stack .lore-illustration{flex:none;height:100%;max-height:100%}
+ #lore-art.lore-art-stack figcaption{font-size:16px}
+}
+/* Alternating dragon portraits and names. PNG files remain untouched. */
+#lore-art.lore-art-stack{gap:12px;padding:4px 0}
+#lore-art.lore-art-stack figure{flex-direction:row;gap:0;overflow:hidden}
+#lore-art.lore-art-stack figure:nth-child(even){flex-direction:row-reverse}
+#lore-art.lore-art-stack .lore-illustration{flex:none;width:72%;max-width:72%;height:100%;max-height:100%;object-fit:contain}
+#lore-art.lore-art-stack figure:first-child .lore-illustration{object-fit:cover}
+#lore-art.lore-art-stack figcaption{width:28%;font-size:21px;line-height:1.25;overflow-wrap:anywhere}
+@media(max-width:700px){
+ .lore-spread:has(.lore-art-stack){grid-template-rows:44% 56%}
+ #lore-art.lore-art-stack{gap:8px;padding:0}
+ #lore-art.lore-art-stack figcaption{font-size:16px}
+}
+@media(max-width:700px){#lore-art.lore-art-stack figcaption{font-size:14px;white-space:nowrap;overflow-wrap:normal}}
