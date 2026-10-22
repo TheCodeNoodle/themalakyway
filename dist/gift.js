@@ -89,7 +89,7 @@
  document.addEventListener('stardiscovered',event=>{
   if(event.detail.count<4||started)return;pending=true;trigger=event.detail.star;preload();requestAnimationFrame(maybeStart);
  });
- document.querySelectorAll('dialog').forEach(dialog=>{if(dialog!==modal)dialog.addEventListener('close',()=>requestAnimationFrame(maybeStart));});
+ document.addEventListener('close',event=>{if(event.target.matches('dialog')&&event.target!==modal)requestAnimationFrame(maybeStart);},true);
  document.addEventListener('visibilitychange',()=>{if(!document.hidden)maybeStart();});
  let resizing;window.addEventListener('resize',()=>{cancelAnimationFrame(resizing);resizing=requestAnimationFrame(()=>{if(modal.open&&state==='dialogue')render();});});
 })();

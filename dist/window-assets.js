@@ -2,6 +2,7 @@
  const cache=new Map();
  const common=['disco-art/closeButton.svg'];
  const extra={
+  lore:['lore-art/paarthurnax.png'],
   disco:['disco-art/windowBackground.svg','disco-art/SubmitButton.svg','disco-art/pauseButton.svg',...Array.from({length:3},(_,i)=>`disco-art/heart-frame-${i}.png`)],
   fortune:['fortune-art/window-table.svg','disco-art/SubmitButton.svg'],
   'cosmic-terminal':['terminal-art/border.svg','terminal-art/chickette.svg','terminal-art/krobus.svg'],
