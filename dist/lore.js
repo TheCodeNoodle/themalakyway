@@ -1,11 +1,12 @@
 (() => {
- const chapters=window.loreChapters,roman=['I','II','III','IV'];
+ const roman=['I','II','III','IV'];
+ const chapters=window.loreChapters.flatMap((chapter,index)=>(chapter.pages||[chapter]).map((sheet,part,sheets)=>({...chapter,...sheet,chapterNumber:index,part:part+1,parts:sheets.length}))); 
  const modal=document.createElement('dialog');modal.id='lore';modal.className='lore-window';modal.setAttribute('aria-labelledby','lore-title');
  modal.innerHTML=`<div class="lore-toolbar"><span>LORE / THE CHRONICLES</span><button id="lore-close" aria-label="Close Lore">Close <span aria-hidden="true">×</span></button></div>
  <div class="lore-binding">
   <div class="lore-spread" inert>
    <section class="lore-art-page" aria-label="Chapter illustrations"><span class="lore-running">THE CHRONICLES OF MALAKISTOS</span><div id="lore-art"></div><span class="lore-place"></span></section>
-   <section class="lore-story-page"><div class="lore-chapter-line"><span id="lore-chapter-number"></span><span aria-hidden="true">✦</span></div><div class="lore-reading" tabindex="0" aria-label="Scroll to read this chapter"><h2 id="lore-title"></h2><div id="lore-story"></div><div class="lore-end-mark" aria-hidden="true">✧</div></div><nav class="lore-navigation" aria-label="Book pages"><button id="lore-prev" aria-label="Previous page">← <span>Previous</span></button><span id="lore-page-number" aria-live="polite"></span><button id="lore-next" aria-label="Next page"><span>Next</span> →</button></nav></section>
+   <section class="lore-story-page"><div class="lore-chapter-line"><span id="lore-chapter-number"></span><span class="lore-header-right"><span aria-hidden="true">✦</span></span></div><div class="lore-reading" tabindex="0" aria-label="Scroll to read this chapter"><h2 id="lore-title"></h2><div id="lore-story"></div><div class="lore-end-mark" aria-hidden="true">✧</div></div><nav class="lore-navigation" aria-label="Book pages"><button id="lore-prev" aria-label="Previous page">← <span>Previous</span></button><span id="lore-page-number" aria-live="polite"></span><button id="lore-next" aria-label="Next page"><span>Next</span> →</button></nav></section>
   </div>
   <div class="lore-cover"><div class="lore-cover-border"><span class="lore-cover-kicker">A TALE FROM SKYRIM</span><div class="lore-seal" aria-hidden="true">✧</div><h2>Malakistos<br><em>the Great</em></h2><div class="lore-cover-rule" aria-hidden="true"></div><p>The Dragonborn’s story</p><button id="lore-read">Open the book <span aria-hidden="true">→</span></button><span class="lore-cover-foot">FOUR CHAPTERS · ONE LEGEND</span></div></div>
  </div><div class="lore-bottom"><button id="lore-cover-button" hidden>↖ Back to cover</button><span id="lore-help">An illustrated chronicle</span></div>`;
@@ -23,7 +24,7 @@
  $('.lore-seal').innerHTML=ornament;
  function renderArt(){
   const root=$('#lore-art'),items=chapters[page].art;root.replaceChildren();
-  if(!items.length){root.innerHTML=ornament;const n=document.createElement('span');n.className='lore-plate-number';n.textContent=roman[page];root.append(n);return;}
+  if(!items.length){root.innerHTML=ornament;const n=document.createElement('span');n.className='lore-plate-number';n.textContent=roman[chapters[page].chapterNumber];root.append(n);return;}
   root.classList.toggle('lore-art-stack',items.length>1);
   for(const a of items){
    const figure=document.createElement('figure'),img=document.createElement('img'),caption=document.createElement('figcaption');
@@ -32,7 +33,11 @@
   }
  }
  function render(){
-  const chapter=chapters[page];$('#lore-title').textContent=chapter.title;$('#lore-chapter-number').textContent=`CHAPTER ${roman[page]}`;$('.lore-place').textContent=chapter.place;
+  const chapter=chapters[page],title=$('#lore-title');title.textContent=chapter.title;title.classList.toggle('lore-continuation-title',chapter.part>1);
+  if(chapter.part>1){$('.lore-header-right').prepend(title);}else{$('.lore-reading').prepend(title);}
+  $('#lore-story').classList.toggle('lore-chapter-start',chapter.part===1);
+  $('.lore-end-mark').hidden=chapter.part!==chapter.parts;
+  $('#lore-chapter-number').textContent=`CHAPTER ${roman[chapter.chapterNumber]}${chapter.parts>1?` · ${chapter.part} / ${chapter.parts}`:""}`;$('.lore-place').textContent=chapter.place;
   const story=$('#lore-story');story.replaceChildren();chapter.paragraphs.forEach(text=>{const p=document.createElement('p');p.textContent=text.replaceAll('—',',');story.append(p);});
   $('#lore-page-number').textContent=`${page+1} / ${chapters.length}`;$('#lore-prev').disabled=page===0;$('#lore-next').disabled=page===chapters.length-1;renderArt();$('.lore-reading').scrollTop=0;
  }

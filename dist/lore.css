@@ -21,7 +21,7 @@
 .lore-reading{min-height:0;flex:1;overflow:auto;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:#96703e66 transparent;padding:0 12px 0 0}
 .lore-window #lore-title{font:normal clamp(26px,2.8vw,37px)/1.12 Georgia,serif;color:#543821;letter-spacing:-.9px;margin:0 0 24px;text-wrap:balance}
 #lore-story p{font-size:16px;line-height:1.65;margin:0 0 13px;color:#493826}
-#lore-story p:first-child::first-letter{float:left;font:52px/.85 Georgia,serif;color:#884731;padding:7px 7px 0 0}
+#lore-story.lore-chapter-start p:first-child::first-letter{float:left;font:52px/.85 Georgia,serif;color:#884731;padding:7px 7px 0 0}
 .lore-end-mark{text-align:center;color:#9b7744;font-size:23px;margin:18px 0 6px}
 .lore-navigation{border-top:1px solid #98764b55;margin-top:12px;padding-top:12px;display:flex;align-items:center;justify-content:space-between;gap:8px}
 .lore-navigation button{border:0;background:none;padding:6px 0;color:#674224;font-size:13px;transition:color .2s,transform .2s}.lore-navigation button:hover{color:#a25732;transform:translateY(-2px)}.lore-navigation button:disabled{opacity:.28;transform:none;cursor:default}
@@ -87,3 +87,8 @@
  #lore-art.lore-art-stack figcaption{font-size:16px}
 }
 @media(max-width:700px){#lore-art.lore-art-stack figcaption{font-size:14px;white-space:nowrap;overflow-wrap:normal}}
+
+.lore-header-right{display:flex;align-items:center;justify-content:flex-end;gap:12px;min-width:0;text-align:right}
+.lore-window #lore-title.lore-continuation-title{font:inherit;letter-spacing:inherit;color:inherit;text-transform:uppercase;margin:0;line-height:1.4}
+.lore-chapter-line{gap:12px}
+#lore-chapter-number{flex-shrink:0}
