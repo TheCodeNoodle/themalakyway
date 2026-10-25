@@ -64,9 +64,12 @@
    page+=direction;render();
    await animateBook(spread,[{opacity:0},{opacity:1}],120);
   }else{
-   const width=spread.offsetWidth,height=spread.offsetHeight;
+   const paperStyle=getComputedStyle(spread);
+   const insetLeft=parseFloat(paperStyle.paddingLeft),insetTop=parseFloat(paperStyle.paddingTop);
+   const width=spread.clientWidth-insetLeft-parseFloat(paperStyle.paddingRight),height=spread.clientHeight-insetTop-parseFloat(paperStyle.paddingBottom);
    const oldSpread=snapshotSpread();page+=direction;render();const nextSpread=snapshotSpread();
    const layer=document.createElement('div');layer.className='lore-flip-layer';layer.inert=true;layer.setAttribute('aria-hidden','true');
+   Object.assign(layer.style,{left:insetLeft+'px',top:insetTop+'px',right:'auto',bottom:'auto',width:width+'px',height:height+'px'});
    layer.style.setProperty('--flip-width',width+'px');layer.style.setProperty('--flip-height',height+'px');
    const stationary=document.createElement('div');stationary.className='lore-flip-stationary '+(direction>0?'is-left':'is-right');
    const stationaryCopy=oldSpread.cloneNode(true);stationary.append(stationaryCopy);

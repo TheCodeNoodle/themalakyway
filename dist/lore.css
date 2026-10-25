@@ -106,3 +106,6 @@
 .lore-flip-stationary.is-left>.lore-flip-snapshot{left:0}.lore-flip-stationary.is-right>.lore-flip-snapshot{left:calc(var(--flip-width) / -2)}
 .lore-flip-face::after{content:'';position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,#3b281d22,transparent 24%,transparent 80%,#3b281d0a)}
 .lore-flip-face.is-back::after{background:linear-gradient(270deg,#3b281d22,transparent 24%)}
+
+/* The leather binding belongs to the stationary spread, never the turning paper. */
+.lore-flip-snapshot{padding:0!important;background:transparent!important;border:0!important;border-radius:0!important;box-shadow:none!important}
