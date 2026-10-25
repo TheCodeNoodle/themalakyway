@@ -47,22 +47,38 @@
   motion.add(animation);
   return animation.finished.catch(()=>{}).finally(()=>{animation.cancel();motion.delete(animation);});
  }
+ // Front/back sheet rotation adapted from https://codepen.io/pizzabote/pen/xxxXmXN.
+ function snapshotSpread(){
+  const copy=spread.cloneNode(true);
+  copy.classList.add('lore-flip-snapshot');copy.inert=true;copy.setAttribute('aria-hidden','true');
+  copy.querySelectorAll('[id]').forEach(el=>{el.classList.add(el.id+'-copy');el.removeAttribute('id');});
+  return copy;
+ }
  async function turn(direction){
   if(busy||!opened||page+direction<0||page+direction>=chapters.length)return;
-  busy=true;const request=version;
-  const artPage=$('.lore-art-page'),storyPage=$('.lore-story-page');
+  busy=true;const request=version,oldScroll=$('.lore-reading').scrollTop;
   modal.classList.add('is-turning');
-  // Move the entire paper, including its illustration. Swap both pages only at the fold.
-  await Promise.all([artPage,storyPage].map((sheet,i)=>animateBook(sheet,[
-   {transform:'rotateY(0deg)',opacity:1},
-   {transform:`rotateY(${(i? -1:1)*direction*88}deg)`,opacity:0}
-  ],360)));
-  if(version!==request)return;
-  page+=direction;render();
-  await Promise.all([artPage,storyPage].map((sheet,i)=>animateBook(sheet,[
-   {transform:`rotateY(${(i?1:-1)*direction*80}deg)`,opacity:0},
-   {transform:'rotateY(0deg)',opacity:1}
-  ],500)));
+  if(reduced.matches){
+   await animateBook(spread,[{opacity:1},{opacity:0}],120);
+   if(version!==request)return;
+   page+=direction;render();
+   await animateBook(spread,[{opacity:0},{opacity:1}],120);
+  }else{
+   const width=spread.offsetWidth,height=spread.offsetHeight;
+   const oldSpread=snapshotSpread();page+=direction;render();const nextSpread=snapshotSpread();
+   const layer=document.createElement('div');layer.className='lore-flip-layer';layer.inert=true;layer.setAttribute('aria-hidden','true');
+   layer.style.setProperty('--flip-width',width+'px');layer.style.setProperty('--flip-height',height+'px');
+   const stationary=document.createElement('div');stationary.className='lore-flip-stationary '+(direction>0?'is-left':'is-right');
+   const stationaryCopy=oldSpread.cloneNode(true);stationary.append(stationaryCopy);
+   const sheet=document.createElement('div');sheet.className='lore-flip-sheet';
+   const front=document.createElement('div'),back=document.createElement('div');front.className='lore-flip-face is-front';back.className='lore-flip-face is-back';
+   front.append(direction>0?oldSpread:nextSpread);back.append(direction>0?nextSpread:oldSpread);
+   sheet.append(front,back);layer.append(stationary,sheet);$('.lore-binding').append(layer);
+   stationaryCopy.querySelector('.lore-reading').scrollTop=oldScroll;oldSpread.querySelector('.lore-reading').scrollTop=oldScroll;
+   sheet.style.transform=direction>0?'rotateY(0deg)':'rotateY(-180deg)';
+   await animateBook(sheet,[{transform:direction>0?'rotateY(0deg)':'rotateY(-180deg)'},{transform:direction>0?'rotateY(-180deg)':'rotateY(0deg)'}],950);
+   layer.remove();
+  }
   if(version!==request)return;modal.classList.remove('is-turning');busy=false;$('.lore-reading').focus({preventScroll:true});
  }
  async function openBook(){
@@ -84,7 +100,7 @@
   if(request===version)showCover();
  };
  modal.addEventListener('keydown',event=>{if(opened&&['ArrowLeft','ArrowRight'].includes(event.key)){event.preventDefault();turn(event.key==='ArrowRight'?1:-1);}});
- modal.addEventListener('close',()=>{version++;busy=false;motion.forEach(a=>a.cancel());modal.classList.remove('is-turning');modal.querySelectorAll('.lore-turning-leaf').forEach(el=>{el.getAnimations().forEach(a=>a.cancel());el.remove();});opener?.focus({preventScroll:true});});
+ modal.addEventListener('close',()=>{version++;busy=false;motion.forEach(a=>a.cancel());modal.classList.remove('is-turning');modal.querySelectorAll('.lore-flip-layer,.lore-turning-leaf').forEach(el=>{el.getAnimations().forEach(a=>a.cancel());el.remove();});opener?.focus({preventScroll:true});});
  render();
  window.lore={async open(source){
   if(window.windowAssets.pending||document.querySelector('dialog[open]')||document.documentElement.classList.contains('intro-active'))return;
