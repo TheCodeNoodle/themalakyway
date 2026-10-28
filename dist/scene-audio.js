@@ -1,6 +1,7 @@
 (() => {
  const music=document.querySelector('#background-music');
  const toggle=document.querySelector('#music-toggle');
+ ['music-on.svg','music-off.svg'].forEach(src=>{const image=new Image();image.src=src;});
  const disco=document.querySelector('#disco');
  const fortune=document.querySelector('#fortune');
  const wizardMusic=document.querySelector('#fortune-music');
@@ -103,7 +104,8 @@
   stopLetters
  };
  toggle.addEventListener('click',()=>{
-  muted=!muted;toggle.textContent=muted?'♫ Music off':'♫ Music on';
+  muted=!muted;toggle.querySelector('img').src=muted?'music-off.svg':'music-on.svg';
+  toggle.title=muted?'Turn music on':'Turn music off';
   toggle.setAttribute('aria-pressed',String(!muted));syncMusic();
  });
  new MutationObserver(syncMusic).observe(disco,{attributes:true,attributeFilter:['open']});

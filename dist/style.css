@@ -80,3 +80,19 @@ a[href],[role=button]{cursor:url('pointers/pointer.png') 12 9,pointer}
 .universe.is-dragging,.universe.is-dragging *{cursor:url('pointers/drag.png') 24 24,grabbing}
 
 html.window-loading,html.window-loading *{cursor:progress!important}
+
+/* The moon shares the sky's coordinate system; only its circular hit area receives input. */
+.moon-layer{z-index:2;pointer-events:none;overflow:visible}
+#birthday-moon{pointer-events:none;outline:none;cursor:url('pointers/pointer.png') 12 9,pointer}
+.moon-art{pointer-events:none;image-rendering:pixelated;transition:filter 240ms ease}
+.moon-hit{pointer-events:all}
+.moon-focus{pointer-events:none;stroke:transparent;stroke-width:.18}
+#birthday-moon:hover .moon-art,#birthday-moon:focus-visible .moon-art{filter:brightness(1.35) drop-shadow(0 0 .45px #a1bdff)}
+#birthday-moon:focus-visible .moon-focus{stroke:#d3dfff}
+.intro-active .moon-hit{pointer-events:none}
+
+
+#music-toggle{width:48px;height:48px;padding:0;border:0;background:transparent;display:grid;place-items:center;transition:filter 180ms ease,transform 180ms ease}
+#music-toggle img{display:block;width:48px;height:48px;image-rendering:pixelated;pointer-events:none}
+#music-toggle:hover{filter:brightness(1.2);transform:translateY(-2px)}
+#music-toggle:active{transform:translateY(0)}

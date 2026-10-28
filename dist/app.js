@@ -132,7 +132,15 @@ companionButton.addEventListener('click',e=>{
  suppressCompanionClick=false;
  sayRandom(characterSpeeches);
 });
-document.addEventListener('click',e=>{if(!e.target.closest('.companion-float,.shooting-star'))hideThought();});
+document.addEventListener('click',e=>{if(!e.target.closest('.companion-float,.shooting-star,#birthday-moon'))hideThought();});
+const birthdayMoon=document.querySelector('#birthday-moon');
+function talkAboutMoon(){
+ if(document.documentElement.classList.contains('intro-active')||document.querySelector('dialog[open]'))return;
+ sayRandom(["That's how the moon looked like when I was born"]);
+}
+birthdayMoon.addEventListener('click',talkAboutMoon);
+birthdayMoon.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();talkAboutMoon();}});
+
 document.addEventListener('shootingstarcatch',()=>{
  sayRandom(shootingStarSpeeches);
 });
