@@ -2,6 +2,7 @@
  const cache=new Map();
  const common=['disco-art/closeButton.svg'];
  const extra={
+  'prank-letter':['gift-art/mail-0.png','gift-art/mail-1.png','gift-art/mail-2.png','gift-art/mail-back.svg','gift-art/mail-front.svg','gift-art/prank-paper.svg'],
   lore:['Helgen.png','paarthurnax.png','dragon2.png','Whiterun.png','Blackreach.png','Skuldafn.png'].map(name=>'lore-art/'+name),
   disco:['disco-art/windowBackground.svg','disco-art/SubmitButton.svg','disco-art/pauseButton.svg',...Array.from({length:3},(_,i)=>`disco-art/heart-frame-${i}.png`)],
   fortune:['fortune-art/window-table.svg','disco-art/SubmitButton.svg'],
