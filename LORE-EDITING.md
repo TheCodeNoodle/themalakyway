@@ -68,3 +68,6 @@ node tools/check-lore.cjs
 It checks the content structure and missing image/music files, with chapter/page locations for errors. Then open the local preview, open Lore and turn through your changed pages to check how the text and pictures fit. Long text scrolls; it does not automatically create a new page.
 
 For the live site, upload the edited `dist/lore-content.js` and any new files in `dist/lore-art/` to those same paths on GitHub. Existing images do not need to be uploaded again. GitHub Pages deploys after the commit. This new modular version must be published first before relying on its automatic behavior on the live site.
+
+## Cover artwork
+The visible cover title and small heading are now drawn in dist/lore-art/cover-title.svg; update that SVG to change those words. cover-base.svg and cover-logo.svg use the same 109 by 142 canvas and overlay exactly. Keep all three canvas proportions identical. The chapter count remains automatic; coverTitle in the content file still supplies the accessible cover title. Story pages are edited as described above.

@@ -9,12 +9,12 @@
    <section class="lore-art-page" aria-label="Chapter illustrations"><span class="lore-running">THE CHRONICLES OF MALAKISTOS</span><div id="lore-art"></div><span class="lore-place"></span></section>
    <section class="lore-story-page"><div class="lore-chapter-line"><span id="lore-chapter-number"></span><span class="lore-header-right"><span aria-hidden="true">✦</span></span></div><div class="lore-reading" tabindex="0" aria-label="Scroll to read this chapter"><h2 id="lore-title"></h2><div id="lore-story"></div><div class="lore-end-mark" aria-hidden="true">✧</div></div><nav class="lore-navigation" aria-label="Book pages"><button id="lore-prev" aria-label="Previous page">← <span>Previous</span></button><span id="lore-page-number" aria-live="polite"></span><button id="lore-next" aria-label="Next page"><span>Next</span> →</button></nav></section>
   </div>
-  <div class="lore-cover"><div class="lore-cover-border"><span class="lore-cover-kicker">A TALE FROM SKYRIM</span><div class="lore-seal" aria-hidden="true">✧</div><h2>Malakistos<br><em>the Great</em></h2><div class="lore-cover-rule" aria-hidden="true"></div><p>The Dragonborn’s story</p><button id="lore-read">Open the book <span aria-hidden="true">→</span></button><span class="lore-cover-foot">FOUR CHAPTERS · ONE LEGEND</span></div></div>
+  <div class="lore-cover-stage"><div class="lore-cover"><img class="lore-cover-layer" src="lore-art/cover-base.svg" alt="" draggable="false"><img class="lore-cover-layer" src="lore-art/cover-logo.svg" alt="" draggable="false"><img class="lore-cover-layer lore-cover-lettering" src="lore-art/cover-title.svg" alt="" draggable="false"><div class="lore-cover-border"><span class="lore-cover-kicker">A TALE FROM SKYRIM</span><div class="lore-seal" aria-hidden="true">✧</div><h2>Malakistos<br><em>the Great</em></h2><div class="lore-cover-rule" aria-hidden="true"></div><p>The Dragonborn’s story</p><button id="lore-read">Open the book <span aria-hidden="true">→</span></button><span class="lore-cover-foot">FOUR CHAPTERS · ONE LEGEND</span></div></div></div>
  </div><div class="lore-bottom"><button id="lore-cover-button" hidden>↖ Back to cover</button><span id="lore-help">An illustrated chronicle</span></div>`;
  document.body.append(modal);
  const soundtrack=new Audio(settings.soundtrack);soundtrack.id='lore-music';soundtrack.loop=true;soundtrack.preload='metadata';document.body.append(soundtrack);
  window.sceneAudio.registerMusic(modal,soundtrack);
- const $=s=>modal.querySelector(s),cover=$('.lore-cover'),spread=$('.lore-spread');
+ const $=s=>modal.querySelector(s),cover=$('.lore-cover'),coverStage=$('.lore-cover-stage'),spread=$('.lore-spread');
  $('.lore-cover-kicker').textContent=settings.kicker;
  $('.lore-running').textContent=settings.runningTitle;
  $('.lore-cover p').textContent=settings.subtitle;
@@ -96,14 +96,14 @@
   if(busy||opened)return;busy=true;const request=version;await preload();if(version!==request||!modal.open){busy=false;return;}
   spread.inert=false;modal.classList.add('is-reading');
   await Promise.all([
-   animateBook(cover,[{transform:'rotateY(0deg)',opacity:1},{transform:'rotateY(-75deg)',opacity:1,offset:.7},{transform:'rotateY(-110deg)',opacity:0}],1000),
-   animateBook(spread,[{opacity:0,transform:'scaleX(.76) scaleY(.96)'},{opacity:1,transform:'scaleX(1) scaleY(1)'}],1000)
+   animateBook(cover,[{transform:'rotateY(0deg)',opacity:1},{transform:'rotateY(-70deg)',opacity:1,offset:.65},{transform:'rotateY(-100deg)',opacity:0}],1000),
+   animateBook(spread,[{opacity:0,transform:'scale(.97)'},{opacity:1,transform:'scaleX(1) scaleY(1)'}],1000)
   ]);
-  if(version!==request)return;cover.hidden=true;opened=true;busy=false;$('#lore-cover-button').hidden=false;$('#lore-help').textContent='Scroll to read · Arrows to turn the pages';$('.lore-reading').focus({preventScroll:true});
+  if(version!==request)return;cover.hidden=true;coverStage.hidden=true;opened=true;busy=false;$('#lore-cover-button').hidden=false;$('#lore-help').textContent='Scroll to read · Arrows to turn the pages';$('.lore-reading').focus({preventScroll:true});
  }
- function showCover(){version++;motion.forEach(a=>a.cancel());busy=false;opened=false;cover.getAnimations().forEach(a=>a.cancel());cover.hidden=false;spread.inert=true;modal.classList.remove('is-reading');$('#lore-cover-button').hidden=true;$('#lore-help').textContent='An illustrated chronicle';$('#lore-read').focus({preventScroll:true});}
+ function showCover(){version++;motion.forEach(a=>a.cancel());busy=false;opened=false;cover.getAnimations().forEach(a=>a.cancel());coverStage.hidden=false;cover.hidden=false;spread.inert=true;modal.classList.remove('is-reading');$('#lore-cover-button').hidden=true;$('#lore-help').textContent='An illustrated chronicle';$('#lore-read').focus({preventScroll:true});}
  $('#lore-read').onclick=openBook;$('#lore-prev').onclick=()=>turn(-1);$('#lore-next').onclick=()=>turn(1);$('#lore-close').onclick=()=>modal.close();$('#lore-cover-button').onclick=async()=>{
-  if(busy)return;busy=true;const request=version;cover.hidden=false;
+  if(busy)return;busy=true;const request=version;coverStage.hidden=false;cover.hidden=false;
   await Promise.all([
    animateBook(cover,[{transform:'rotateY(-110deg)',opacity:0},{transform:'rotateY(-60deg)',opacity:1,offset:.3},{transform:'rotateY(0deg)',opacity:1}],850),
    animateBook(spread,[{opacity:1,transform:'scale(1)'},{opacity:0,transform:'scale(.94)'}],850)
