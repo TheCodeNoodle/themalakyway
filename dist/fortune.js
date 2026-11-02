@@ -1,7 +1,9 @@
 (() => {
  const passages=[
   'Hmmm… interesting… very interesting…',
-  'Oh, my crystal ball is showing me something… In 18 years, you shall become… a dentist. A dentist who likes men, specifically.',
+  'Oh, my crystal ball is showing me something… In 18 years, you shall become… a baker?',
+  'Ooh, you own the bakery actually.',
+  'A baker who likes men, specifically.',
   'Fascinating. Truly fascinating.',
   'Wait… WAIT. I see children. One… two… three… FOUR!',
   "Oh, hold on… there's a fifth one coming your way.",

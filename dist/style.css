@@ -96,3 +96,22 @@ html.window-loading,html.window-loading *{cursor:progress!important}
 #music-toggle img{display:block;width:48px;height:48px;image-rendering:pixelated;pointer-events:none}
 #music-toggle:hover{filter:brightness(1.2);transform:translateY(-2px)}
 #music-toggle:active{transform:translateY(0)}
+/* Pixel-art sky footer. */
+.explore{padding:16px 20px 22px;color:#c9bfc8}
+.explore .hint,.explore .progress,.explore .unlock{font-family:'VT323',monospace;text-shadow:2px 2px #02091c;letter-spacing:.6px}
+.explore .hint{font-size:20px;line-height:1.15;color:#a6b9e7;margin-bottom:14px}
+.explore .progress{font-size:18px;color:#c9bfc8}
+.explore .progress p{margin:10px 0}
+#dots{gap:12px;align-items:center;justify-content:center}
+#dots i{width:8px;height:8px;transform:none;background:#29376b;box-shadow:2px 2px 0 #050b27;clip-path:polygon(25% 0,75% 0,75% 25%,100% 25%,100% 75%,75% 75%,75% 100%,25% 100%,25% 75%,0 75%,0 25%,25% 25%)}
+#dots i.lit{background:#dcd2f5;box-shadow:0 0 8px #9e86d7}
+.explore .final-button{position:relative;font:23px/1 'VT323',monospace;letter-spacing:.5px;font-style:normal;padding:11px 22px;margin-top:2px;background:#30335f;color:#f1dafa;border:2px solid #b6a2e0;border-radius:0;box-shadow:inset 2px 2px #71689b,inset -2px -2px #171c42,4px 4px #03081c;text-shadow:2px 2px #1a1737;transition:transform .15s,background .15s}
+.explore .final-button:disabled{color:#8998c5;background:#121d40;border-color:#40517c;box-shadow:inset 2px 2px #243259,inset -2px -2px #080e28,4px 4px #03081c}
+.explore .final-button:not(:disabled):hover{background:#494374;transform:translateY(-2px)}
+.explore .final-button:not(:disabled):active{transform:translate(2px,2px)}
+.explore .unlock{font-size:16px;line-height:1.2;color:#7e93c5;margin:12px 0 0}
+@media(max-width:600px){.explore{padding:12px 12px 16px}.explore .hint{font-size:18px;max-width:300px}.explore .final-button{font-size:21px}.explore .unlock{font-size:15px}}
+.explore .final-button{min-width:230px;height:48px;padding:0 20px;vertical-align:middle}
+.final-button .final-lock{display:block;width:40px;height:40px;margin:auto;image-rendering:pixelated}
+.final-button .final-label{margin:0}
+.final-button:disabled .final-label,.final-button:not(:disabled) .final-lock{display:none}

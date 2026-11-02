@@ -1,0 +1,17 @@
+#last-letter{width:min(790px,calc(100vw - 28px));height:min(920px,calc(100svh - 56px));max-height:none;max-width:none;border:0;padding:12px;background:transparent;box-shadow:none;overflow:visible;color:#493629}
+#last-letter::backdrop{background:#03091bd9;backdrop-filter:blur(7px)}
+.letter-paper{position:relative;height:100%;padding:38px 44px 30px;background:#eddfb8;border:4px solid #826644;box-shadow:inset 4px 4px #fff0cb,inset -4px -4px #c8ad7b,inset 8px 8px #e3cca0,inset -8px -8px #e3cca0;clip-path:polygon(0 12px,4px 12px,4px 4px,12px 4px,12px 0,calc(100% - 12px) 0,calc(100% - 12px) 4px,calc(100% - 4px) 4px,calc(100% - 4px) 12px,100% 12px,100% calc(100% - 12px),calc(100% - 4px) calc(100% - 12px),calc(100% - 4px) calc(100% - 4px),calc(100% - 12px) calc(100% - 4px),calc(100% - 12px) 100%,12px 100%,12px calc(100% - 4px),4px calc(100% - 4px),4px calc(100% - 12px),0 calc(100% - 12px))}
+.letter-scroll{height:100%;overflow:auto;overscroll-behavior:contain;padding:0 22px 12px 4px;scrollbar-width:thin;font:24px/1.45 'VT323',monospace;color:#493629}
+#last-letter #letter-salutation{font:32px/1.2 'VT323',monospace;color:#493629;margin:0 0 26px;text-align:left}
+.letter-paragraphs p{margin:0 0 22px;text-indent:1.8em;line-height:inherit}
+.letter-dedication{margin:30px 0 12px;line-height:1.45}
+.letter-signature{text-align:right;font:28px/1.5 'VT323',monospace;margin:22px 4px 0;color:#493629}
+.letter-close{position:absolute;z-index:20;right:54px;top:24px;width:24px;height:24px;background:transparent;padding:0;border:0;cursor:url('pointers/pointer.png') 12 9,pointer;transition:transform .15s}
+.letter-close img{display:block;width:100%;height:100%;image-rendering:pixelated}.letter-close:hover{transform:translateY(-2px)}
+#last-letter[open] .letter-paper{animation:letter-unfold .65s cubic-bezier(.2,.7,.2,1) both}
+#last-letter>.pixel-scrollbar{background:#dfcda6;border:2px solid #b69a6d;animation:letter-ink .7s ease both}
+#last-letter>.pixel-scrollbar .pixel-scroll-thumb{background:#a18455;box-shadow:inset 1px 1px #d8bd8c,inset -1px -1px #785b38}
+@keyframes letter-unfold{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
+@keyframes letter-ink{0%,70%{opacity:0}100%{opacity:1}}
+@media(max-width:600px){#last-letter{height:calc(100svh - 32px);padding:8px}.letter-paper{padding:26px 18px 22px}.letter-close{right:24px;top:8px}.letter-scroll{font-size:21px;line-height:1.4;padding-right:18px}#last-letter #letter-salutation{font-size:28px}.letter-signature{font-size:25px}.letter-paragraphs p{text-indent:1.3em}}
+@media(prefers-reduced-motion:reduce){#last-letter *,#last-letter>.pixel-scrollbar{animation:none!important}}

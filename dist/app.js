@@ -3,6 +3,7 @@ const stars=[...document.querySelectorAll('.star')];
 const dialog=document.querySelector('#surprise');
 const finalButton=document.querySelector('#final');
 const discovered=new Set();
+finalButton.disabled=true;
 let opener;
 const dots=document.querySelector('#dots');
 stars.forEach(()=>dots.append(document.createElement('i')));
@@ -28,7 +29,7 @@ function openStar(index){
  stars[index].querySelector('.star-name').textContent=surprises[index].title.toUpperCase();
  dots.children[index].classList.add('lit');
  document.querySelector('#progress').textContent=`${discovered.size} of ${stars.length} little discoveries`;
- if(discovered.size===stars.length){finalButton.disabled=false;document.querySelector('#unlock').textContent='Every little light found. One last wish is waiting.';}
+ if(discovered.size===stars.length){finalButton.disabled=false;document.querySelector('#unlock').textContent='Every little light found.';}
  if(surprises[index].game)window[surprises[index].game].open(stars[index]);else show(surprises[index],stars[index]);
  document.dispatchEvent(new CustomEvent('stardiscovered',{detail:{count:discovered.size,star:stars[index]}}));
 }
@@ -44,7 +45,10 @@ let backdropDown=false;
 dialog.addEventListener('pointerdown',e=>{const r=dialog.getBoundingClientRect();backdropDown=e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom;});
 dialog.addEventListener('click',e=>{const r=dialog.getBoundingClientRect();if(backdropDown&&(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom))dialog.close();backdropDown=false;});
 dialog.addEventListener('close',()=>opener?.focus({preventScroll:true}));
-finalButton.addEventListener('click',()=>show(finale,finalButton));
+finalButton.addEventListener('click',()=>{
+ if(discovered.size!==stars.length){finalButton.disabled=true;return;}
+ window.lastLetter.open(finalButton);
+});
 
 // Play the original GIF frames once, then hold its first frame for 5–9 seconds.
 const characterFrames=Array.from({length:4},(_,i)=>`cursor/frame-large-${i}.png`);

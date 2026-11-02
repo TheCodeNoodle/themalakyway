@@ -1,0 +1,19 @@
+/* DOM scrollbars allow the supplied cursor artwork on both hover and drag. */
+.pixel-scroll-source{scrollbar-width:none!important}
+.pixel-scroll-source::-webkit-scrollbar{display:none!important}
+.pixel-scrollbar{position:absolute;z-index:12;width:10px;min-width:0;padding:0;border:1px solid #536397;background:#080f2c;cursor:url('pointers/pointer.png') 12 9,pointer;touch-action:none;user-select:none}
+.pixel-scrollbar[hidden]{display:none!important}
+.pixel-scroll-thumb{position:absolute;left:1px;right:1px;top:0;min-height:22px;background:#8b96cf;box-shadow:inset 1px 1px #d5c9ed,inset -1px -1px #4c548e;pointer-events:none}
+.pixel-scrollbar:hover .pixel-scroll-thumb{background:#b6b5e7}
+.pixel-scrollbar:focus-visible{outline:2px solid #d5c9ed;outline-offset:2px}
+html.pixel-scroll-dragging,html.pixel-scroll-dragging *{cursor:url('pointers/drag.png') 24 24,grabbing!important;user-select:none!important}
+#lore>.pixel-scrollbar,#on-this-day>.pixel-scrollbar{background:#d3bc90;border-color:#a18351}
+#lore>.pixel-scrollbar .pixel-scroll-thumb,#on-this-day>.pixel-scrollbar .pixel-scroll-thumb{background:#a08050;box-shadow:inset 1px 1px #d7ba82,inset -1px -1px #765b37}
+#cosmic-terminal>.pixel-scrollbar{background:#101e21;border-color:#36584d}
+#cosmic-terminal>.pixel-scrollbar .pixel-scroll-thumb{background:#598276;box-shadow:inset 1px 1px #a2c9b6,inset -1px -1px #294f45}
+.is-turning>.pixel-scrollbar{visibility:hidden}
+
+.lore-reading.pixel-scroll-source{padding-right:24px}
+#disco-suggestions.pixel-scroll-source{padding-right:16px}
+
+#lore:has(.lore-cover:not([hidden]))>.pixel-scrollbar{display:none}
