@@ -109,3 +109,6 @@
 
 /* The leather binding belongs to the stationary spread, never the turning paper. */
 .lore-flip-snapshot{padding:0!important;background:transparent!important;border:0!important;border-radius:0!important;box-shadow:none!important}
+
+/* The number of illustrations follows the page data. */
+:is(#lore-art,.lore-art-copy).lore-art-stack{grid-template-rows:repeat(var(--art-count,2),minmax(0,1fr))}

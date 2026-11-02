@@ -1,6 +1,7 @@
 (() => {
- const roman=['I','II','III','IV'];
- const chapters=window.loreChapters.flatMap((chapter,index)=>(chapter.pages||[chapter]).map((sheet,part,sheets)=>({...chapter,...sheet,chapterNumber:index,part:part+1,parts:sheets.length}))); 
+ const settings=window.loreSettings;
+ const roman=window.loreChapters.map((_,i)=>{let n=i+1,result='';for(const [value,symbol] of [[1000,'M'],[900,'CM'],[500,'D'],[400,'CD'],[100,'C'],[90,'XC'],[50,'L'],[40,'XL'],[10,'X'],[9,'IX'],[5,'V'],[4,'IV'],[1,'I']]){while(n>=value){result+=symbol;n-=value;}}return result;});
+ const chapters=window.loreChapters.flatMap((chapter,index)=>chapter.pages.map((sheet,part,sheets)=>({...chapter,...sheet,chapterNumber:index,part:part+1,parts:sheets.length}))); 
  const modal=document.createElement('dialog');modal.id='lore';modal.className='lore-window';modal.setAttribute('aria-labelledby','lore-title');
  modal.innerHTML=`<div class="lore-toolbar"><span>LORE / THE CHRONICLES</span><button id="lore-close" aria-label="Close Lore">Close <span aria-hidden="true">×</span></button></div>
  <div class="lore-binding">
@@ -11,24 +12,31 @@
   <div class="lore-cover"><div class="lore-cover-border"><span class="lore-cover-kicker">A TALE FROM SKYRIM</span><div class="lore-seal" aria-hidden="true">✧</div><h2>Malakistos<br><em>the Great</em></h2><div class="lore-cover-rule" aria-hidden="true"></div><p>The Dragonborn’s story</p><button id="lore-read">Open the book <span aria-hidden="true">→</span></button><span class="lore-cover-foot">FOUR CHAPTERS · ONE LEGEND</span></div></div>
  </div><div class="lore-bottom"><button id="lore-cover-button" hidden>↖ Back to cover</button><span id="lore-help">An illustrated chronicle</span></div>`;
  document.body.append(modal);
- const soundtrack=new Audio('music/lore-solitude.mp3');soundtrack.id='lore-music';soundtrack.loop=true;soundtrack.preload='metadata';document.body.append(soundtrack);
+ const soundtrack=new Audio(settings.soundtrack);soundtrack.id='lore-music';soundtrack.loop=true;soundtrack.preload='metadata';document.body.append(soundtrack);
  window.sceneAudio.registerMusic(modal,soundtrack);
  const $=s=>modal.querySelector(s),cover=$('.lore-cover'),spread=$('.lore-spread');
+ $('.lore-cover-kicker').textContent=settings.kicker;
+ $('.lore-running').textContent=settings.runningTitle;
+ $('.lore-cover p').textContent=settings.subtitle;
+ const heading=$('.lore-cover h2'),em=document.createElement('em');em.textContent=settings.coverTitle[1]||'';heading.replaceChildren(document.createTextNode(settings.coverTitle[0]),document.createElement('br'),em);
+ const count=window.loreChapters.length,words=['ZERO','ONE','TWO','THREE','FOUR','FIVE','SIX','SEVEN','EIGHT','NINE','TEN'];
+ $('.lore-cover-foot').textContent=(words[count]||count)+' CHAPTER'+(count===1?'':'S')+' · ONE LEGEND';
  const reduced=matchMedia('(prefers-reduced-motion: reduce)');
  let page=0,opener,opened=false,busy=false,version=0;
  const images=new Map();
- function preload(){return Promise.all(chapters.flatMap(c=>c.art).map(a=>{
+ function preload(){return Promise.all(chapters.flatMap(c=>c.art||[]).map(a=>{
   if(!images.has(a.src)){const img=new Image();img.src=a.src;images.set(a.src,img.decode().catch(()=>{}));}return images.get(a.src);
  }));}
  const ornament=`<svg viewBox="0 0 400 420" class="lore-cartography" aria-hidden="true"><g fill="none" stroke="currentColor"><circle cx="200" cy="192" r="136" stroke-width=".7"/><circle cx="200" cy="192" r="128" stroke-dasharray="2 10"/><path d="M200 32V68M200 316V352M40 192H76M324 192H360M86 78l22 22M292 284l22 22M314 78l-22 22M108 284l-22 22"/><path d="m72 258 61-100 28 40 50-104 80 136 28-37 26 65H72Z" stroke-width="1.2"/><path d="m176 165 35-71 31 53-22-8-10 13-11-9-23 22Zm-61 23 18-30 28 40-17-5-9 7-9-16-11 4Z"/><path d="m100 279 44 5 64-7 91 5M140 296l58 3 60-4M192 24h16m-8-8v16" stroke-width=".7"/></g><text x="200" y="388" text-anchor="middle" fill="currentColor" font-family="Georgia,serif" font-size="12" letter-spacing="7">SKYRIM</text></svg>`;
  $('.lore-seal').innerHTML=ornament;
  function renderArt(){
-  const root=$('#lore-art'),items=chapters[page].art;root.replaceChildren();
+  const root=$('#lore-art'),items=chapters[page].art||[];root.replaceChildren();
+  root.classList.toggle('lore-art-stack',items.length>1);root.style.setProperty('--art-count',Math.max(1,items.length));
   if(!items.length){root.innerHTML=ornament;const n=document.createElement('span');n.className='lore-plate-number';n.textContent=roman[chapters[page].chapterNumber];root.append(n);return;}
   root.classList.toggle('lore-art-stack',items.length>1);
   for(const a of items){
    const figure=document.createElement('figure'),img=document.createElement('img'),caption=document.createElement('figcaption');
-   img.src=a.src;img.alt=a.alt;img.className='lore-illustration';caption.textContent=a.caption||'';
+   img.src=a.src;img.alt=a.alt||a.caption||'';if(a.fit)img.style.objectFit=a.fit;img.className='lore-illustration';caption.textContent=a.caption||'';
    figure.append(img,caption);root.append(figure);
   }
  }

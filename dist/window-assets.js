@@ -3,7 +3,7 @@
  const common=['disco-art/closeButton.svg'];
  const extra={
   'prank-letter':['gift-art/mail-0.png','gift-art/mail-1.png','gift-art/mail-2.png','gift-art/mail-back.svg','gift-art/mail-front.svg','gift-art/prank-paper.svg'],
-  lore:['Helgen.png','paarthurnax.png','dragon2.png','Whiterun.png','Blackreach.png','Skuldafn.png'].map(name=>'lore-art/'+name),
+  lore:[],
   disco:['disco-art/windowBackground.svg','disco-art/SubmitButton.svg','disco-art/pauseButton.svg',...Array.from({length:3},(_,i)=>`disco-art/heart-frame-${i}.png`)],
   fortune:['fortune-art/window-table.svg','disco-art/SubmitButton.svg'],
   'cosmic-terminal':['terminal-art/border.svg','terminal-art/chickette.svg','terminal-art/krobus.svg'],
@@ -22,6 +22,7 @@
  }
  function prepare(modal){
   const urls=[...common,...(extra[modal.id]||[])];
+  if(modal.id==='lore')urls.push(...(window.loreChapters||[]).flatMap(chapter=>chapter.pages.flatMap(page=>(page.art||[]).map(image=>image.src))));
   modal.querySelectorAll('img[src],image[href]').forEach(img=>urls.push(img.currentSrc||img.getAttribute('src')||img.getAttribute('href')));
   const fonts=['24px VT323'];
   if(modal.id==='cosmic-terminal')fonts.push('24px MalakyGalactic','24px GalacticSyllabics','24px Eyeclipse');
