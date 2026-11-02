@@ -10,10 +10,9 @@
   if(busy)return;busy=true;const run=version;$('.gift-open').disabled=true;$('.gift-hint').textContent='';
   for(let i=1;i<=2;i++){$('.gift-open img').src=`gift-art/mail-${i}.png`;await new Promise(r=>setTimeout(r,100));if(run!==version)return;}
   $('.gift-open').hidden=true;$('.gift-layers').hidden=false;
-  await animate($('.prank-stage'),[{transform:'translateY(0)'},{transform:'translateY(65px)'}],600);if(run!==version)return;
-  await animate($('.gift-card'),[{transform:'translateX(0)'},{transform:'translateX(110.7%)'}],1100);if(run!==version)return;
+  await animate($('.gift-card'),[{transform:'translateX(0)'},{transform:'translateX(110.7%)'}],850);if(run!==version)return;
   $('.prank-reveal').hidden=false;
-  await Promise.all([animate($('.prank-delivery'),[{opacity:1},{opacity:0}],450),animate($('.prank-reveal'),[{opacity:0,transform:'translateY(35px) scale(.7) rotate(-5deg)'},{opacity:1,transform:'translateY(0) scale(1) rotate(0deg)'}],750)]);
+  await Promise.all([animate($('.prank-delivery'),[{opacity:1},{opacity:0}],450),animate($('.prank-reveal'),[{opacity:0,transform:'scale(.92)'},{opacity:1,transform:'scale(1)'}],750)]);
   if(run!==version)return;$('.prank-delivery').hidden=true;$('.prank-close').focus({preventScroll:true});
  };
  $('.prank-close').onclick=()=>modal.close();modal.addEventListener('close',()=>{version++;reset();opener?.focus({preventScroll:true});});

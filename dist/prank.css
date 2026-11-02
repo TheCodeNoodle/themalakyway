@@ -12,3 +12,7 @@
 .prank-reveal .prank-paper{max-width:150svh;margin:auto}
 .prank-window .gift-hint{margin-top:25px}
 .prank-close:hover{filter:brightness(1.25)}
+/* Overlay the reveal without moving the envelope's flex layout. */
+.prank-window .prank-reveal{position:absolute;inset:0;width:100%;height:100%;max-height:none;display:grid;place-items:center;pointer-events:none}
+.prank-window .prank-reveal .prank-paper{width:min(820px,92vw,150svh)}
+.prank-window .gift-hint{min-height:1.2em}
