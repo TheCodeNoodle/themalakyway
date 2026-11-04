@@ -10,10 +10,12 @@
   'cosmic-terminal':['terminal-art/border.svg','terminal-art/chickette.svg','terminal-art/krobus.svg'],
   'milestone-gift':['intro-dialogue.svg','gift-art/mail-1.png','gift-art/mail-2.png']
  };
- // Two background transfers; leave one extra slot available for user intent.
+ // Keep background work bounded; user intent gets its own additional slot.
+ const connection=navigator.connection;
+ const backgroundLimit=()=>connection&&(connection.saveData||/^(slow-2g|2g|3g)$/.test(connection.effectiveType)||connection.downlink<2)?1:2;
  function pump(){
   queue.sort((a,b)=>b.priority-a.priority);
-  while(queue.length&&active<(queue[0].priority>=10?3:2)){
+  while(queue.length&&active<(backgroundLimit()+(queue[0].priority>=10?1:0))){
    const job=queue.shift();active++;job.state='loading';
    job.img.fetchPriority=job.priority>=10?'high':'low';job.img.src=job.url;
    job.img.decode().then(()=>{job.state='ready';},()=>{job.state='failed';cache.delete(job.url);}).finally(()=>{active--;job.resolve();pump();});
@@ -42,7 +44,7 @@
   const modal=document.getElementById(id);if(!modal)return Promise.resolve();
   // Queue the next interactions too, without making the scene wait for them.
   const ready=prepare(modal,priority);
-  deeperAssets(id).forEach((url,i)=>image(url,priority>=10&&i===0?10:0));
+  if(priority>=10)deeperAssets(id).forEach((url,i)=>image(url,i===0?10:0));
   return ready;
  }
  window.windowAssets={
@@ -70,9 +72,12 @@
  // Essential sky/intro requests finish first. Warm the rest while the intro is read.
  window.addEventListener('load',()=>{
   setTimeout(async()=>{
-   for(const id of ['disco','fortune','museum','on-this-day','cosmic-terminal','lore','prank-letter','milestone-gift','last-letter']){
-    await warm(id);await new Promise(resolve=>setTimeout(resolve,60));
+   const ids=['disco','fortune','museum','on-this-day','cosmic-terminal','lore','prank-letter','milestone-gift','last-letter'];
+   for(const id of ids){
+    await prepare(document.getElementById(id),2);await new Promise(resolve=>setTimeout(resolve,60));
    }
+   // Every window shell is ready before bulk book/exhibit artwork starts.
+   for(const id of ids)deeperAssets(id).forEach(url=>image(url,0));
   },1200);
  },{once:true});
 })();

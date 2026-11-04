@@ -61,14 +61,41 @@
   for(let i=1;i<=a.length;i++){let next=[i];for(let j=1;j<=b.length;j++)next[j]=Math.min(next[j-1]+1,row[j]+1,row[j-1]+(a[i-1]!==b[j-1]));row=next;}
   return row[b.length];
  }
- const catalog=[...(window.discoSongCatalog||[]),...easyTracks,...intermediateTracks,...hardTracks].filter((song,i,all)=>all.findIndex(s=>normalize(s.title)===normalize(song.title)&&normalize(s.artist)===normalize(song.artist))===i).map(s=>({...s,key:normalize(s.title),artistKey:normalize(s.artist)}));
+ // Normalize and deduplicate once, in linear time.
+ const catalog=[],seenSongs=new Set(),searchCache=new Map();
+ for(const song of [...(window.discoSongCatalog||[]),...easyTracks,...intermediateTracks,...hardTracks]){
+  const key=normalize(song.title),artistKey=normalize(song.artist),id=key+'\0'+artistKey;
+  if(seenSongs.has(id))continue;
+  seenSongs.add(id);catalog.push({...song,key,artistKey});
+ }
+ const collator=new Intl.Collator();
+ catalog.sort((a,b)=>collator.compare(a.key,b.key)||collator.compare(a.artistKey,b.artistKey));
+ function searchSongs(query){
+  if(searchCache.has(query))return searchCache.get(query);
+  const buckets=[[],[],[],[],[]],remaining=[];let directCount=0;
+  for(const song of catalog){
+   const rank=song.key===query?0:song.key.startsWith(query)?1:song.key.includes(query)?2:song.artistKey.includes(query)?3:99;
+   if(rank<99){directCount++;if(buckets[rank].length<6)buckets[rank].push(song);}else remaining.push(song);
+  }
+  // Fuzzy matches cannot displace six higher-ranked direct matches.
+  if(directCount<6&&query.length>=3){
+   const limit=Math.min(2,Math.floor(query.length/3));
+   for(const song of remaining){
+    const prefix=song.key.slice(0,Math.max(query.length,Math.min(song.key.length,query.length+1)));
+    if(Math.abs(prefix.length-query.length)<=limit&&distance(query,prefix)<=limit){buckets[4].push(song);if(buckets[4].length>=6-directCount)break;}
+   }
+  }
+  const result=buckets.flat().slice(0,6);
+  if(searchCache.size>=128)searchCache.delete(searchCache.keys().next().value);
+  searchCache.set(query,result);return result;
+ }
  function hideSuggestions(){suggestions.hidden=true;input.setAttribute('aria-expanded','false');input.removeAttribute('aria-activedescendant');selected=-1;}
  function choose(i){if(!matches[i])return;input.value=matches[i].title;hideSuggestions();input.focus();}
  function filter(){
   selected=-1;input.removeAttribute('aria-activedescendant');
   const query=normalize(input.value);
   if(!query||resolved){hideSuggestions();return;}
-  matches=catalog.map(s=>({song:s,rank:s.key===query?0:s.key.startsWith(query)?1:s.key.includes(query)?2:s.artistKey.includes(query)?3:query.length>=3&&distance(query,s.key.slice(0,Math.max(query.length,Math.min(s.key.length,query.length+1))))<=Math.min(2,Math.floor(query.length/3))?4:99})).filter(s=>s.rank<99).sort((a,b)=>a.rank-b.rank||a.song.key.localeCompare(b.song.key)||a.song.artistKey.localeCompare(b.song.artistKey)).slice(0,6).map(s=>s.song);
+  matches=searchSongs(query);
   suggestions.replaceChildren();
   for(const [i,song] of matches.entries()){
    const option=document.createElement('li');option.id=`disco-option-${i}`;option.setAttribute('role','option');option.setAttribute('aria-selected','false');
