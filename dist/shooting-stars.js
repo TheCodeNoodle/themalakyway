@@ -2,7 +2,6 @@
  const star=document.querySelector('.shooting-star');
  const picture=star.querySelector('img');
  const stage=document.querySelector('.shooting-star-stage');
- const modal=document.querySelector('#surprise');
  const frames=Array.from({length:7},(_,i)=>`shooting-star/frame-${i+1}.png`);
  let launchTimer,frameTimer,flight,state='waiting',frame=0;
  const preloads=frames.map(src=>{const image=new Image();image.src=src;return image.decode().catch(()=>{});});
@@ -25,20 +24,26 @@
  }
  function launch(){
   if(document.hidden||document.documentElement.classList.contains('intro-active'))return;
-  if(modal.open){schedule(3000);return;}
+  if(document.querySelector('dialog[open]')){schedule(3000);return;}
   state='flying';star.dataset.state=state;star.hidden=false;frame=0;display(frame);
   const w=stage.clientWidth,h=stage.clientHeight;
   const pixelScale=document.querySelector('.sky').getBoundingClientRect().width/167;
   const spriteWidth=30*pixelScale,spriteHeight=20*pixelScale;
   star.style.width=`${spriteWidth}px`;
   star.style.height=`${spriteHeight}px`;
-  const startX=-spriteWidth-8,startY=Math.max(8,h*(.02+Math.random()*.08));
-  // Enter fully outside the left edge, with the mirrored tail trailing behind.
-  const endX=w+8,endY=Math.max(startY,Math.min(h-spriteHeight,startY+(w+spriteWidth)*.4));
+  // Vary the entry point along the top and left edges. The whole sprite
+  // starts outside, then continues until its trailing edge has left the viewport.
+  const fromTop=Math.random()<.5,slope=.4;
+  const startX=fromTop?Math.random()*w*.75:-spriteWidth-16;
+  const startY=fromTop?-spriteHeight-16:Math.random()*h*.55;
+  const travel=Math.min(w+16-startX,(h+16-startY)/slope);
+  const endX=startX+travel,endY=startY+travel*slope;
+  const speed=Math.max(500,Math.hypot(w,h)/2.8);
+  star.style.transform='';
   flight=star.animate([
-   {transform:`translate3d(${startX}px,${startY}px,0)`},
-   {transform:`translate3d(${endX}px,${endY}px,0)`}
-  ],{duration:2800,easing:'linear',fill:'forwards'});
+   {transform:`translate3d(${startX}px,${startY}px,0)`,opacity:1},
+   {transform:`translate3d(${endX}px,${endY}px,0)`,opacity:1}
+  ],{duration:Math.hypot(travel,travel*slope)/speed*1000,easing:'linear',fill:'forwards'});
   flight.onfinish=()=>{if(state==='flying')retire();};
   frameTimer=setTimeout(animateTrail,100);
  }
@@ -62,6 +67,7 @@
   clearTimeout(launchTimer);
   if(document.hidden){retire();}else schedule(5000);
  });
+ document.addEventListener('windowopened',()=>{if(state!=='waiting')retire();});
  window.addEventListener('resize',()=>{if(state!=='waiting')retire();});
  Promise.all(preloads).then(()=>schedule(2200));
  document.addEventListener('introcomplete',()=>schedule(5000));

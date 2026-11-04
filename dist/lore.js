@@ -9,10 +9,10 @@
    <section class="lore-art-page" aria-label="Chapter illustrations"><span class="lore-running">THE CHRONICLES OF MALAKISTOS</span><div id="lore-art"></div><span class="lore-place"></span></section>
    <section class="lore-story-page"><div class="lore-chapter-line"><span id="lore-chapter-number"></span><span class="lore-header-right"><span aria-hidden="true">✦</span></span></div><div class="lore-reading" tabindex="0" aria-label="Scroll to read this chapter"><h2 id="lore-title"></h2><div id="lore-story"></div><div class="lore-end-mark" aria-hidden="true">✧</div></div><nav class="lore-navigation" aria-label="Book pages"><button id="lore-prev" aria-label="Previous page">← <span>Previous</span></button><span id="lore-page-number" aria-live="polite"></span><button id="lore-next" aria-label="Next page"><span>Next</span> →</button></nav></section>
   </div>
-  <div class="lore-cover-stage"><div class="lore-cover"><img class="lore-cover-layer" src="lore-art/cover-base.svg" alt="" draggable="false"><img class="lore-cover-layer" src="lore-art/cover-logo.svg" alt="" draggable="false"><img class="lore-cover-layer lore-cover-lettering" src="lore-art/cover-title.svg" alt="" draggable="false"><div class="lore-cover-border"><span class="lore-cover-kicker">A TALE FROM SKYRIM</span><div class="lore-seal" aria-hidden="true">✧</div><h2>Malakistos<br><em>the Great</em></h2><div class="lore-cover-rule" aria-hidden="true"></div><p>The Dragonborn’s story</p><button id="lore-read">Open the book <span aria-hidden="true">→</span></button><span class="lore-cover-foot">FOUR CHAPTERS · ONE LEGEND</span></div></div></div>
+  <div class="lore-cover-stage"><div class="lore-cover"><img loading="lazy" class="lore-cover-layer" src="lore-art/cover-base.svg" alt="" draggable="false"><img loading="lazy" class="lore-cover-layer" src="lore-art/cover-logo.svg" alt="" draggable="false"><img loading="lazy" class="lore-cover-layer lore-cover-lettering" src="lore-art/cover-title.svg" alt="" draggable="false"><div class="lore-cover-border"><span class="lore-cover-kicker">A TALE FROM SKYRIM</span><div class="lore-seal" aria-hidden="true">✧</div><h2>Malakistos<br><em>the Great</em></h2><div class="lore-cover-rule" aria-hidden="true"></div><p>The Dragonborn’s story</p><button id="lore-read" aria-label="Open the book"></button><span class="lore-cover-foot">FOUR CHAPTERS · ONE LEGEND</span></div></div></div>
  </div><div class="lore-bottom"><button id="lore-cover-button" hidden>↖ Back to cover</button><span id="lore-help">An illustrated chronicle</span></div>`;
  document.body.append(modal);
- const soundtrack=new Audio(settings.soundtrack);soundtrack.id='lore-music';soundtrack.loop=true;soundtrack.preload='metadata';document.body.append(soundtrack);
+ const soundtrack=new Audio(settings.soundtrack);soundtrack.id='lore-music';soundtrack.loop=true;soundtrack.preload='none';document.body.append(soundtrack);
  window.sceneAudio.registerMusic(modal,soundtrack);
  const $=s=>modal.querySelector(s),cover=$('.lore-cover'),coverStage=$('.lore-cover-stage'),spread=$('.lore-spread');
  $('.lore-cover-kicker').textContent=settings.kicker;
@@ -23,13 +23,11 @@
  $('.lore-cover-foot').textContent=(words[count]||count)+' CHAPTER'+(count===1?'':'S')+' · ONE LEGEND';
  const reduced=matchMedia('(prefers-reduced-motion: reduce)');
  let page=0,opener,opened=false,busy=false,version=0;
- const images=new Map();
- function preload(){return Promise.all(chapters.flatMap(c=>c.art||[]).map(a=>{
-  if(!images.has(a.src)){const img=new Image();img.src=a.src;images.set(a.src,img.decode().catch(()=>{}));}return images.get(a.src);
- }));}
+ function preload(index=page,priority=15){return Promise.all((chapters[index]?.art||[]).map(a=>window.windowAssets.image(a.src,priority)));}
  const ornament=`<svg viewBox="0 0 400 420" class="lore-cartography" aria-hidden="true"><g fill="none" stroke="currentColor"><circle cx="200" cy="192" r="136" stroke-width=".7"/><circle cx="200" cy="192" r="128" stroke-dasharray="2 10"/><path d="M200 32V68M200 316V352M40 192H76M324 192H360M86 78l22 22M292 284l22 22M314 78l-22 22M108 284l-22 22"/><path d="m72 258 61-100 28 40 50-104 80 136 28-37 26 65H72Z" stroke-width="1.2"/><path d="m176 165 35-71 31 53-22-8-10 13-11-9-23 22Zm-61 23 18-30 28 40-17-5-9 7-9-16-11 4Z"/><path d="m100 279 44 5 64-7 91 5M140 296l58 3 60-4M192 24h16m-8-8v16" stroke-width=".7"/></g><text x="200" y="388" text-anchor="middle" fill="currentColor" font-family="Georgia,serif" font-size="12" letter-spacing="7">SKYRIM</text></svg>`;
  $('.lore-seal').innerHTML=ornament;
  function renderArt(){
+  if(!modal.open)return;
   const root=$('#lore-art'),items=chapters[page].art||[];root.replaceChildren();
   root.classList.toggle('lore-art-stack',items.length>1);root.style.setProperty('--art-count',Math.max(1,items.length));
   if(!items.length){root.innerHTML=ornament;const n=document.createElement('span');n.className='lore-plate-number';n.textContent=roman[chapters[page].chapterNumber];root.append(n);return;}
@@ -66,6 +64,7 @@
   if(busy||!opened||page+direction<0||page+direction>=chapters.length)return;
   busy=true;const request=version,oldScroll=$('.lore-reading').scrollTop;
   modal.classList.add('is-turning');
+  await preload(page+direction);if(version!==request||!modal.open)return;
   if(reduced.matches){
    await animateBook(spread,[{opacity:1},{opacity:0}],120);
    if(version!==request)return;
@@ -90,16 +89,16 @@
    await animateBook(sheet,[{transform:direction>0?'rotateY(0deg)':'rotateY(-180deg)'},{transform:direction>0?'rotateY(-180deg)':'rotateY(0deg)'}],950);
    layer.remove();
   }
-  if(version!==request)return;modal.classList.remove('is-turning');busy=false;$('.lore-reading').focus({preventScroll:true});
+  if(version!==request)return;modal.classList.remove('is-turning');busy=false;$('.lore-reading').focus({preventScroll:true});preload(page+1,4);
  }
  async function openBook(){
   if(busy||opened)return;busy=true;const request=version;await preload();if(version!==request||!modal.open){busy=false;return;}
-  spread.inert=false;modal.classList.add('is-reading');
+  renderArt();spread.inert=false;modal.classList.add('is-reading');
   await Promise.all([
    animateBook(cover,[{transform:'rotateY(0deg)',opacity:1},{transform:'rotateY(-70deg)',opacity:1,offset:.65},{transform:'rotateY(-100deg)',opacity:0}],1000),
    animateBook(spread,[{opacity:0,transform:'scale(.97)'},{opacity:1,transform:'scaleX(1) scaleY(1)'}],1000)
   ]);
-  if(version!==request)return;cover.hidden=true;coverStage.hidden=true;opened=true;busy=false;$('#lore-cover-button').hidden=false;$('#lore-help').textContent='Scroll to read · Arrows to turn the pages';$('.lore-reading').focus({preventScroll:true});
+  if(version!==request)return;cover.hidden=true;coverStage.hidden=true;opened=true;busy=false;$('#lore-cover-button').hidden=false;$('#lore-help').textContent='Scroll to read · Arrows to turn the pages';$('.lore-reading').focus({preventScroll:true});preload(page+1,4);
  }
  function showCover(){version++;motion.forEach(a=>a.cancel());busy=false;opened=false;cover.getAnimations().forEach(a=>a.cancel());coverStage.hidden=false;cover.hidden=false;spread.inert=true;modal.classList.remove('is-reading');$('#lore-cover-button').hidden=true;$('#lore-help').textContent='An illustrated chronicle';$('#lore-read').focus({preventScroll:true});}
  $('#lore-read').onclick=openBook;$('#lore-prev').onclick=()=>turn(-1);$('#lore-next').onclick=()=>turn(1);$('#lore-close').onclick=()=>modal.close();$('#lore-cover-button').onclick=async()=>{
@@ -115,6 +114,6 @@
  render();
  window.lore={async open(source){
   if(window.windowAssets.pending||document.querySelector('dialog[open]')||document.documentElement.classList.contains('intro-active'))return;
-  opener=source;showCover();if(!await window.windowAssets.show(modal))return;preload();animateBook($('.lore-binding'),[{opacity:0,transform:'translateY(30px) scale(.94)'},{opacity:1,transform:'translateY(0) scale(1)'}],700);$('#lore-read').focus({preventScroll:true});
+  opener=source;showCover();if(!await window.windowAssets.show(modal))return;animateBook($('.lore-binding'),[{opacity:0,transform:'translateY(30px) scale(.94)'},{opacity:1,transform:'translateY(0) scale(1)'}],700);$('#lore-read').focus({preventScroll:true});
  }};
 })();

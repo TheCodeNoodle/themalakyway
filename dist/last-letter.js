@@ -9,7 +9,7 @@
   "Selfishly enough, I would also love to be around for a lot of those moments too. I would love to see where life takes you, and hear about everything that happens along the way.",
   "Happy 18th birthday. I'm really really glad I met you. Thank you for being such a wonderful friend to me. May life bring you all the happiness you deserve."
  ];
- modal.innerHTML=`<button class="letter-close" type="button" aria-label="Close letter"><img src="letter-close.svg" alt="" draggable="false"></button><article class="letter-paper"><div class="letter-scroll" tabindex="0" aria-label="Birthday letter"><h2 id="letter-salutation">Dear Malak</h2><div class="letter-paragraphs"></div><p class="letter-dedication">To Malakistos, the friend that I love most &lt;3</p><p class="letter-signature">- Mohamed</p></div></article>`;
+ modal.innerHTML=`<button class="letter-close" type="button" aria-label="Close letter"><img loading="lazy" src="letter-close.svg" alt="" draggable="false"></button><article class="letter-paper"><div class="letter-scroll" tabindex="0" aria-label="Birthday letter"><h2 id="letter-salutation">Dear Malak</h2><div class="letter-paragraphs"></div><p class="letter-dedication">To Malakistos, the friend that I love most &lt;3</p><p class="letter-signature">- Mohamed</p></div></article>`;
  for(const text of paragraphs){const p=document.createElement('p');p.textContent=text;modal.querySelector('.letter-paragraphs').append(p);}
  document.body.append(modal);
  const music=document.createElement('audio');music.src='audio/letter-music-box.mp3';music.loop=true;music.preload='none';modal.append(music);window.sceneAudio.registerMusic(modal,music);

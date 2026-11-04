@@ -72,3 +72,6 @@
 @media(hover:hover){.disco-window button:not(:disabled):hover{transform:translateY(-2px);filter:brightness(1.18) drop-shadow(0 3px 3px #aa86ee55)}}
 .disco-window button:not(:disabled):active{transform:translateY(1px) scale(.97);filter:brightness(.93)}
 @media(prefers-reduced-motion:reduce){.disco-window button:not(:disabled):hover,.disco-window button:not(:disabled):active{transform:none}}
+
+/* Suggestions open upward, leaving Submit and hearts accessible. */
+#disco-suggestions{top:auto;bottom:calc(100% + 6px)}

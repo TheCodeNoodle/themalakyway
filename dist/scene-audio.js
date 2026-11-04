@@ -72,6 +72,10 @@
   return analysers.get(track);
  }
  function syncMusic(){
+  for(const button of [toggle]){
+   button.querySelector('img').src=muted?'music-off.svg':'music-on.svg';
+   button.title=muted?'Turn music on':'Turn music off';button.setAttribute('aria-label',button.title);button.setAttribute('aria-pressed',String(!muted));
+  }
   const active=extraScenes.find(scene=>scene.modal.open)?.track || (day.open?dayMusic:museum.open?museumMusic:fortune.open?wizardMusic:music);
   if(document.hidden||!unlocked){tracks.forEach(stopMedia);return;}
   for(const track of tracks)fadeMedia(track,(track===active&&!muted&&!disco.open) ? .22 : 0);
@@ -103,11 +107,7 @@
   camera(){stopLetters();effect('camera');},
   stopLetters
  };
- toggle.addEventListener('click',()=>{
-  muted=!muted;toggle.querySelector('img').src=muted?'music-off.svg':'music-on.svg';
-  toggle.title=muted?'Turn music on':'Turn music off';
-  toggle.setAttribute('aria-pressed',String(!muted));syncMusic();
- });
+ for(const button of [toggle])button.addEventListener('click',()=>{muted=!muted;syncMusic();});
  new MutationObserver(syncMusic).observe(disco,{attributes:true,attributeFilter:['open']});
  new MutationObserver(syncMusic).observe(fortune,{attributes:true,attributeFilter:['open']});
  new MutationObserver(syncMusic).observe(museum,{attributes:true,attributeFilter:['open']});

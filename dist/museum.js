@@ -11,10 +11,9 @@
  const close=document.querySelector('#museum-close');
  let opener,selected,viewRequest=0;
  const discovered=new Set();
- for(const item of Object.values(exhibits)){const img=new Image();img.src=`museum-art/${item.image}`;}
  async function showExhibit(button){
   const exhibit=exhibits[button.dataset.exhibit],request=++viewRequest;
-  art.src=`museum-art/${exhibit.image}`;art.alt=exhibit.title;art.style.width=exhibit.width;
+  art.loading='eager';art.src=`museum-art/${exhibit.image}`;art.alt=exhibit.title;art.style.width=exhibit.width;
   await art.decode().catch(()=>{});
   if(request!==viewRequest||!modal.open)return;
   selected=button;

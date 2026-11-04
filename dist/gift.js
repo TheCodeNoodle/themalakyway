@@ -5,15 +5,15 @@
   'One gift, sealed and ready. Go on Citizen, I mean Astronaut sorry. Open your mail!'
  ];
  const description='Malakistos the Great is the legendary warrior who conquered the Seven Realms. Known for her strength, courage, and unmatched fighting skills, she defeated countless enemies and built an empire that would never be forgotten.';
- const cardFace=`<div class="gift-card-face"><img src="gift-art/card.svg" alt="Malakistos the Great"><p class="gift-card-description">${description}</p><span class="gift-strength" aria-label="Strength: 90">90</span><span class="gift-defense" aria-label="Defense: 75">75</span></div>`;
+ const cardFace=`<div class="gift-card-face"><img loading="lazy" src="gift-art/card.svg" alt="Malakistos the Great"><p class="gift-card-description">${description}</p><span class="gift-strength" aria-label="Strength: 90">90</span><span class="gift-defense" aria-label="Defense: 75">75</span></div>`;
  const modal=document.createElement('dialog');modal.id='milestone-gift';modal.className='gift-window';
  modal.setAttribute('aria-label','A gift from Agent 01');
  modal.innerHTML=`<button class="gift-transmission" type="button" aria-label="Continue Agent 01 transmission">
-  <span class="transmission-card"><img class="transmission-art" src="intro-dialogue.svg" alt="Agent 01"><span class="transmission-text" id="gift-text"></span></span>
+  <span class="transmission-card"><img loading="lazy" class="transmission-art" src="intro-dialogue.svg" alt="Agent 01"><span class="transmission-text" id="gift-text"></span></span>
   <span class="gift-hint" id="gift-dialogue-hint">Click to continue ▸</span></button>
  <div class="gift-scene" hidden><div class="gift-stage">
-  <div class="gift-envelope"><button class="gift-open" type="button" aria-label="Open your gift envelope"><img src="gift-art/mail-0.png" alt="Sealed envelope"></button>
-   <div class="gift-layers" hidden><img class="gift-back" src="gift-art/mail-back.svg" alt=""><div class="gift-card">${cardFace}</div><img class="gift-front" src="gift-art/mail-front.svg" alt=""></div>
+  <div class="gift-envelope"><button class="gift-open" type="button" aria-label="Open your gift envelope"><img loading="lazy" src="gift-art/mail-0.png" alt="Sealed envelope"></button>
+   <div class="gift-layers" hidden><img loading="lazy" class="gift-back" src="gift-art/mail-back.svg" alt=""><div class="gift-card">${cardFace}</div><img loading="lazy" class="gift-front" src="gift-art/mail-front.svg" alt=""></div>
   </div></div><p class="gift-hint" id="gift-envelope-hint">A delivery for you. Click the seal to open it.</p></div>
  <div class="gift-collection" hidden>${cardFace}<button class="gift-return" type="button">Back to the stars ↗</button></div>`;
  // Reuse the current opening frame, including its cropped SVG viewport and any manual styling.

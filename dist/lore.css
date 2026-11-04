@@ -126,3 +126,9 @@
 .lore-cover-stage #lore-read:hover{background:#51231a;box-shadow:inset 2px 2px #87522b,inset -2px -2px #23100e}
 .lore-cover-stage .lore-cover-foot{position:absolute;top:88%;left:12%;right:12%;margin:0;color:#fcb960;font:3cqw/1 'VT323',monospace;letter-spacing:.12cqw;text-align:center}
 @media(prefers-reduced-motion:reduce){.lore-cover-stage .lore-cover{scroll-behavior:auto}}
+
+/* The whole visible cover is the opening control. */
+.lore-cover-stage #lore-read{inset:0;width:100%;height:100%;padding:0;border:0;background:transparent;box-shadow:none;cursor:url('pointers/pointer.png') 12 9,pointer;touch-action:pan-y}
+.lore-cover-stage #lore-read:hover{background:transparent;box-shadow:none}
+.lore-cover-stage #lore-read:focus-visible{outline:3px solid #f4d090;outline-offset:-14px}
+.lore-cover-stage .lore-cover-border>*:not(#lore-read){pointer-events:none}

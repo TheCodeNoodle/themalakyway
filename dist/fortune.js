@@ -7,6 +7,7 @@
   'Fascinating. Truly fascinating.',
   'Wait… WAIT. I see children. One… two… three… FOUR!',
   "Oh, hold on… there's a fifth one coming your way.",
+  'Hmm… what a promising future.',
   "I'm afraid the crystal ball doesn't offer refunds on these predictions my dear."
  ];
  const modal=document.querySelector('#fortune'),idle=document.querySelector('#fortune-idle');

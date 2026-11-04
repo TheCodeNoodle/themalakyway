@@ -40,7 +40,7 @@ main{position:relative;min-height:100svh;display:flex;flex-direction:column;just
 dialog::backdrop{backdrop-filter:none;background:#010719df}
 @media(prefers-reduced-motion:reduce){.cloud-drift{animation:cloud-drift 50s ease-in-out infinite alternate!important}.twinkle{animation:sky-twinkle var(--twinkle-duration) ease-in-out var(--twinkle-delay) infinite!important}.moving-clouds,.bottom-cloud{transition:transform 700ms ease-out!important}}
 html.scene-paused .cloud-drift,html.scene-paused .twinkle,html.scene-paused .companion-float{animation-play-state:paused!important}
-.shooting-star-stage{position:absolute;inset:0 0 170px;overflow:hidden;pointer-events:none;z-index:1}
+.shooting-star-stage{position:fixed;inset:0;overflow:hidden;pointer-events:none;z-index:1}
 .shooting-star{position:absolute;left:0;top:0;width:90px;height:60px;padding:0;border:0;background:transparent;pointer-events:auto;cursor:url('pointers/pointer.png') 12 9, pointer;touch-action:manipulation;will-change:transform;-webkit-tap-highlight-color:transparent}
 .shooting-star[hidden]{display:none}.shooting-star img{display:block;width:100%;height:100%;image-rendering:pixelated;pointer-events:none;transform:scaleX(-1)}
 
@@ -115,3 +115,4 @@ html.window-loading,html.window-loading *{cursor:progress!important}
 .final-button .final-lock{display:block;width:40px;height:40px;margin:auto;image-rendering:pixelated}
 .final-button .final-label{margin:0}
 .final-button:disabled .final-label,.final-button:not(:disabled) .final-lock{display:none}
+
