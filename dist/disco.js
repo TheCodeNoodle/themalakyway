@@ -3,7 +3,7 @@
   ['Margaret','Lana Del Rey feat. Bleachers'],['All the Stars','Kendrick Lamar & SZA'],
   ['Lover Girl','Laufey'],['Army Dreamers','Kate Bush'],['K.','Cigarettes After Sex'],
   ['Indigo Night','Tamino'],['Smooth Operator','Sade'],['The Night We Met','Lord Huron'],
-  ['Orange-coloured day','liana flores'],['Shape of My Heart','Sting']
+  ['Only Girl (In the World)','Rihanna'],['Shape of My Heart','Sting']
  ].map(([title,artist],i)=>({title,artist,src:`music/track-${String(i+1).padStart(2,'0')}.mp3`}));
  const intermediateTracks=[
   ['Umbrella','Rihanna feat. JAY-Z'],['Red Right Hand','Nick Cave & The Bad Seeds'],
@@ -16,7 +16,8 @@
   ['Every Girl Gets Her Wish','Saint Avangeline']
  ].map(([title,artist],i)=>({title,artist,src:`music/hard-${String(i+1).padStart(2,'0')}.mp3`}));
  const playlists={easy:easyTracks,intermediate:intermediateTracks,hard:hardTracks};
- let tracks=easyTracks,levelName='Easy';
+ let tracks=easyTracks,levelName='Easy',levelKey='easy';
+ const completedLevels=new Set();
  const modal=document.querySelector('#disco');
  const $=s=>modal.querySelector(s);
  const audio=$('audio'),input=$('#disco-answer'),suggestions=$('#disco-suggestions');
@@ -24,8 +25,17 @@
  const levels=document.createElement('section');levels.id='disco-levels';levels.setAttribute('aria-labelledby','disco-level-title');
  levels.innerHTML=`<h3 id="disco-level-title">Choose your level</h3><p>Listen. Guess. Unlock a little more.</p><div class="disco-level-list"><button type="button" data-level="easy"><span>Easy</span><small>10 songs ▸</small></button><button type="button" data-level="intermediate"><span>Intermediate</span><small>6 songs ▸</small></button><button type="button" data-level="hard"><span>Hard</span><small>5 songs ▸</small></button></div>`;
  modal.append(levels);$('#disco-game').hidden=true;
+ const playlistRewards=[levels,$('#disco-finale')].map(container=>{
+  const link=document.createElement('a');link.className='disco-spotify';link.hidden=true;
+  link.href='https://open.spotify.com/playlist/1W0IEkKqFTd3pWpOOnqKEg?si=4da3642ab43d4017';
+  link.target='_blank';link.rel='noopener noreferrer';link.setAttribute('aria-label','Open the playlist on Spotify');link.title='Open the playlist on Spotify';
+  const icon=document.createElement('img');icon.src='disco-art/spotify.svg';icon.alt='Spotify';icon.loading='lazy';icon.draggable=false;link.append(icon);
+  if(container===levels)container.append(link);else $('#disco-score').after(link);
+  return link;
+ });
+
  let levelStarted=false,snippetLoading=false;
- const clipSeconds=()=>Math.min(15,5*(mistakes+1));
+ const clipSeconds=()=>[2,7,15][Math.min(mistakes,2)];
  const clipSource=()=>tracks[round].src.replace('.mp3',clipSeconds()===15?'.mp3':`-${clipSeconds()}s.mp3`);
  const bars=[...modal.querySelectorAll('.disco-equalizer i')];
  let analyser,frequencyData,visualFrame=0,lastVisualTime=0,roundRequest=0;
@@ -162,7 +172,7 @@
   input.disabled=true;input.value='';$('#disco-submit').disabled=true;$('#disco-next').hidden=true;
   feedback.textContent='';feedback.className='disco-feedback';hideSuggestions();hearts();
   $('#disco-round').textContent=`TRACK ${String(round+1).padStart(2,'0')} / ${tracks.length}`;
-  $('#disco-game .disco-subtitle').textContent=`${levelName.toUpperCase()} · Listen to 5 seconds and guess the song`;
+  $('#disco-game .disco-subtitle').textContent=`${levelName.toUpperCase()} · Listen to 2 seconds and guess the song`;
   await window.sceneAudio.fadeOut(audio);
   if(request!==roundRequest)return;
   audio.src=clipSource();audio.load();updatePlayback();snippetLoading=false;play.disabled=false;input.disabled=false;$('#disco-submit').disabled=false;
@@ -202,6 +212,8 @@
  });
  $('#disco-next').addEventListener('click',next);
  function showPlaylist(){
+  completedLevels.add(levelKey);
+  playlistRewards.forEach(link=>link.hidden=completedLevels.size<3);
   finished=true;modal.classList.add('is-finale');window.sceneAudio.fadeOut(audio);hideSuggestions();$('#disco-game').hidden=true;$('#disco-finale').hidden=false;
   $('#disco-score').textContent=`${results.filter(Boolean).length} / ${tracks.length} songs found · ${levelName}. A whole playlist for you.`;
   const list=$('#disco-playlist');list.replaceChildren();
@@ -211,8 +223,9 @@
    title.textContent=track.title;artist.textContent=track.artist;details.append(title,artist);row.append(initial,details);list.append(row);
   });
   $('#disco-score').tabIndex=-1;$('#disco-score').focus({preventScroll:true});
+  $('#disco-finale').scrollTop=0;
  }
- levels.querySelectorAll('[data-level]').forEach(button=>button.addEventListener('click',()=>{tracks=playlists[button.dataset.level];levelName={easy:'Easy',intermediate:'Intermediate',hard:'Hard'}[button.dataset.level];levelStarted=true;levels.hidden=true;round=0;results=[];finished=false;modal.classList.remove('is-finale');$('#disco-game').hidden=false;$('#disco-finale').hidden=true;loadRound();}));
+ levels.querySelectorAll('[data-level]').forEach(button=>button.addEventListener('click',()=>{levelKey=button.dataset.level;tracks=playlists[levelKey];levelName={easy:'Easy',intermediate:'Intermediate',hard:'Hard'}[button.dataset.level];levelStarted=true;levels.hidden=true;round=0;results=[];finished=false;modal.classList.remove('is-finale');$('#disco-game').hidden=false;$('#disco-finale').hidden=true;loadRound();}));
  $('#disco-replay').addEventListener('click',()=>{levelStarted=false;finished=false;modal.classList.remove('is-finale');$('#disco-game').hidden=true;$('#disco-finale').hidden=true;levels.hidden=false;levels.querySelector('button').focus({preventScroll:true});});
  $('#disco-close').addEventListener('click',()=>modal.close());
  modal.addEventListener('close',()=>{window.sceneAudio.fadeOut(audio);stopVisualizer();clearTimeout(transitionTimer);hideSuggestions();opener?.focus({preventScroll:true});});

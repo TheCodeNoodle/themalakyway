@@ -75,3 +75,9 @@
 
 /* Suggestions open upward, leaving Submit and hearts accessible. */
 #disco-suggestions{top:auto;bottom:calc(100% + 6px)}
+
+.disco-spotify{display:block;width:clamp(38px,8cqw,56px);margin:2cqw auto;line-height:0;transition:transform 160ms ease,filter 160ms ease}
+.disco-spotify[hidden]{display:none}.disco-spotify img{width:100%;height:auto;image-rendering:pixelated}
+.disco-spotify:hover{transform:translateY(-2px);filter:brightness(1.15) drop-shadow(0 0 6px #65d78966)}
+.disco-spotify:focus-visible{outline:2px solid #bdf6d3;outline-offset:5px}
+@media(prefers-reduced-motion:reduce){.disco-spotify{transition:none}.disco-spotify:hover{transform:none}}
