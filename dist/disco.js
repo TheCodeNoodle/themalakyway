@@ -25,6 +25,9 @@
  const levels=document.createElement('section');levels.id='disco-levels';levels.setAttribute('aria-labelledby','disco-level-title');
  levels.innerHTML=`<h3 id="disco-level-title">Choose your level</h3><p>Listen. Guess. Unlock a little more.</p><div class="disco-level-list"><button type="button" data-level="easy"><span>Easy</span><small>10 songs ▸</small></button><button type="button" data-level="intermediate"><span>Intermediate</span><small>6 songs ▸</small></button><button type="button" data-level="hard"><span>Hard</span><small>5 songs ▸</small></button></div>`;
  modal.append(levels);$('#disco-game').hidden=true;
+ levels.querySelectorAll('[data-level]').forEach(button=>{
+  const badge=document.createElement('img');badge.className='disco-completed';badge.src='disco-art/completed.svg';badge.alt='Completed';badge.loading='lazy';badge.hidden=true;button.querySelector('span').append(badge);
+ });
  const playlistRewards=[levels,$('#disco-finale')].map(container=>{
   const link=document.createElement('a');link.className='disco-spotify';link.hidden=true;
   link.href='https://open.spotify.com/playlist/1W0IEkKqFTd3pWpOOnqKEg?si=4da3642ab43d4017';
@@ -187,7 +190,7 @@
  function resolve(correct){
   resolved=true;modal.classList.add('is-resolved');window.sceneAudio.fadeOut(audio);hideSuggestions();input.disabled=true;$('#disco-submit').disabled=true;
   results[round]=correct;feedback.classList.add(correct?'correct':'revealed');
-  feedback.textContent=`${correct?'You got it!':'This one was'} ${tracks[round].title} — ${tracks[round].artist}`;
+  feedback.textContent=`${correct?'You got it!':'This one was'} ${tracks[round].title}: ${tracks[round].artist}`;
   $('#disco-next').textContent=round===tracks.length-1?'See your playlist ▸':'Next song ▸';$('#disco-next').hidden=false;
   $('#disco-next').focus({preventScroll:true});
   // Leave enough time to read the revealed title before automatically moving on.
@@ -203,7 +206,7 @@
   mistakes++;hearts();hideSuggestions();
   if(mistakes===3){resolve(false);return;}
   const request=++roundRequest;snippetLoading=true;play.disabled=true;input.disabled=true;$('#disco-submit').disabled=true;
-  feedback.textContent=`Not quite. ${clipSeconds()} seconds unlocked — listen again.`;
+  feedback.textContent=`Not quite. ${clipSeconds()} seconds unlocked. Listen again.`;
   $('#disco-game .disco-subtitle').textContent=`${levelName.toUpperCase()} · Listen to ${clipSeconds()} seconds and guess the song`;
   await window.sceneAudio.fadeOut(audio);
   if(request!==roundRequest)return;
@@ -213,6 +216,7 @@
  $('#disco-next').addEventListener('click',next);
  function showPlaylist(){
   completedLevels.add(levelKey);
+  levels.querySelectorAll('[data-level]').forEach(button=>button.querySelector('.disco-completed').hidden=!completedLevels.has(button.dataset.level));
   playlistRewards.forEach(link=>link.hidden=completedLevels.size<3);
   finished=true;modal.classList.add('is-finale');window.sceneAudio.fadeOut(audio);hideSuggestions();$('#disco-game').hidden=true;$('#disco-finale').hidden=false;
   $('#disco-score').textContent=`${results.filter(Boolean).length} / ${tracks.length} songs found · ${levelName}. A whole playlist for you.`;

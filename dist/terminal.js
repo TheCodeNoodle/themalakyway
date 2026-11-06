@@ -56,7 +56,7 @@
   $('.terminal-radar').hidden=true;$('#terminal-channel').textContent=channel;modal.dataset.caller=asset;
  }
  function standby(second=false){
-  state=second?'waiting-krobus':'idle';line(second?'[TRANSMISSION ENDED] — Another signal is waiting.':'Receiver ready. Two signals are waiting for you.');
+  state=second?'waiting-krobus':'idle';line(second?'[TRANSMISSION ENDED] Another signal is waiting.':'Receiver ready. Two signals are waiting for you.');
   $('#terminal-channel').textContent='CH 00 / STANDBY';$('#terminal-caller').textContent='UNKNOWN';$('#terminal-origin').textContent='Searching the stars...';$('#terminal-avatar').hidden=true;$('.terminal-radar').hidden=false;
   $('#terminal-queue').textContent=second?'01 SIGNAL WAITING':'02 SIGNALS WAITING';
   choices([['Receive transmission','receive']],'Type receive','Type RECEIVE and press Enter, or use the button above.');

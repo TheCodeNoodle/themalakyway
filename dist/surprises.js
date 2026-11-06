@@ -10,5 +10,5 @@ window.birthdayContent = {
     {kind:'06 / LORE',title:'Lore',game:'lore'},
     {kind:'07 / A LETTER',title:'A letter for you',game:'prankLetter'}
   ],
-  finale:{kind:'ALL THE STARS, JUST FOR YOU',title:'Happy birthday, you.',body:'Seven little lights could never hold everything I want to say. But maybe they’re a start.\n\nI’m so glad you exist. I’m so glad our paths crossed. And I hope you always know how deeply you are loved.\n\nHere’s to another trip around the sun — and all the beautiful things waiting for you.',note:'With all my love, [your name]'}
+  finale:{kind:'ALL THE STARS, JUST FOR YOU',title:'Happy birthday, you.',body:'Seven little lights could never hold everything I want to say. But maybe they’re a start.\n\nI’m so glad you exist. I’m so glad our paths crossed. And I hope you always know how deeply you are loved.\n\nHere’s to another trip around the sun, and all the beautiful things waiting for you.',note:'With all my love, [your name]'}
 };

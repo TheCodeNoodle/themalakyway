@@ -30,12 +30,11 @@
 .disco-play{position:absolute;left:9.58084%;top:32.03125%;width:13.77245%;height:17.96875%;padding:0;border:0;background:none;clip-path:none;filter:none}
 .disco-equalizer{position:absolute;left:29%;top:35%;width:51%;height:15%;display:flex;align-items:flex-end;gap:1.5cqw;padding:0}
 .disco-equalizer i{display:block;flex:1;height:100%;background:#a179f2;transform-origin:bottom;transform:scaleY(.06)}
-.disco-spark{position:absolute;right:9%;top:43%;color:#f4bdf0;font-size:4cqw;line-height:1}
 .disco-timeline{position:absolute;left:10%;top:54%;width:80%;height:6%;display:flex;align-items:center;gap:3cqw}
 #disco-time{white-space:nowrap;font-size:2.7cqw;color:#aaa0df;line-height:1;font-variant-numeric:tabular-nums}
 #disco-seek{--played:0%;appearance:none;min-width:0;width:100%;height:1cqw;margin:0;border:0;border-radius:0;background:linear-gradient(to right,#edbcff var(--played),#7875ee var(--played));cursor:url('pointers/pointer.png') 12 9, pointer}
-#disco-seek::-webkit-slider-thumb{appearance:none;width:2.7cqw;height:2.7cqw;border:2px solid #c0c5ff;background:#aaaaff;box-shadow:2px 2px #32376b}
-#disco-seek::-moz-range-thumb{width:2.4cqw;height:2.4cqw;border:2px solid #c0c5ff;border-radius:0;background:#aaaaff}
+#disco-seek::-webkit-slider-thumb{appearance:none;width:3.3cqw;height:3.3cqw;border:0;border-radius:0;background:transparent url('disco-art/seek-handle.svg') center/100% 100% no-repeat;box-shadow:none;image-rendering:pixelated;cursor:url('pointers/drag.png') 15 12,grabbing}
+#disco-seek::-moz-range-thumb{width:3.3cqw;height:3.3cqw;border:0;border-radius:0;background:transparent url('disco-art/seek-handle.svg') center/100% 100% no-repeat;box-shadow:none;image-rendering:pixelated;cursor:url('pointers/drag.png') 15 12,grabbing}
 #disco-form{display:contents}
 .disco-answer-wrap{position:absolute;left:13%;top:64%;width:74%;height:10%;text-align:left;z-index:5}
 #disco-answer{display:block;width:100%;height:100%;min-height:0;padding:1cqw 2cqw;color:#eee6ff;background:#080f2f;border:2px solid #6d68c4;border-radius:0;box-shadow:inset 2px 2px #020a26;outline-offset:2px;font-size:clamp(16px,3.8cqw,26px)}
@@ -81,3 +80,6 @@
 .disco-spotify:hover{transform:translateY(-2px);filter:brightness(1.15) drop-shadow(0 0 6px #65d78966)}
 .disco-spotify:focus-visible{outline:2px solid #bdf6d3;outline-offset:5px}
 @media(prefers-reduced-motion:reduce){.disco-spotify{transition:none}.disco-spotify:hover{transform:none}}
+
+.disco-level-list button span{display:inline-flex;align-items:center;gap:1.8cqw}
+.disco-level-list .disco-completed{width:.98em;height:.7em;flex:0 0 .98em;image-rendering:pixelated;object-fit:contain}.disco-completed[hidden]{display:none}

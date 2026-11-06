@@ -3,7 +3,7 @@
   blanket:{title:"Malakistos' Blanket",image:'blanket.svg',width:'76%'},
   demnate:{title:'Imi-n-Ifri, Demnate',image:'demnate.svg',width:'96%'},
   statue:{title:'Malakistos the Great',image:'malakistos-statue.svg',width:'55%'},
-  earring:{title:'The Lost Earring — 22 April 2025',image:'lost-earring.svg',width:'50%'}
+  earring:{title:'The Lost Earring, 22 April 2025',image:'lost-earring.svg',width:'50%'}
  };
  const modal=document.querySelector('#museum'),gallery=document.querySelector('#museum-gallery');
  const detail=document.querySelector('#museum-detail'),art=document.querySelector('#museum-artwork');

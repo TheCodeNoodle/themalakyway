@@ -5,7 +5,7 @@
  const extra={
   'last-letter':['letter-paper.svg'],
   'prank-letter':['gift-art/mail-0.png','gift-art/mail-1.png','gift-art/mail-2.png','gift-art/mail-back.svg','gift-art/mail-front.svg','gift-art/prank-paper.svg'],
-  disco:['disco-art/windowBackground.svg','disco-art/SubmitButton.svg','disco-art/pauseButton.svg',...Array.from({length:3},(_,i)=>`disco-art/heart-frame-${i}.png`)],
+  disco:['disco-art/seek-handle.svg','disco-art/windowBackground.svg','disco-art/SubmitButton.svg','disco-art/pauseButton.svg',...Array.from({length:3},(_,i)=>`disco-art/heart-frame-${i}.png`)],
   fortune:['fortune-art/window-table.svg','disco-art/SubmitButton.svg'],
   'cosmic-terminal':['terminal-art/border.svg','terminal-art/chickette.svg','terminal-art/krobus.svg'],
   'milestone-gift':['intro-dialogue.svg','gift-art/mail-1.png','gift-art/mail-2.png']

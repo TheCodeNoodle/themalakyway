@@ -44,7 +44,7 @@
   $('#lore-story').classList.toggle('lore-chapter-start',chapter.part===1);
   $('.lore-end-mark').hidden=chapter.part!==chapter.parts;
   $('#lore-chapter-number').textContent=`CHAPTER ${roman[chapter.chapterNumber]}${chapter.parts>1?` · ${chapter.part} / ${chapter.parts}`:""}`;$('.lore-place').textContent=chapter.place;
-  const story=$('#lore-story');story.replaceChildren();chapter.paragraphs.forEach(text=>{const p=document.createElement('p');p.textContent=text.replaceAll('—',',');story.append(p);});
+  const story=$('#lore-story');story.replaceChildren();chapter.paragraphs.forEach(text=>{const p=document.createElement('p');p.textContent=text.replaceAll(String.fromCharCode(8212),',');story.append(p);});
   $('#lore-page-number').textContent=`${page+1} / ${chapters.length}`;$('#lore-prev').disabled=page===0;$('#lore-next').disabled=page===chapters.length-1;renderArt();$('.lore-reading').scrollTop=0;
  }
  const motion=new Set();
