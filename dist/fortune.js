@@ -2,11 +2,11 @@
  const passages=[
   'Hmmm… interesting… very interesting…',
   'Oh, my crystal ball is showing me something… In 18 years, you shall become… a baker?',
-  'Ooh, you own the bakery actually.',
-  'A baker who likes men, specifically.',
+  'Ooh, good news. You own the bakery actually.',
+  'Hmm… so a baker who likes men, specifically.',
   'Fascinating. Truly fascinating.',
   'Wait… WAIT. I see children. One… two… three… FOUR!',
-  "Oh, hold on… there's a fifth one coming your way.",
+  "Oh, hold on… there's also a fifth one coming your way.",
   'Hmm… what a promising future.',
   "I'm afraid the crystal ball doesn't offer refunds on these predictions my dear."
  ];
