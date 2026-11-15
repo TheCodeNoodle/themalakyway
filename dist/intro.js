@@ -3,13 +3,13 @@
   'Hello, Citizen. Can you hear us?',
   "Excellent. This is the National Aeronautics and Space Administration calling. We've received a notification that you've officially turned 18.",
   'First of all, congratulations on surviving 18 rotations around the Sun. Impressive work.',
-  'Now, as you may know, turning 18 comes with certain privileges. The right to vote, making questionable decisions, and, most importantly...',
+  'Now, as you may know, turning 18 comes with certain privileges. The right to vote, making questionable decisions, and most importantly...',
   'obtaining a legal permit to roam freely through outer space!!',
   "And since we're feeling generous today, we've decided to approve your application.",
   'But before we can issue your official Rocketship License, we need one last thing from you.',
   'Please look directly at the nearest camera, put on your best astronaut smile, and hold still.',
   'Three... two... one... CHEESE!',
-  "Alriight, you're cleared for takeoff. Grab your helmet and go ride the Saturn V Rocketship. There's a whole universe out there waiting for you.",
+  "Perfect, you're cleared for takeoff now. Grab your helmet and go ride your rocketship. There's a whole universe out there waiting for you.",
   'Transmission terminated. Happy 18th Birthday!'
  ];
  const scene=document.querySelector('#intro-scene');
