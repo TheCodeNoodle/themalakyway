@@ -1,3 +1,6 @@
+// EDIT THIS FILE to change the book. See LORE-EDITING.md in the project folder.
+// Chapter order = reading order. Each page has its own images and paragraphs.
+// Use double quotes for text; put a comma between entries. Images live in lore-art/.
 window.loreSettings = {
   "coverTitle": [
     "Malakistos",
@@ -123,43 +126,7 @@ window.loreChapters = [
           }
         ],
         "paragraphs": [
-          "To learn Dragonrend, Malakistos had to find an Elder Scroll.",
-          "She searched through old underground ruins and reached Blackreach, a huge cave with glowing mushrooms and abandoned buildings.",
-          "After finding the Scroll, she returned to Paarthurnax.",
-          "She opened it on the mountain and saw a vision of the past. Three heroes were fighting Alduin. When they used Dragonrend, she learned the words.",
-          "But the heroes hadn’t killed him. They had used the Scroll to send him into the future.",
-          "That was why he had returned.",
-          "Then Alduin appeared on the mountain.",
-          "Malakistos used her new Shout to bring him down. She fought him with Paarthurnax, and together they managed to defeat him.",
-          "But before she could finish him, Alduin escaped.",
-          "She wasn’t going to let him get away that easily."
-        ]
-      }
-    ]
-  },
-  {
-    "title": "Malakistos the Great",
-    "pages": [
-      {
-        "place": "Skuldafn · Sovngarde",
-        "art": [
-          {
-            "src": "lore-art/Skuldafn.png",
-            "alt": "An illustration of Skuldafn.",
-            "caption": "Skuldafn"
-          }
-        ],
-        "paragraphs": [
-          "Malakistos trapped a dragon called Odahviing in Whiterun and asked him where Alduin had gone.",
-          "He told her that Alduin was hiding in Sovngarde, the place where the souls of Nord heroes went after death.",
-          "She released Odahviing, and he flew her to an ancient temple with a portal to Sovngarde.",
-          "After fighting her way through the temple, she entered the portal.",
-          "There, she met the same three heroes she had seen in the past. They agreed to help her finish what they had started.",
-          "Together, they cleared the mist where Alduin was hiding and faced him one last time.",
-          "Malakistos used Dragonrend, and the four of them fought until the World-Eater finally fell.",
-          "Skyrim was safe from Alduin.",
-          "Malakistos returned from Sovngarde, and the story of her victory spread across the land.",
-          "From that day on, she was known as Malakistos the Great."
+          "To be continued..."
         ]
       }
     ]
