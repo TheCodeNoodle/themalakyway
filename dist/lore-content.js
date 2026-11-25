@@ -1,6 +1,3 @@
-// EDIT THIS FILE to change the book. See LORE-EDITING.md in the project folder.
-// Chapter order = reading order. Each page has its own images and paragraphs.
-// Use double quotes for text; put a comma between entries. Images live in lore-art/.
 window.loreSettings = {
   "coverTitle": [
     "Malakistos",
@@ -58,36 +55,61 @@ window.loreChapters = [
       }
     ]
   },
-  {
-    "title": "The Dragonborn",
-    "pages": [
-      {
-        "place": "The Throat of the World",
-        "art": [
-          {
-            "src": "lore-art/paarthurnax.png",
-            "alt": "An illustrated portrait of Paarthurnax, the ancient dragon with pale scales and long horns.",
-            "caption": "Paarthurnax"
-          },
-          {
-            "src": "lore-art/dragon2.png",
-            "alt": "Alduin, the black dragon known as the World-Eater.",
-            "caption": "Alduin"
-          }
-        ],
-        "paragraphs": [
-          "After the battle, Malakistos heard a voice calling her from the mountains.",
-          "It was the Greybeards, a group of old men who knew how to use powerful dragon Shouts. She climbed the mountain to meet them, and they helped her understand her powers.",
-          "But the dragons were still attacking Skyrim.",
-          "The black dragon from Helgen was called Alduin, the World-Eater. He was bringing dead dragons back to life, and someone had to stop him.",
-          "Malakistos searched for a way to defeat him. Her journey took her to the highest mountain in Skyrim, where she met another dragon called Paarthurnax.",
-          "Unlike Alduin, he wanted to help her.",
-          "He told her about Dragonrend, a special Shout that could force Alduin to land so she could fight him.",
-          "The problem was that the people who knew it had died a long time ago."
-        ]
-      }
-    ]
-  },
+  
+{
+  "title": "The Dragonborn",
+  "pages": [
+    {
+      "place": "The Throat of the World",
+      "art": [
+        {
+          "src": "lore-art/dragon2.png",
+          "alt": "Alduin, the black dragon known as the World-Eater.",
+          "caption": "Alduin"
+        }
+      ],
+      "paragraphs": [
+        "While Malakistos was unconscious, she began hearing faint voices, one of them was calling her name, she slowly started to gain her consciousness, she opened her eyes and found herself lying on a bed in an unfamiliar room with her head aching, but weirdly enough the voices didn't disappear, she could hear them coming from the mountains nearby . For a moment, she couldn't remember what happened to her. The last thing she recalled was the dragon swinging its tail towards her.",
+        "The nurse came into the room, as she was delighted by her awakeness. She told her that she's in Whiterun being taken care of under the orders of the Jarl. Malakistos wanted to go and check from where does that voice in her head comes from, but the nurse told her that she should stay there for one more day at least.",
+        "The next day, one of the guards came in to tell her that the Jarl is expecting to meet her in his castle, she dressed and went to the meeting. The Jarl thanked her for her courage and leadership during the dragon battle, praising her for standing by his guards despite the danger.",
+        " He told her that after the end of the battle, the guards attempted to carry her, but a strange thing occured. The dragon began to burn and a mysterious cloud of blue glowing ash rose from the dragon's remains and entered Malakistos' body.",
+        "At that moment, things began to connect. The mysterious voices weren't hallucinations, they were signs of mysterious power she gained from the dragon, but she still couldn't understand what's making the sound or what they wanted. Could they eventually harm her? Why were they calling her? So many questions, yet no answers.",
+        "Her curiosity made her so determined to uncover the truth behind the mysterious /powers/ she gained, Malakistos decided to follow the voices that seemed echoing from the distant mountains."
+      ]
+    },
+    {
+      "place": "The Throat of the World",
+      "art": [
+        {
+          "src": "lore-art/paarthurnax.png",
+          "alt": "An illustrated portrait of Paarthurnax, the ancient dragon with pale scales and long horns.",
+          "caption": "Paarthurnax"
+        },
+        {
+          "src": "lore-art/Throat of the world.png",
+          "alt": "An illustration of Throat of the world",
+          "caption": "Throat of the world"
+        }
+      ],
+      "paragraphs": [
+        "After a long climbing journey, she finally reached the summit, where she discovered an ancient monastery. As she approached its entrance, the doors slowly opened, revealing a group of old men dressing like wizards in grey cloaks.",
+        "They introduced themselves as the Greybeards, masters of an ancient power known as the Stentor. Malakistos was surprised because they seemed to have been expecting her arrival.",
+        "They explained that they had summoned her to the mountain after they sensed the awakening of a new Dragonborn.",
+        "They told her that when dragons die near her, their souls don't disappear into the void, her soul possessed a rare ability that makes her absorb the souls of dragons and take fragments of their strength, memories and abilities.",
+        "They also revealed the truth behind the attack in Helgen. The black dragon was Alduin, also called the World-Eater. He was resurrecting dead dragons, and that he must be stopped as soon as possible before Skyrim was reduced to ashes.",
+        "The Greybeards began to train Malakistos on how to use the Stentor, they taught her powerful dragon Shouts that could shake the ground and push anything in her way as if it was nothing. At first, she struggled to control the power, it felt like her body wasn't made to handle that kind of force, but day after day, she started getting better at it, the old men were impressed by how fast she was learning.",
+        "But they stopped the training when they heard that dragons were still attacking villages across Skyrim, burning everything in their path, innocent people were dying and the guards couldn't handle the attacks on their own. The Greybeards told her that Alduin was visiting ancient burial grounds and using a powerful shout to bring dead dragons back to life, so he can raise an army that could destroy the entire land if nobody stopped him.",
+        "They also told her that there was someone who could help her defeat Adluin, as she wasn't ready to face him yet. Someone who had been living in isolation for centuries on the highest peak in all of Skyrim, a place called the Throat of the World.",
+        "The climb was hard and rough, the wind was hitting her from every direction, and the cold was cutting through her armor like it was made out of paper. For several times, the icy rocks almost made her slip, one wrong step and she would have fallen to her death. But she kept going, she didn't come this far just to go back.",
+        "When she finally reached the top, she was expecting to find another old man or maybe a shrine of some kind, but instead, sitting on the peak like it owned the entire mountain, was a dragon. Her first instinct was to draw her weapon as she thought it was one of the dragons Alduin brought back to life, but before she could, the dragon spoke to her in a calm deep voice that echoed through the mountains. He introduced himself as Paarthurnax.",
+        "Unlike Alduin, Paarthurnax had no desire to destroy or conquer, he distanced himself from his own kind a long time ago because he believed that dragons and humans didn't have to be enemies. He told Malakistos that he had been waiting for a Dragonborn to come, someone who could finally put an end to Alduin's destruction.",
+        "Paarthurnax told her about a special shout called Dragonrend, it was the only shout that was created by humans and not by dragons, as it had the power to force any dragon out of the sky and make it land, which meant that Alduin wouldn't be able to fly away from the fight. Without this shout, fighting Alduin would be impossible as he would just stay in the air blasting fire from above where no sword or arrow could reach him.",
+        "But there was a big problem. Dragonrend was created by three ancient warriors who lived millenniums ago, they used it against Alduin to defeat him, but those warriors had been dead for so long, and the knowledge of the shout died with them. Nobody alive knew how to use it, not even Paarthurnax himself.",
+        "Malakistos stood on top of the mountain, the wind blowing through her hair as she looked at the endless sky. She had finally found a way to defeat Alduin, but the answer was hidden in the past, with people who were long gone, she had no idea what to do next."
+      ]
+    }
+  ]
+},
   {
     "title": "The First Battle",
     "pages": [
